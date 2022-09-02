@@ -3,7 +3,12 @@
             <a class="headerLink" id="headerLinkGames" href="./games.html">Games</a>
             <div id="headerDropDownGamesContent">
                 <div id="planeagement">
-                    <img src="src/assets/planeagementlogo.png" alt="planeagement logo" style="width: 200px; filter: drop-shadow(0px 0px 10px #000);">
+                    <img src="src/assets/planeagementlogo.png" type="image/png" alt="planeagement logo" style="width: 350px; filter:drop-shadow(0px 0px 10px black);">
+                    <p style="color:white; text-shadow: 0px 0px 10px black; font-size: 22px; margin: auto; ">planeagement wow what a game now this is epic </p>
+                </div>
+                <div id="fdphysics">
+                    <img src="src/assets/planeagementlogo.png" type="image/png" alt="planeagement logo" style="width: 350px; filter:drop-shadow(0px 0px 10px black);">
+                    <p style="color:white; text-shadow: 0px 0px 10px black; font-size: 22px; margin: auto; ">planeagement wow what a game now this is epic </p>
                 </div>
             </div>
         </div>
@@ -26,7 +31,6 @@
 
     .headerLink{
         color: white;
-        font-family: "Calibri", "Helvetica", monospace, sans-serif;
         font-size: 40px;
         font-weight: 900;
         text-decoration: none;
@@ -48,17 +52,19 @@
     }
 
     #headerDropDownGames:hover #headerDropDownGamesContent {
-         display: block;
-         position: absolute;
+         opacity: 1;
+         visibility: visible;
     }
 
     #headerDropDownGamesContent {
+        display: block;
+        position: absolute;
         z-index: 2;
-        display: none;
-        background-color: #1a1a1a;
-        border-radius: 0% 0% 10% 10%;
-        box-shadow: 0 0 10pt black;
-        padding:0.1%;
+        visibility: hidden;
+        border-radius: 0% 0% 25px 25px;
+        box-shadow: 0 5pt 10pt black;
+        opacity: 0;
+        transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
     }
 
 
@@ -72,9 +78,20 @@
 
     #planeagement{
         background-image: url("src/assets/background.png");
-        background-size: contain;
-        padding: 1.2%;
-        filter: blur(5px);
+        background-size:cover;
+        padding: 5.5%;
+        display: flex;
+        align-content: flex-start;
+    
+    }
+
+    #fdphysics{
+        background-image: url("src/assets/fdphysicsbackground.png");
+        background-size:cover;
+        padding: 5.5%;
+        display: flex;
+        align-content: flex-start;
+    
     }
 
 
