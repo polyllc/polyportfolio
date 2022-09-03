@@ -1,6 +1,6 @@
 <script>
     import Header from "./header.svelte";
-    import Sticky from "./sticky.svelte";
+    import Sticky from "./lib/sticky.svelte";
 
     let link = "src/assets/3.png";
 </script>

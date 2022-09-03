@@ -1,3 +1,24 @@
+<script>
+import { each } from "svelte/internal";
+import Box from "./lib/box.svelte";
+
+
+    let opensourceapps = [
+        {name: "discord-gameboy", date: "2020", description: "a gameboy emulator that's a discord bot"},
+        {name: "alexa", date: "2020-2022", description: "alexa is a feature rich music discord bot, from voice commands, to playlists"},
+        {name: "poly portfolio", date: "2022", description: "a portfolio of my works"},
+        {name: "scrypty", date: "2021-2022", description: "clone, detect, compile, install from any repository, without the complicated steps"},
+        {name: "disconnall", date: "2021", description: "disconnects everyone from wifi around you!"},
+        {name: "progflow", date: "2021", description: "scripting for efficiency"},
+        {name: "jump cutter revamped", date: "2020", description: "cuts out silent audio from vidoes to shorten the length"}
+    ];
+
+    let tempapps = [];
+
+    let counter = 0;
+</script>
+
+
 <div id="header" class="centered">
         <div id="headerDropDownGames" class="headerDropDown">
             <a class="headerLink" id="headerLinkGames" href="./games.html">Games</a>
@@ -25,7 +46,16 @@
         <div id="headerDropDownOpenSource" class="headerDropDown">
             <a class="headerLink" id="headerLinkOpenSource" href="./games.html">Open Source Apps</a>
             <div id="headerDropDownOpenSourceContent">
-
+                <div class="boxDivider">
+                    <Box title={"discord-gameboy"} date={"2020"}  description={"a gameboy emulator that's a discord bot"}/>
+                    <Box title={"alexa"} date={"2020-2022"}  description={"alexa is a feature rich music discord bot, from voice commands, to playlists"}/>
+                    <Box title={"poly portfolio"} date={"2022"}  description={"a portfolio of my works"}/>
+                </div>  
+                <div class="boxDivider">
+                    <Box title={"scrypty"} date={"2020"}  description={"clone, detect, compile, install from any repository, automatically"}/>
+                    <Box title={"disconnall"} date={"2021"}  description={"disconnects everyone from wifi around you!"}/>
+                    <Box title={"progflow"} date={"2021"}  description={"scripting for efficiency"}/>
+                </div>
             </div>
         </div>
     <img src="src/assets/polylogo.png" id="polylogoheader" alt="poly logo">
@@ -93,7 +123,7 @@
 
     #headerDropDownGamesContent {
         max-width: 80vw;
-        display: block;
+        display: inline-block;
         position: absolute;
         z-index: 3;
         visibility: hidden;
@@ -164,7 +194,31 @@
         
     }
 
+
+
+
+
+
+    #headerDropDownOpenSource:hover #headerDropDownOpenSourceContent {
+         opacity: 1;
+         visibility: visible;
+    }
+
+    #headerDropDownOpenSourceContent {
+        max-width: 80vw;
+        display: block;
+        position: absolute;
+        z-index: 3;
+        visibility: hidden;
+        border-radius: 25px;
+        color: white;
+        opacity: 0;
+        transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+    }
     
+    .boxDivider {
+        display: flex;
+    }
 
 
 
