@@ -1,18 +1,33 @@
 <div id="header" class="centered">
-        <div id="headerDropDownGames">
+        <div id="headerDropDownGames" class="headerDropDown">
             <a class="headerLink" id="headerLinkGames" href="./games.html">Games</a>
             <div id="headerDropDownGamesContent">
-                <div id="planeagement">
-                    <img src="src/assets/planeagementlogo.png" type="image/png" alt="planeagement logo" style="width: 350px; filter:drop-shadow(0px 0px 10px black);">
-                    <p style="color:white; text-shadow: 0px 0px 10px black; font-size: 22px; margin: auto; ">planeagement wow what a game now this is epic </p>
-                </div>
-                <div id="fdphysics">
-                    <img src="src/assets/planeagementlogo.png" type="image/png" alt="planeagement logo" style="width: 350px; filter:drop-shadow(0px 0px 10px black);">
-                    <p style="color:white; text-shadow: 0px 0px 10px black; font-size: 22px; margin: auto; ">planeagement wow what a game now this is epic </p>
-                </div>
+                    <a href="./planeagement.html" style="text-decoration: none !important;">
+                        <div id="planeagement">
+                            <img src="src/assets/planeagementlogo.png" type="image/png" alt="planeagement logo" id="planeagementLogo">
+                            <div style="display: block">
+                                <p style="color:white; font-size:30px; font-weight: 900;">Released 2020</p>
+                                <p style="color:white; text-shadow: 0px 0px 10px black; font-size: 22px; font-weight:200;">Manage your planes as they travel back and forth from your airport to another, and make as much money as possible.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./fdphysics.html" style="text-decoration: none !important;">
+                        <div id="fdphysics">
+                            <img src="src/assets/fdphysics logo.png" type="image/png" alt="fdphysics logo" id="fdphysicsLogo">
+                            <div style="display: block;">
+                                <p style="color:white; font-size:30px; font-weight: 900;">Released 2018</p>
+                                <p style="color:white; text-shadow: 0px 0px 10px black; font-size: 22px; font-weight:200;">A 2d shooting showdown. With lots of physics.</p>
+                            </div>
+                        </div>
+                    </a>
             </div>
         </div>
-        <a class="headerLink" id="headerLinkOpenSource" href="./games.html">Open Source Apps</a>
+        <div id="headerDropDownOpenSource" class="headerDropDown">
+            <a class="headerLink" id="headerLinkOpenSource" href="./games.html">Open Source Apps</a>
+            <div id="headerDropDownOpenSourceContent">
+
+            </div>
+        </div>
     <img src="src/assets/polylogo.png" id="polylogoheader" alt="poly logo">
         <a class="headerLink" id="headerLinkDiscord" href="./games.html">Discord Bots</a>
         <a class="headerLink" id="headerLinkWebsites" href="./games.html">Websites</a>
@@ -38,8 +53,8 @@
         margin-top: auto;
         margin-bottom: auto;
         transition: color 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
-        
-        
+        overflow-wrap: normal;
+        white-space: nowrap;
     }
     .headerLink:hover{
         color:#fbc200 !important;
@@ -48,27 +63,20 @@
     #header {
         background-color: #333; 
         box-shadow: 0px 3pt 10pt #000;
-        overflow-x: hidden;
-    }
-
-    #headerDropDownGames:hover #headerDropDownGamesContent {
-         opacity: 1;
-         visibility: visible;
-    }
-
-    #headerDropDownGamesContent {
-        display: block;
-        position: absolute;
+        overflow-x: visible;
+        padding: 0.2%;
         z-index: 2;
-        visibility: hidden;
-        border-radius: 0% 0% 25px 25px;
-        box-shadow: 0 5pt 10pt black;
-        opacity: 0;
-        transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+        position: sticky;
     }
+  
 
-
-
+    .headerDropDown {
+        margin-left: 2%;
+        margin-top: auto;
+        margin-bottom: auto;
+        inline-size: min-content;
+    }
+    
     .centered {
         align-content: center;
         justify-content: center;
@@ -76,13 +84,53 @@
         align-items: center;
     }
 
+
+
+    #headerDropDownGames:hover #headerDropDownGamesContent {
+         opacity: 1;
+         visibility: visible;
+    }
+
+    #headerDropDownGamesContent {
+        max-width: 80vw;
+        display: block;
+        position: absolute;
+        z-index: 3;
+        visibility: hidden;
+        border-radius: 25px;
+        
+        opacity: 0;
+        transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+    }
+
+
     #planeagement{
         background-image: url("src/assets/background.png");
         background-size:cover;
         padding: 5.5%;
         display: flex;
         align-content: flex-start;
-    
+        box-shadow: 0 0 0pt black;
+        border-radius: 15px;
+        transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+    }
+
+    #planeagement:hover {
+        box-shadow: 0 0 15pt black;
+        z-index: 4;
+        padding: 6.5%;
+        border-radius: 50px;
+    }
+
+    #planeagementLogo {
+        width: 350px; 
+        filter:drop-shadow(0px 0px 2px black);
+        transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+    }
+
+    #planeagementLogo:hover {
+        filter: drop-shadow(0px 0px 10px black);
+        
     }
 
     #fdphysics{
@@ -91,8 +139,32 @@
         padding: 5.5%;
         display: flex;
         align-content: flex-start;
-    
+        box-shadow: 0 0 0pt black;
+        border-radius: 15px;
+        transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+        text-decoration: none !important;
     }
+
+    #fdphysics:hover {
+        box-shadow: 0 0 15pt black;
+        z-index: 4;
+        padding: 6.5%;
+        border-radius: 50px;
+        
+    }
+
+    #fdphysicsLogo {
+        width: 350px; 
+        filter:drop-shadow(0px 0px 2px black);
+        transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+    }
+
+    #fdphysicsLogo:hover {
+        filter: drop-shadow(0px 0px 10px black);
+        
+    }
+
+    
 
 
 
