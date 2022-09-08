@@ -7,7 +7,7 @@ export let iconLink = "";
 export let link;
 export let language;
 
-import { css, cx } from '@emotion/css';
+import { css } from '@emotion/css';
 
 let a = Math.floor(Math.random() * 125) + 100;
 let b = Math.floor(Math.random() * 125) + 100;

@@ -146,7 +146,7 @@ import GithubLogo from "./lib/githubLogo.svelte";
         
     }
     #header {
-        background-color: #333; 
+        background-color: rgba(30,30,30,0.5); 
         box-shadow: 0px 3pt 10pt #000;
         overflow-x: visible;
         padding: 0.2%;

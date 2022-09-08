@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #333;
-  font-family:  "Calibri", "Helvetica", monospace, sans-serif !important;
+  font-family: "SFProDisplay", "Calibri", "Helvetica", monospace, sans-serif !important;
 }
 
 .githubLogo {
@@ -15,6 +15,7 @@ body {
   height: 3.4vh;
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(61deg) brightness(102%) contrast(101%);
   transition: all 0.1s cubic-bezier(0.215, 0.610, 0.355, 1);
+
 }
 .githubLogo:hover {
   width: 4.5vh;
