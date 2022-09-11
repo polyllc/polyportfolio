@@ -35,7 +35,7 @@ import GithubLogo from "./lib/githubLogo.svelte";
 
 <div id="header" class="centered">
         <div id="headerDropDownGames" class="headerDropDown">
-            <a class="headerLink" id="headerLinkGames" href="./games.html">Games</a>
+            <a class="headerLink" id="headerLinkGames" href="./index.html#games">Games</a>
             <div id="headerDropDownGamesContent">
                     <a href="./planeagement.html" style="text-decoration: none !important;">
                         <div id="planeagement">
