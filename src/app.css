@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #333;
-  font-family: "SFProDisplay", "Calibri", "Helvetica", monospace, sans-serif !important;
+  font-family: "Roboto","Helvetica Neue", "Calibri", "Helvetica", monospace, sans-serif !important;
 }
 
 .githubLogo {
@@ -21,4 +21,17 @@ body {
   width: 4.5vh;
   height: 4.5vh;
   filter: invert(82%) sepia(39%) saturate(3984%) hue-rotate(4deg) brightness(102%) contrast(103%);
+}
+
+.itchLogo {
+  width: 3.4vh;
+  height: 3.4vh;
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(61deg) brightness(102%) contrast(101%);
+  transition: all 0.1s cubic-bezier(0.215, 0.610, 0.355, 1);
+  
+}
+.itchLogo:hover {
+  width: 4.5vh;
+  height: 4.5vh;
+  filter: invert(82%) sepia(39%) saturate(3984%) hue-rotate(6deg) brightness(162%) contrast(120%);
 }

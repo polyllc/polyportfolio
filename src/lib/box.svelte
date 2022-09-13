@@ -64,7 +64,7 @@ let randomBorder = css`
     }
 
     .titleOfBox {
-        font-size: 3.89vh;
+        font-size: 4.5vh;
         color: white;
         font-weight: 900;
         margin-left: 2%;
@@ -84,7 +84,7 @@ let randomBorder = css`
         left: 0;
         text-align: center;
         position: absolute;
-        z-index: -500;
+        z-index: -1;
         hyphens: manual;
         word-break: normal;
         line-height: 80%;

@@ -4,22 +4,14 @@ import Box from "./lib/box.svelte";
 import GithubLogo from "./lib/githubLogo.svelte";
 
 
-    let opensourceapps = [
-        {name: "discord-gameboy", date: "2020", description: "a gameboy emulator that's a discord bot"},
-        {name: "alexa", date: "2020-2022", description: "alexa is a feature rich music discord bot, from voice commands, to playlists"},
-        {name: "poly portfolio", date: "2022", description: "a portfolio of my works"},
-        {name: "scrypty", date: "2021-2022", description: "clone, detect, compile, install from any repository, without the complicated steps"},
-        {name: "disconnall", date: "2021", description: "disconnects everyone from wifi around you!"},
-        {name: "progflow", date: "2021", description: "scripting for efficiency"},
-        {name: "jump cutter revamped", date: "2020", description: "cuts out silent audio from vidoes to shorten the length"}
-    ];
 
     let languages = [
         {name: "Javascript", color: "#f1e05a"},
         {name: "Svelte", color: "#ff3e00"},
         {name: "C++", color: "#f34b7d"},
         {name: "PHP", color: "#4f5d95"},
-        {name: "HTML&CSS", color: "#ccc"}
+        {name: "HTML&CSS", color: "#ccc"},
+        {name: "GMS2", color: "#3345ff"}
     ]
 
     let tempapps = [];
@@ -150,7 +142,7 @@ import GithubLogo from "./lib/githubLogo.svelte";
         box-shadow: 0px 3pt 10pt #000;
         overflow-x: visible;
         padding: 0.2%;
-        z-index: 2;
+        z-index: 4;
         position: fixed;
         width: 100vw;
     }
@@ -161,6 +153,7 @@ import GithubLogo from "./lib/githubLogo.svelte";
         margin-top: auto;
         margin-bottom: auto;
         inline-size: min-content;
+        z-index: 1;
     }
     
     .centered {
