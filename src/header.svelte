@@ -50,7 +50,7 @@ import GithubLogo from "./lib/githubLogo.svelte";
             </div>
         </div>
         <div id="headerDropDownOpenSource" class="headerDropDown">
-            <a class="headerLink" id="headerLinkOpenSource" href="./games.html">Open Source Apps</a>
+            <a class="headerLink" id="headerLinkOpenSource" href="./index.html#opensource">Open Source Apps</a>
             <div id="headerDropDownOpenSourceContent">
                 <div class="boxDivider">
                     <Box title={"discord-gameboy"} date={"2020"}  description={"a gameboy emulator that's a discord bot"} icon={githubLogo} iconLink="https://github.com/polyllc/discord-gameboy" link="" language={languages[0]}/>

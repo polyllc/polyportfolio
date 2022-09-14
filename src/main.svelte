@@ -104,33 +104,74 @@
     -->
     <div class="{bg2}" style="min-height: 100vh;">
             <div style="background: rgba(0,0,0,0.5); padding-left: 10%;" class="full">
-                <div id="gamesDiv">
-                    <p style="font-size: 150px; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800;">Games</p>
+                <div>
+                    <p style="font-size: 150px; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800;">About</p>
                     <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black;">
-                        Starting in 2018, two games were published under the company Poly LLC. The first one, released on December 30th, 2018, was fdphysics. An ambitious game, a two player, 2D, shooting showdown in a variety of maps and modes. The game later received a couple of updates.
+                        &emsp;Hey! My name is Poly, and welcome to my portfolio! This portfolio is a collection of projects that I have finished (or worked on) over the years since 2017. I started to program when I was eight in Scratch. My dad was watching a TED talk
+                        about this new programming language made by MIT just for kids. He installed it on our family computer, and I just started to click the blocks together. I had no idea what I was doing, but something was happening on the screen, so I didn't care.
+                        I gave up like a month after being introduced, but later when I was ten, people of course wanted to find any way to get games on their school computers, and I introduced them to Scratch. They instantly fell in love with it (not the programming, 
+                        the games of course), and would sit on it 24/7 (well at least in school). This prompted my return to Scratch. I then made upwards of ten or twenty games when I was ten and eleven. Most of them did really badly, but one game in particular, was my
+                        favourite. It was called The Adventures of Stick Man, and was I proud of that. It was a simple platformer, but it was complete. Complete with levels, gameplay(!!!), leaderboards and more. I was so proud, I even told the people at a hair salon 
+                        when my hair was being cut. I eventually moved on from block coding, to text coding. And to help publish my new games that weren't going to be on Scratch, I made a company.
+                        <br>&emsp;I initially started up as Poly under the company Poly LLC, and my first project at Poly LLC
+                        was to make a game. I started with a Geometry Dash style game, which I extensively developed over a year, with multiple notebooks filled with ideas. I bought a game engine called GameMaker Studio 2, and started to tinker around in it.
+                        I eventually made my first prototype of my game, which was unbelievably horrible. But by my standards when I was eleven, it was magically. I had just made crudely drawn pictures and programmed a bit with the worst spaghetti code possible,
+                        but it was my drawings and my code, all working. I worked on that for a long time, but nothing came out of it. <br>&emsp;In the meantime, I made my first website. Mind you, this was HTML 101 basic website, with awful color pairings and misaligned 
+                        text, but yet again, it was my website, available through the very same link you're using to see this website. <br>&emsp;While on vacation, I bought this book on PHP and MySQL, and after reading it, my multifunction website (that has no name other
+                        than poly, it's called poly website under the website section) was dreamed up and created. I had put at least 500 hours into making that website, and it took up my most of my free time when I was twelve. But the hours I would spend with my friends
+                        playing around on that website were of course the best. I partly made that website for them, so we could have fun on it. After a while, I got busy with other things, and I stopped maitaining the website, until I had to shut it down because of 
+                        certain concerns.<br>&emsp;Anyways, most everything below this is well documented, so if you want to learn more about this website or the games that I made for Poly LLC, scroll on down and click the button. 
+                    </p>
+                </div>
+                
+                <hr style="margin-right:10%; margin-top: 4%;">
+
+                <div id="games">
+                    <p style="font-size: 150px; color: white; text-decoration: underline; text-decoration-color: #9043e2; margin: 0%; padding-top: 2%; font-weight: 800;">Games</p>
+                    <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black;">
+                        &emsp;Starting in 2018, two games were published under the company Poly LLC. The first one, released on December 30th, 2018, was fdphysics. An ambitious game, a two player, 2D, shooting showdown in a variety of maps and modes. The game later received a couple of updates.
                         The second game, released on June 6th, 2020, was planeagement. A more casual plane management game, where you manage your planes going from your airport to others. An update was also later released. To learn more about both games, click on their titles below.
                     </p>
-                    <div style="display: flex; z-index: -100 !important;">
-                        <Box title={"fdphysics"} date={"2018-2019"} description={"a two player, 2D, shooting showdown in a variety of maps and modes"} icon={itchLogo} iconLink="https://polyllc.itch.io/fdphysics" link="./fdphysics.html" language={languages[5]}/>
-                        <Box title={"planeagement"} date={"2019-2020"} description={"a casual plane management game, where you manage your planes going from your airport to others"} icon={itchLogo} iconLink="https://polyllc.itch.io/planeagement" link="./planeagement.html" language={languages[5]}/>
-                    </div>
-                </div><hr style="margin-right:10%; margin-top: 4%;">
-                <div id="openSourceDiv">
-                    <p style="font-size: 150px; color: white; text-decoration: underline; text-decoration-color: blue; margin: 0%; padding-top: 2%; font-weight: 800;">Open Source</p>
-                    <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black;">
-                        Starting in 2020, I started to publish some of my code to GitHub. I initially made a file splitter that would split up files into smaller files, and stitch them back up. It ultimately did not work too well, but it was my first open source
-                        project none the less. After that, I published my second, and much more polished, repository. It was jump-cutter-revamped, a clone of carykh's jump cutter in which he described it as a tool to get speed up video lectures. I wanted to 
-                        challenge myself and see if I could make it in C++, rather than in Python like he did. It eventually turned out better than his, although there is a hit to accuracy. <br><br>I then started to publish some little programs such as disconnall, 
-                        a WiFi disonnecting program, that send deauthentication packets to the router of everyone in the area, disconnecting them from the WiFi, and discord-gameboy, which is a gameboy emulator in Discord, which actually works pretty well. It uses
-                        gifs as a way to show a sense of frame progression, and either chat messages or reactions as controls. <br><br>Soon after the success of discord-gameboy, I published alexa, which started out as a joke Discord bot, which would play despacito when
-                        you asked "alexa, play despacito". But after finding a tutorial on making a music bot in Discord, I eventually started to evolve it into something much more. I added a ton of features, such as voice recognition, Twitch chat integration, 
-                        Spotify integration, playlist support (where you create a playlist based on the songs in the queue) and much more.   
-                    </p>
-                    <div style="display: flex; z-index: -100 !important;">
+                    <div style="display: flex; z-index: -100 !important;" id="gamesDiv">
                         <Box title={"fdphysics"} date={"2018-2019"} description={"a two player, 2D, shooting showdown in a variety of maps and modes"} icon={itchLogo} iconLink="https://polyllc.itch.io/fdphysics" link="./fdphysics.html" language={languages[5]}/>
                         <Box title={"planeagement"} date={"2019-2020"} description={"a casual plane management game, where you manage your planes going from your airport to others"} icon={itchLogo} iconLink="https://polyllc.itch.io/planeagement" link="./planeagement.html" language={languages[5]}/>
                     </div>
                 </div>
+                
+                <hr style="margin-right:10%; margin-top: 4%;">
+
+                <div id="opensource">
+                    <p style="font-size: 150px; color: white; text-decoration: underline; text-decoration-color: blue; margin: 0%; padding-top: 2%; font-weight: 800;">Open Source</p>
+                    <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black;">
+                        &emsp;Starting in 2020, I started to publish some of my code to GitHub. I initially made a file splitter that would split up files into smaller files, and stitch them back up. It ultimately did not work too well, but it was my first open source
+                        project none the less. After that, I published my second, and much more polished, repository. It was jump-cutter-revamped, a clone of carykh's jump cutter in which he described it as a tool to get speed up video lectures. I wanted to 
+                        challenge myself and see if I could make it in C++, rather than in Python like he did. It eventually turned out better than his, although there is a hit to accuracy. <br><br>&emsp;I then started to publish some little programs such as disconnall, 
+                        a WiFi disonnecting program, that send deauthentication packets to the router of everyone in the area, disconnecting them from the WiFi, and discord-gameboy, which is a gameboy emulator in Discord, which actually works pretty well. It uses
+                        gifs as a way to show a sense of frame progression, and either chat messages or reactions as controls. <br><br>&emsp;Soon after the success of discord-gameboy, I published alexa, which started out as a joke Discord bot, which would play despacito when
+                        you asked "alexa, play despacito". But after finding a tutorial on making a music bot in Discord, I eventually started to evolve it into something much more. I added a ton of features, such as voice recognition, Twitch chat integration, 
+                        Spotify integration, playlist support (where you create a playlist based on the songs in the queue) and much more.<br><br>&emsp;
+                        I had always wanted to make a scripting language (rather than programming, scripting would be best defined as a shortcut programming language, rather than one to create apps/programs), and I attempted to do so with ProgFlow. My best C++ code
+                        yet, it had extreme ambition, which had yet to be achieved. But it is probably the code I am most proud of because it looks extremely complicated, but actually is easy to read. <br><br>&emsp;
+                        My most recent project was Scrypty. Scrypty was designed to be an automatic repository compiler and installer, by looking at the files and make an estimated guess on how to compile it. Its vision is now much more broad. With the introduction
+                        of ScryptyFiles, everything can be defined in the file of how it's compiled, and for what system too. With automatic compile tool installation (so the end user doesn't have to) and a web interface (by electron) in the works, it will hopefully
+                        bring open source out of the developer community, and into the hands of everyone, no matter how little or much they know about compiling something. <br><br>&emsp;
+                        Open source to me is extremely important. It's a massive community of developers that contribute their time and knowledge just for the betterment of the program. They might be interested in the program, or they might want to see it be 
+                        developed in the best way it can be, but it's clear to me that it is a loving community, in which all they want to do, is to spread their code to everyone, without thinking about money or fame or recognition (even though pull requests
+                        have the developer name in them, most end users only know the master branch owner's name). 
+                    </p>
+                    <div id="openSourceDiv">
+                        <div class="reactiveFlex">
+                            <Box title={"discord-gameboy"} date={"2020"}  description={"a gameboy emulator that's a discord bot"} icon={githubLogo} iconLink="https://github.com/polyllc/discord-gameboy" link="" language={languages[0]}/>
+                            <Box title={"alexa"} date={"2020-\n2022"}  description={"alexa is a feature rich music discord bot, from voice commands, to playlists"} icon={githubLogo} iconLink="https://github.com/polyllc/alexa" link="" language={languages[0]}/>
+                            <Box title={"poly portfolio"} date={"2022"}  description={"a portfolio of my works"} icon={githubLogo} iconLink="https://github.com/polyllc/polyportfolio" link="" language={languages[1]}/>
+                        </div>
+                        <div class="reactiveFlex">
+                            <Box title={"scrypty"} date={"2021-\n2022"}  description={"clone, detect, compile, install from any repository, automatically"} icon={githubLogo} iconLink="https://github.com/polyllc/scrypty" link="" language={languages[0]}/>
+                            <Box title={"disconnall"} date={"2021"}  description={"disconnects everyone from wifi around you!"} icon={githubLogo} iconLink="https://github.com/polyllc/disonnall" link="" language={languages[2]}/>
+                            <Box title={"progflow"} date={"2021"}  description={"scripting for efficiency"} icon={githubLogo} iconLink="https://github.com/polyllc/progflow" link="" language={languages[2]}/>
+                        </div>
+                        <Box title={"jump cutter revamped"} date={"2020"}  description={"cuts out silent audio from videos to shorten the length"} icon={githubLogo} iconLink="https://github.com/polyllc/jump-cutter-revamped" link="" language={languages[2]}/> </div>
+                    </div>
             </div>
     </div>
 </div>
@@ -165,6 +206,7 @@
         margin-left: auto; 
         margin-right: auto; 
         position: relative;
+        display:block;
     }
 
     #polytitle {
@@ -191,6 +233,22 @@
     }
 
 
+    .reactiveFlex {
+        display: flex;
+        max-width: 80vw;
+        min-width: 50vw;
+        align-self: center;
+        position: relative;
+        align-content: center;
+    }
+
+    @media screen and (max-width: 700px) {
+        .reactiveFlex {
+            flex-direction: column;
+        }
+    }
+    
+    
     
 
 </style>
