@@ -2,6 +2,7 @@
     import Header from "./header.svelte";
     import Box from "./lib/box.svelte";
     import { css } from '@emotion/css';
+import GithubLogo from "./lib/githubLogo.svelte";
 
     let languages = [
         {name: "Javascript", color: "#f1e05a"},
@@ -15,9 +16,7 @@
     //from itch's website
     let itchLogo = `<svg class="itchLogo" xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 245.37069 220.73612"><path d="M31.99 1.365C21.287 7.72.2 31.945 0 38.298v10.516C0 62.144 12.46 73.86 23.773 73.86c13.584 0 24.902-11.258 24.903-24.62 0 13.362 10.93 24.62 24.515 24.62 13.586 0 24.165-11.258 24.165-24.62 0 13.362 11.622 24.62 25.207 24.62h.246c13.586 0 25.208-11.258 25.208-24.62 0 13.362 10.58 24.62 24.164 24.62 13.585 0 24.515-11.258 24.515-24.62 0 13.362 11.32 24.62 24.903 24.62 11.313 0 23.773-11.714 23.773-25.046V38.298c-.2-6.354-21.287-30.58-31.988-36.933C180.118.197 157.056-.005 122.685 0c-34.37.003-81.228.54-90.697 1.365zm65.194 66.217a28.025 28.025 0 0 1-4.78 6.155c-5.128 5.014-12.157 8.122-19.906 8.122a28.482 28.482 0 0 1-19.948-8.126c-1.858-1.82-3.27-3.766-4.563-6.032l-.006.004c-1.292 2.27-3.092 4.215-4.954 6.037a28.5 28.5 0 0 1-19.948 8.12c-.934 0-1.906-.258-2.692-.528-1.092 11.372-1.553 22.24-1.716 30.164l-.002.045c-.02 4.024-.04 7.333-.06 11.93.21 23.86-2.363 77.334 10.52 90.473 19.964 4.655 56.7 6.775 93.555 6.788h.006c36.854-.013 73.59-2.133 93.554-6.788 12.883-13.14 10.31-66.614 10.52-90.474-.022-4.596-.04-7.905-.06-11.93l-.003-.045c-.162-7.926-.623-18.793-1.715-30.165-.786.27-1.757.528-2.692.528a28.5 28.5 0 0 1-19.948-8.12c-1.862-1.822-3.662-3.766-4.955-6.037l-.006-.004c-1.294 2.266-2.705 4.213-4.563 6.032a28.48 28.48 0 0 1-19.947 8.125c-7.748 0-14.778-3.11-19.906-8.123a28.025 28.025 0 0 1-4.78-6.155 27.99 27.99 0 0 1-4.736 6.155 28.49 28.49 0 0 1-19.95 8.124c-.27 0-.54-.012-.81-.02h-.007c-.27.008-.54.02-.813.02a28.49 28.49 0 0 1-19.95-8.123 27.992 27.992 0 0 1-4.736-6.155zm-20.486 26.49l-.002.01h.015c8.113.017 15.32 0 24.25 9.746 7.028-.737 14.372-1.105 21.722-1.094h.006c7.35-.01 14.694.357 21.723 1.094 8.93-9.747 16.137-9.73 24.25-9.746h.014l-.002-.01c3.833 0 19.166 0 29.85 30.007L210 165.244c8.504 30.624-2.723 31.373-16.727 31.4-20.768-.773-32.267-15.855-32.267-30.935-11.496 1.884-24.907 2.826-38.318 2.827h-.006c-13.412 0-26.823-.943-38.318-2.827 0 15.08-11.5 30.162-32.267 30.935-14.004-.027-25.23-.775-16.726-31.4L46.85 124.08c10.684-30.007 26.017-30.007 29.85-30.007zm45.985 23.582v.006c-.02.02-21.863 20.08-25.79 27.215l14.304-.573v12.474c0 .584 5.74.346 11.486.08h.006c5.744.266 11.485.504 11.485-.08v-12.474l14.304.573c-3.928-7.135-25.79-27.215-25.79-27.215v-.006l-.003.002z" color="#fff" fill="#fff"/></svg>`;
 
-    let githubLogo = `<svg height="50" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="50" data-view-component="true" class="githubLogo">
-    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-    </svg>`; //from githubs own website
+    let githubLogo = `<img src="src/assets/GitHub-Mark-Light-120px-plus.png" width="50" height="50" class="githubLogo">`; //from githubs own website
 
     let bgGC = ["#1e00c1", "#412fa2", "#332fa2", "#0c06a5",  "#586be0", "#697be9", "#6495fb", "#8db6ff", "#73cde6", "#40d5ce", "#9dfddb", "#a1ffbf", "#fbc200"]; //background gradient colors
 
@@ -103,7 +102,7 @@
     make all of the sections have a description along with the title, and just a scrollable flex box with <Box/>s of the projects, like in the header to make it look nice
     -->
     <div class="{bg2}" style="min-height: 100vh;">
-            <div style="background: rgba(0,0,0,0.5); padding-left: 10%;" class="full">
+        <div style="background: rgba(0,0,0,0.5); padding-left: 10%;" class="full">
                 <div>
                     <p style="font-size: 150px; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800;">About</p>
                     <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black;">
@@ -152,12 +151,14 @@
                         Spotify integration, playlist support (where you create a playlist based on the songs in the queue) and much more.<br><br>&emsp;
                         I had always wanted to make a scripting language (rather than programming, scripting would be best defined as a shortcut programming language, rather than one to create apps/programs), and I attempted to do so with ProgFlow. My best C++ code
                         yet, it had extreme ambition, which had yet to be achieved. But it is probably the code I am most proud of because it looks extremely complicated, but actually is easy to read. <br><br>&emsp;
-                        My most recent project was Scrypty. Scrypty was designed to be an automatic repository compiler and installer, by looking at the files and make an estimated guess on how to compile it. Its vision is now much more broad. With the introduction
+                        My most recent project is Scrypty. Scrypty is designed to be an automatic repository compiler and installer, by looking at the files and make an estimated guess on how to compile it. Its vision is now much more broad. With the introduction
                         of ScryptyFiles, everything can be defined in the file of how it's compiled, and for what system too. With automatic compile tool installation (so the end user doesn't have to) and a web interface (by electron) in the works, it will hopefully
                         bring open source out of the developer community, and into the hands of everyone, no matter how little or much they know about compiling something. <br><br>&emsp;
-                        Open source to me is extremely important. It's a massive community of developers that contribute their time and knowledge just for the betterment of the program. They might be interested in the program, or they might want to see it be 
+                        Open source to me is extremely important. It's a massive community of developers that contribute their time and knowledge just for the betterment of programs. They might be interested in the program, or they might want to see it be 
                         developed in the best way it can be, but it's clear to me that it is a loving community, in which all they want to do, is to spread their code to everyone, without thinking about money or fame or recognition (even though pull requests
                         have the developer name in them, most end users only know the master branch owner's name). 
+                        <br><br>&emsp;Of course, there are way more programs that I've made over the years than just these 7, but these are the one's that I wanted to share on Github, and most of the other ones are not even close to be finished, at all, no 
+                        matter how good the code looks. 
                     </p>
                     <div id="openSourceDiv">
                         <div class="reactiveFlex">
@@ -170,9 +171,59 @@
                             <Box title={"disconnall"} date={"2021"}  description={"disconnects everyone from wifi around you!"} icon={githubLogo} iconLink="https://github.com/polyllc/disonnall" link="" language={languages[2]}/>
                             <Box title={"progflow"} date={"2021"}  description={"scripting for efficiency"} icon={githubLogo} iconLink="https://github.com/polyllc/progflow" link="" language={languages[2]}/>
                         </div>
-                        <Box title={"jump cutter revamped"} date={"2020"}  description={"cuts out silent audio from videos to shorten the length"} icon={githubLogo} iconLink="https://github.com/polyllc/jump-cutter-revamped" link="" language={languages[2]}/> </div>
+                        <Box title={"jump cutter revamped"} date={"2020"}  description={"cuts out silent audio from videos to shorten the length"} icon={githubLogo} iconLink="https://github.com/polyllc/jump-cutter-revamped" link="" language={languages[2]}/> 
                     </div>
-            </div>
+                </div>
+
+
+                <hr style="margin-right:10%; margin-top: 4%;">
+
+                <div id="discordbots">
+                    <p style="font-size: 150px; color: white; text-decoration: underline; text-decoration-color: #687be8; margin: 0%; padding-top: 2%; font-weight: 800;">Discord Bots</p>
+                    <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black; line-height: 160%">
+                        I started to make Discord bots during the start of the pandemic (I had made some before, but they were very basic and not worth mentioning) when I had a lot of spare time and I would mostly spend my time on Discord talking to my friends.
+                        Since I spent so much time on Discord, I thought "why not? I'll make some discord bots".<br><br>
+                        &emsp;The first bot I made during this time was @everyone bot. It essentially sent a message every x seconds, not very useful, but I thought it was funny because people didn't like when you pinged them.<br><br>
+                        &emsp;The second bot was far more advanced. Alexa started as a alexa, play despacito bot, where if you'd type in alexa, play despacito in chat and you were in a voice channel, well you can guess what happened after. Eventually, I found this
+                        article online on how to make a music bot in Discord, so I started to replace alexa, play despacito with the music bot, and eventually renamed it to alexa. Over the two years, I gradually added functionality such as playlist support, where 
+                        you could save the queue of music on Discord to a playlist stored on a local database, Spotify support, where it'd import songs from a Spotify playlist or just a Spotify link, Twitch chat support, where Twitch chat would request songs to
+                        be added to the queue, and many, many more. Sadly, it does not work today as Discord, of course, had to change yet again how bots work, so it won't work with the latest Discord.JS version (v12 works!).<br><br>
+                        &emsp;During 2020 as well, I was, well, bored. To fill that boredom, I used to play games. I would try and emulate as many different systems as possible to a point where that got boring. So I thought "hey, what if I play this on Discord?".
+                        That's how discord-gameboy came alive. It's a pretty simple concept, use Javascript canvas as a "screen" for a gameboy emulator, and post that to a Discord chat. And use chat messages or react emojis to control the game. Of course, all concepts
+                        are easy (except rocket science), but in practice, gameboy emulation in Javascript is hard. Thankfully, I didn't have to do that because someone already did it for me. So it was up to me to attach it to discord and make it run properly. And it 
+                        does! You can even have gifs for the game and play with your friends where you all control the game. I thought of expanding it to all Javascript based emulators and have a system where you could upload roms (that you own) to the server, and then
+                        anyone in the server could browse what games are on them and this huge online thing for multiplayer, but then I realised "wow, that is the easiest way to get sued", so that idea had to get scratched. Currently (probably), it only works on Discord.JS v12.
+                        <br><br>&emsp;The rest of the bots are not that impressive. They were all simple bots to serve a simple purpose. Voting bot is just that, it set up a poll, and people would vote on it. That's it. Log bot on the other hand is a bit more complicated. So, I 
+                        was in this Discord server that I was co-owner of, and I thought "what if I just made a copy of this server, and whatever is sent in the main server will be said in the other server?". Of course no one would have the resolve of doing such an evil deed?
+                        So I made a bot that copied the server and started to paste everything in another server. I perfectly* copies a server, sets up the channel order correctly, all the roles, etc. and then starts to listen in the primary server. It will then send logs of 
+                        all chat and files to the clone server for "logging purposes". After realizing the power of this bot, I proceeded to not care and post the source code on my website. I wonder who tricked someone into adding the bot as an admin and then got their entire
+                        server logged for a long time... oh well. Auto counter is the last, with it just automatically counting, from 0 to infinity or 2^31 or something.
+                          
+                    </p>
+                    <div>
+                        <div class="reactiveFlex">
+                            <Box title={"discord-gameboy"} date={"2020"}  description={"a gameboy emulator that's a discord bot"} icon={githubLogo} iconLink="https://github.com/polyllc/discord-gameboy" link="" language={languages[0]}/>
+                            <Box title={"alexa"} date={"2020-\n2022"}  description={"alexa is a feature rich music discord bot, from voice commands, to playlists"} icon={githubLogo} iconLink="https://github.com/polyllc/alexa" link="" language={languages[0]}/>
+                            <Box title={"voting bot"} date={"2020"}  description={"a simple voting bot"} icon="" iconLink="" link="" language={languages[0]}/>
+                        </div>
+                        <div class="reactiveFlex">
+                            <Box title={"log bot"} date={"2020"}  description={"logs a server to another created just for logging"} icon="" iconLink="" link="" language={languages[0]}/>
+                            <Box title={"auto counter"} date={"2020"}  description={"auto counts in a channel and makes sure everyone is counting correctly"} icon="" iconLink="" link="" language={languages[0]}/>
+                        </div>
+                    </div>
+                </div> 
+
+               
+
+                <hr style="margin-right:10%; margin-top: 4%;">
+
+                <div id="websites"> 
+                    <p style="font-size: 150px; color: white; text-decoration: underline; text-decoration-color: #22ff56; margin: 0%; padding-top: 2%; font-weight: 800;">Websites</p>
+                    <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black;">
+                         
+                    </p>
+                </div>
+        </div>
     </div>
 </div>
 
@@ -232,21 +283,6 @@
 
     }
 
-
-    .reactiveFlex {
-        display: flex;
-        max-width: 80vw;
-        min-width: 50vw;
-        align-self: center;
-        position: relative;
-        align-content: center;
-    }
-
-    @media screen and (max-width: 700px) {
-        .reactiveFlex {
-            flex-direction: column;
-        }
-    }
     
     
     
