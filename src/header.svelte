@@ -67,7 +67,7 @@ import GithubLogo from "./lib/githubLogo.svelte";
         </div>
         
         <div id="headerDropDownDiscord" class="headerDropDown">
-            <a class="headerLink" id="headerLinkDiscord" href="./games.html">Discord Bots</a>
+            <a class="headerLink" id="headerLinkDiscord" href="./index.html#discordbots">Discord Bots</a>
             <div id="headerDropDownDiscordContent">
                 <div class="boxDivider">
                     <Box title={"discord-gameboy"} date={"2020"}  description={"a gameboy emulator that's a discord bot"} icon={githubLogo} iconLink="https://github.com/polyllc/discord-gameboy" link="" language={languages[0]}/>
@@ -82,7 +82,7 @@ import GithubLogo from "./lib/githubLogo.svelte";
         </div>
 
         <div id="headerDropDownWebsites" class="headerDropDown">
-            <a class="headerLink" id="headerLinkWebsites" href="./games.html">Websites</a>
+            <a class="headerLink" id="headerLinkWebsites" href="./index.html#websites">Websites</a>
             <div id="headerDropDownWebsitesContent">
                 <div class="boxDivider">
                     <Box title={"polyllc.org"} date={"2017-\n2020"}  description={"the main website for poly"} icon="" iconLink="" link="" language={languages[4]}/>

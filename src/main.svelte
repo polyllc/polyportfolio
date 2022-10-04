@@ -46,7 +46,6 @@ import GithubLogo from "./lib/githubLogo.svelte";
 
     let bgControl= 0;
     function changeBgColor() {
-        let colorsAtOnce = 4;
         let tempbg = `background: linear-gradient(45deg, ${bgGC[0]} 0% ${clamp(bgControl-250, 0, 100)}%, ${bgGC[1]} ${bgControl}%);`;
         bg = tempbg;
         bgControl+=2;
@@ -62,11 +61,11 @@ import GithubLogo from "./lib/githubLogo.svelte";
         changeBgColor();
     },15);
 
-    function handleScroll(e){
-          console.log(e.srcElement.scrollTop);
-        bg2 =  `background: linear-gradient(${e.srcElement.scrollTop/3}deg, #101c7f,#212b6c,#262b6c,#24319d,#252f89,#252f89,#20288b,#20358b);`
-        bgControl++;
-    }
+    //function handleScroll(e){
+    //      console.log(e.srcElement.scrollTop);
+    //    bg2 =  `background: linear-gradient(${e.srcElement.scrollTop}deg, #101c7f,#212b6c,#262b6c,#24319d,#252f89,#252f89,#20288b,#20358b);`
+    //    bgControl++;
+    //}
 
     function arrowClick(e){
         window.scrollBy({
@@ -83,7 +82,7 @@ import GithubLogo from "./lib/githubLogo.svelte";
 </script>
 <Header/>
 <!--bro just use gradients in css-->
-<div id="scrollContainer" on:scroll={handleScroll} style=" overflow-x:hidden; transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);">
+<div id="scrollContainer" style=" overflow-x:hidden; transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);">
     <div class="full" style="{bg} height: 100vh" >
         <div style="background-size: 10%; background-image:url('src/assets/polytiles2.png'); background-repeat:repeat; text-align: center;" class="full">
             <div style="background: rgba(0,0,0,0); text-align: center;" class="full">
@@ -105,21 +104,21 @@ import GithubLogo from "./lib/githubLogo.svelte";
         <div style="background: rgba(0,0,0,0.5); padding-left: 10%;" class="full">
                 <div>
                     <p style="font-size: 150px; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800;">About</p>
-                    <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black;">
+                    <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black; line-height: 160%;">
                         &emsp;Hey! My name is Poly, and welcome to my portfolio! This portfolio is a collection of projects that I have finished (or worked on) over the years since 2017. I started to program when I was eight in Scratch. My dad was watching a TED talk
                         about this new programming language made by MIT just for kids. He installed it on our family computer, and I just started to click the blocks together. I had no idea what I was doing, but something was happening on the screen, so I didn't care.
                         I gave up like a month after being introduced, but later when I was ten, people of course wanted to find any way to get games on their school computers, and I introduced them to Scratch. They instantly fell in love with it (not the programming, 
                         the games of course), and would sit on it 24/7 (well at least in school). This prompted my return to Scratch. I then made upwards of ten or twenty games when I was ten and eleven. Most of them did really badly, but one game in particular, was my
-                        favourite. It was called The Adventures of Stick Man, and was I proud of that. It was a simple platformer, but it was complete. Complete with levels, gameplay(!!!), leaderboards and more. I was so proud, I even told the people at a hair salon 
+                        favourite. It was called The Adventures of Stick Man, and was I proud of it. It was a simple platformer, but it was complete. Complete with levels, gameplay(!!!), leaderboards and more. I was so proud, I even told the people at a hair salon 
                         when my hair was being cut. I eventually moved on from block coding, to text coding. And to help publish my new games that weren't going to be on Scratch, I made a company.
-                        <br>&emsp;I initially started up as Poly under the company Poly LLC, and my first project at Poly LLC
+                        <br><br>&emsp;I initially started up as Poly under the company Poly LLC, and my first project at Poly LLC
                         was to make a game. I started with a Geometry Dash style game, which I extensively developed over a year, with multiple notebooks filled with ideas. I bought a game engine called GameMaker Studio 2, and started to tinker around in it.
-                        I eventually made my first prototype of my game, which was unbelievably horrible. But by my standards when I was eleven, it was magically. I had just made crudely drawn pictures and programmed a bit with the worst spaghetti code possible,
-                        but it was my drawings and my code, all working. I worked on that for a long time, but nothing came out of it. <br>&emsp;In the meantime, I made my first website. Mind you, this was HTML 101 basic website, with awful color pairings and misaligned 
-                        text, but yet again, it was my website, available through the very same link you're using to see this website. <br>&emsp;While on vacation, I bought this book on PHP and MySQL, and after reading it, my multifunction website (that has no name other
+                        I eventually made my first prototype of my game, which was unbelievably horrible. But by my standards when I was eleven, it was magical. I had just made crudely drawn pictures and programmed a bit with the worst spaghetti code possible,
+                        but it was my drawings and my code, all working. I worked on that for a long time, but nothing came out of it. <br><br>&emsp;In the meantime, I made my first website. Mind you, this was HTML 101 basic website, with awful color pairings and misaligned
+                        text, but yet again, it was my website, available through the very same link you're using to see this website. <br><br>&emsp;While on vacation, I bought this book on PHP and MySQL, and after reading it, my multifunction website (that has no name other
                         than poly, it's called poly website under the website section) was dreamed up and created. I had put at least 500 hours into making that website, and it took up my most of my free time when I was twelve. But the hours I would spend with my friends
                         playing around on that website were of course the best. I partly made that website for them, so we could have fun on it. After a while, I got busy with other things, and I stopped maitaining the website, until I had to shut it down because of 
-                        certain concerns.<br>&emsp;Anyways, most everything below this is well documented, so if you want to learn more about this website or the games that I made for Poly LLC, scroll on down and click the button. 
+                        certain concerns.<br><br>&emsp;Anyways, most everything below this is well documented, so if you want to learn more about this website or the games that I made for Poly LLC, scroll on down and click the button. 
                     </p>
                 </div>
                 
@@ -127,9 +126,10 @@ import GithubLogo from "./lib/githubLogo.svelte";
 
                 <div id="games">
                     <p style="font-size: 150px; color: white; text-decoration: underline; text-decoration-color: #9043e2; margin: 0%; padding-top: 2%; font-weight: 800;">Games</p>
-                    <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black;">
+                    <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black; line-height: 160%;">
                         &emsp;Starting in 2018, two games were published under the company Poly LLC. The first one, released on December 30th, 2018, was fdphysics. An ambitious game, a two player, 2D, shooting showdown in a variety of maps and modes. The game later received a couple of updates.
-                        The second game, released on June 6th, 2020, was planeagement. A more casual plane management game, where you manage your planes going from your airport to others. An update was also later released. To learn more about both games, click on their titles below.
+                        The second game, released on June 6th, 2020, was planeagement. A more casual plane management game, where you manage your planes going from your airport to others. An update was also later released. This description is very short because of the very extensive documentation
+                        that is in the website. To learn more about both games, click on their titles below.
                     </p>
                     <div style="display: flex; z-index: -100 !important;" id="gamesDiv">
                         <Box title={"fdphysics"} date={"2018-2019"} description={"a two player, 2D, shooting showdown in a variety of maps and modes"} icon={itchLogo} iconLink="https://polyllc.itch.io/fdphysics" link="./fdphysics.html" language={languages[5]}/>
@@ -141,7 +141,7 @@ import GithubLogo from "./lib/githubLogo.svelte";
 
                 <div id="opensource">
                     <p style="font-size: 150px; color: white; text-decoration: underline; text-decoration-color: blue; margin: 0%; padding-top: 2%; font-weight: 800;">Open Source</p>
-                    <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black;">
+                    <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black; line-height: 160%;">
                         &emsp;Starting in 2020, I started to publish some of my code to GitHub. I initially made a file splitter that would split up files into smaller files, and stitch them back up. It ultimately did not work too well, but it was my first open source
                         project none the less. After that, I published my second, and much more polished, repository. It was jump-cutter-revamped, a clone of carykh's jump cutter in which he described it as a tool to get speed up video lectures. I wanted to 
                         challenge myself and see if I could make it in C++, rather than in Python like he did. It eventually turned out better than his, although there is a hit to accuracy. <br><br>&emsp;I then started to publish some little programs such as disconnall, 
@@ -157,7 +157,7 @@ import GithubLogo from "./lib/githubLogo.svelte";
                         Open source to me is extremely important. It's a massive community of developers that contribute their time and knowledge just for the betterment of programs. They might be interested in the program, or they might want to see it be 
                         developed in the best way it can be, but it's clear to me that it is a loving community, in which all they want to do, is to spread their code to everyone, without thinking about money or fame or recognition (even though pull requests
                         have the developer name in them, most end users only know the master branch owner's name). 
-                        <br><br>&emsp;Of course, there are way more programs that I've made over the years than just these 7, but these are the one's that I wanted to share on Github, and most of the other ones are not even close to be finished, at all, no 
+                        <br><br>&emsp;Of course, there are way more programs that I've made over the years than just these 7, but these are the ones that I wanted to share on Github, and most of the other ones are not even close to be finished, at all, no
                         matter how good the code looks. 
                     </p>
                     <div id="openSourceDiv">
@@ -180,8 +180,8 @@ import GithubLogo from "./lib/githubLogo.svelte";
 
                 <div id="discordbots">
                     <p style="font-size: 150px; color: white; text-decoration: underline; text-decoration-color: #687be8; margin: 0%; padding-top: 2%; font-weight: 800;">Discord Bots</p>
-                    <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black; line-height: 160%">
-                        I started to make Discord bots during the start of the pandemic (I had made some before, but they were very basic and not worth mentioning) when I had a lot of spare time and I would mostly spend my time on Discord talking to my friends.
+                    <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black; line-height: 160%;">
+                        &emsp;I started to make Discord bots during the start of the pandemic (I had made some before, but they were very basic and not worth mentioning) when I had a lot of spare time and I would mostly spend my time on Discord talking to my friends.
                         Since I spent so much time on Discord, I thought "why not? I'll make some discord bots".<br><br>
                         &emsp;The first bot I made during this time was @everyone bot. It essentially sent a message every x seconds, not very useful, but I thought it was funny because people didn't like when you pinged them.<br><br>
                         &emsp;The second bot was far more advanced. Alexa started as a alexa, play despacito bot, where if you'd type in alexa, play despacito in chat and you were in a voice channel, well you can guess what happened after. Eventually, I found this
@@ -219,9 +219,35 @@ import GithubLogo from "./lib/githubLogo.svelte";
 
                 <div id="websites"> 
                     <p style="font-size: 150px; color: white; text-decoration: underline; text-decoration-color: #22ff56; margin: 0%; padding-top: 2%; font-weight: 800;">Websites</p>
-                    <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black;">
-                         
+                    <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black; line-height: 160%;">
+                        &emsp;Back in 2017, I started to make websites for Poly LLC. The websites would all be hosted on polyllc.org (the same page you're viewing this on!). Initially, they were all static websites, with information about Poly LLC. But after picking
+                         up a book on PHP and MySQL, I started to make actual dynamic websites (well at least it wouldn't be static). There is so much history with both of these websites, which I like to call polyllc.org and Poly Website (it was called phpfiles 
+                         internally, but wow is that a dumb name for a website. I think at one point it was called Poly User? Whatever, there is no name sadly, so it will be referred to as poly website, not to be confused with the main page polyllc.org that was
+                        <i>technically</i> part of poly website as I had no real direction, but this sidenote is getting too wordy.), that there are actual dedicated websites for them. Just click below to see an entire history of the websites (spoilers, there is a lot).
+                        <br><br>
+                        &emsp;Soon after the fall of poly website, I tried to replace it with PolyForums, a social media site (with no forums at all actually) that you would follow tags, rather than following users or following groups as a main way find content. After
+                        realizing that making an entire social media site is really hard, mainly the home page algorithm and the moderation, I stopped developing. It was probably my best work of a website at the time, and it was the last time I would work on websites
+                        before starting to make this portfolio. 
+                        <br><br>
+                        &emsp;In 2018, Poly LLC celebrated its first birthday, and with that, some mini Javascript based games were made for the event. These games are really simple games that really need no introduction, so click on the link, and it'll bring you to the 
+                        original spinner that was put on the polyllc.org website. That site will also give some extra detail to each game. 
+                        <br><br>
+                        &emsp;Lastly is this website. This website is the one stop for most of the things I have made since 2017, so around 5 years of work. It was intended to show off my work for college, but it's also made so I can see all of my works compiled into one 
+                        neat source, and look at it. 
+                        <br><br>
+                        &emsp;So click around, you'll probably find at least <i>something</i> interesting (I hope). Enjoy!
                     </p>
+                    <div>
+                        <div class="reactiveFlex">
+                            <Box title={"polyllc.org"} date={"2017-\n2020"}  description={"the main website for poly"} icon="" iconLink="" link="" language={languages[4]}/>
+                            <Box title={"poly website"} date={"2017-\n2019"}  description={"a feature rich website, with videos, profiles, email and more"} icon="" iconLink="" link="" language={languages[3]}/>
+                            <Box title={"PolyForums"} date={"2019"}  description={"a social media site with tags as the way to find new content"} icon="" iconLink="" link="" language={languages[3]}/>
+                        </div>
+                        <div class="reactiveFlex">
+                            <Box title={"poly birthday games"} date={"2018"}  description={"simple games for poly's birthday"} icon="" iconLink="" link="" language={languages[0]}/>
+                            <Box title={"poly portfolio"} date={"2022"}  description={"a portfolio of my works"} icon={githubLogo} iconLink="https://github.com/polyllc/polyportfolio" link="index.html" language={languages[1]}/>
+                        </div>
+                    </div>
                 </div>
         </div>
     </div>
