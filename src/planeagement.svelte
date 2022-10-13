@@ -54,18 +54,78 @@
 </div>
 
 <div class="full" style="padding-left: 10%; background-image:url('src/assets/planeagement/smallerworldd.png'); background-size:100vw;">
-    <p style="font-size: 75px; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800;">What is planeagement?</p>
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">What is planeagement?</p>
     <div class="reactiveFlex">
-        <p style="font-size: 35px; color: white; margin-top: 2%; font-weight: 0; text-shadow: 0 0 15pt black; line-height: 160%; width: 50%;" class="reactiveWidth">
+        <p style="font-size: 2.5vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
             Manage your planes going to and from your airport to other airports. Manage routes, upgrade your airport, buy planes, make money. Pretty simple concept. Each airport has different values, mainly a value called popularity, that directly affects
             how much money you make per trip, and more popularity means more people want to go to your airport (and from), which can lead to overcrowding. Overcrowding leads to your reputation taking a hit, and once it hits 0, you lose that airport. 
             There are 90 challenges pre made, with a challenge editor to make any challenge one would want. The challenges can range from unlocking all the airports, to earning x amount of money, to even losing all the airports. 
         </p>
         <div style="display: block; margin-top: auto; margin-bottom: auto;">
-            <img src="/src/assets/planeagement/gameplay.png" alt="gameplay" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-radius: 15px;" class="reactiveWidth"/>
+            <img src="/src/assets/planeagement/gameplay.png" alt="gameplay" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #4590ff solid; border-radius: 15px;" class="reactiveWidth" />
+           <!-- <p style="float: right; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-right: 0%; font-weight: 100; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">average gameplay</p> we'll save that for later -->
         </div>
     </div>
 </div>
+
+<div class="full" style="padding-left: 10%; background-image:url('src/assets/planeagement/smallerworldd.png'); background-size:100vw;">
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">How did planeagement begin?</p>
+    <div class="reactiveFlex">
+        <div style="display: block; margin-top: auto; margin-bottom: auto;">
+            <img src="/src/assets/planeagement/ideas1.png" alt="gameplay" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #4590ff solid; border-radius: 15px;" class="reactiveWidth" />
+            <p style="float: left; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-left: 5%;  margin-right: 0%; font-weight: 400; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">a control tower, made for an old idea</p>
+        </div>
+        
+        <p style="margin-left: 5%; font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
+            After creating fdphysics, I thought of making another game that was completely different from planeagement. The game never released, nor was even started, but in the meantime I thought between these two games (I for some reason thought I needed
+            a bridge between games to fill a gap?) I would make another, simple game. So simple that it would only take 2 months! I soon realised that I was awful at predicting how long projects took. Planeagement's idea initially came from a Wii game that 
+            had the player drag the route the plane would take with lines and it would land on a landing strip without hitting other planes (I forgot the name), so I sought to recreate that by with my own twist. That twist ended up being completely different,
+            other than the planes of course. It did go through a couple of ideas, one where you would manage an airport and move the planes somehow and upgrade the parts of the airport. Most ideas were not developed well, as most ended up to be boring gameplay
+            wise in practice. 
+        </p>
+    </div>
+</div>
+
+<div class="full" style="padding-left: 10%; background-image:url('src/assets/planeagement/smallerworldd2.png'); background-size:100vw;">
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">Starting development</p>
+    <div class="reactiveFlex">
+        <p style="font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
+            Development started in around October of 2019. I started by tracing a map of the world, which you can see in the background. Since the world map would have to be very detailed, as the user could zoom about 20x, the map size had to be 16384x9216.
+            This specific number was actually the max resolution of a texture page (all sprites live here, so that it won't have to load potentially thousands of images (think fonts), but just cut up portions of one image)
+             in the game engine I was using, GameMaker Studio 2. After playing around with the image of the world, I soon realised there was a reason why 16384x9216 was the max texture page:
+             it was slow. Really slow. So the solution was to create 8 4095x4609 images of the world that effectively made a resolution of 16380x9218, almost the same as 16384x9216.
+             This made the game actually playable, but it did have one trade off. During gameplay, you can change the theme (daytime, afternoon, night) and the map's color changes accordingly. Loading these texture pages takes such a long time that it freezes
+             the game for about 10 seconds the first time it's loaded in vram. Sadly, there was no way out of this as the game <i>required</i> a high resolution map. After creating the world map, it was time to make the basic gameplay routines: planes.
+        </p>
+        <div style="display: block; margin-top: auto; margin-bottom: auto;">
+            <img src="/src/assets/planeagement/gameplay.png" alt="gameplay" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #4590ff solid; border-radius: 15px;" class="reactiveWidth" />
+           <!-- <p style="float: right; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-right: 0%; font-weight: 100; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">average gameplay</p> we'll save that for later -->
+        </div>
+    </div>
+</div>
+<!--
+    what is planeagement
+    how did it begin
+    starting development
+    plane mechanics
+    how the gameplay works - include the other countries airports and such
+    how the gameplay was implemented
+    gameplay - masterai
+    what the gameplay is missing
+    development screenshots - image slideshow
+    gui design
+    how was the gui implemented
+    the problem with the gui
+    the problem with gms2
+    gui in action (gameplay) - image slideshow
+    encountered problems while developing
+    features that I wanted to implement
+    music
+    publishing 
+    first and last update
+    conclusion
+
+-->
 
 
 <style>

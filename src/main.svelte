@@ -86,7 +86,7 @@ import GithubLogo from "./lib/githubLogo.svelte";
     <div class="full" style="{bg} height: 100vh" >
         <div style="background-size: 10%; background-image:url('src/assets/polytiles2.png'); background-repeat:repeat; text-align: center;" class="full">
             <div style="background: rgba(0,0,0,0); text-align: center;" class="full">
-                    <img src="src/assets/plogo.png" alt="PolyPortfolio" id="polytitle"><br>
+                    <img src="src/assets/plogo.png" on:click={arrowClick} alt="PolyPortfolio" id="polytitle"><br>
                     <div id="arrows" on:click={arrowClick}>
                         <img src="src/assets/arrows.png" alt="\/" class="arrow" id="a1" style={a1}>
                         <img src="src/assets/arrows.png" alt="\/" class="arrow" id="a2" style={a2}>
@@ -144,13 +144,13 @@ import GithubLogo from "./lib/githubLogo.svelte";
                     <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black; line-height: 160%;">
                         &emsp;Starting in 2020, I started to publish some of my code to GitHub. I initially made a file splitter that would split up files into smaller files, and stitch them back up. It ultimately did not work too well, but it was my first open source
                         project none the less. After that, I published my second, and much more polished, repository. It was jump-cutter-revamped, a clone of carykh's jump cutter in which he described it as a tool to get speed up video lectures. I wanted to 
-                        challenge myself and see if I could make it in C++, rather than in Python like he did. It eventually turned out better than his, although there is a hit to accuracy. <br><br>&emsp;I then started to publish some little programs such as disconnall, 
-                        a WiFi disonnecting program, that send deauthentication packets to the router of everyone in the area, disconnecting them from the WiFi, and discord-gameboy, which is a gameboy emulator in Discord, which actually works pretty well. It uses
+                        challenge myself and see if I could make it in C++, rather than in Python like he did. It eventually turned out better than his, although there is a hit to accuracy. <br><br>&emsp;I started to publish some little programs such as disconnall, 
+                        a WiFi disonnecting program, that sends deauthentication packets to the router of everyone in the area, disconnecting them from the WiFi, and discord-gameboy, which is a gameboy emulator in Discord, which actually works pretty well. It uses
                         gifs as a way to show a sense of frame progression, and either chat messages or reactions as controls. <br><br>&emsp;Soon after the success of discord-gameboy, I published alexa, which started out as a joke Discord bot, which would play despacito when
                         you asked "alexa, play despacito". But after finding a tutorial on making a music bot in Discord, I eventually started to evolve it into something much more. I added a ton of features, such as voice recognition, Twitch chat integration, 
                         Spotify integration, playlist support (where you create a playlist based on the songs in the queue) and much more.<br><br>&emsp;
-                        I had always wanted to make a scripting language (rather than programming, scripting would be best defined as a shortcut programming language, rather than one to create apps/programs), and I attempted to do so with ProgFlow. My best C++ code
-                        yet, it had extreme ambition, which had yet to be achieved. But it is probably the code I am most proud of because it looks extremely complicated, but actually is easy to read. <br><br>&emsp;
+                        I had always wanted to make a scripting language (rather than programming, scripting would be best defined as a shortcut programming language, rather than one to create apps/programs), and I attempted to do so with ProgFlow. It is my best C++ code
+                        yet, and it had extreme ambition, which has yet to be achieved. But it is probably the code I am most proud of because it looks extremely complicated, but actually is easy to read. <br><br>&emsp;
                         My most recent project is Scrypty. Scrypty is designed to be an automatic repository compiler and installer, by looking at the files and make an estimated guess on how to compile it. Its vision is now much more broad. With the introduction
                         of ScryptyFiles, everything can be defined in the file of how it's compiled, and for what system too. With automatic compile tool installation (so the end user doesn't have to) and a web interface (by electron) in the works, it will hopefully
                         bring open source out of the developer community, and into the hands of everyone, no matter how little or much they know about compiling something. <br><br>&emsp;
