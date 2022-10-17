@@ -103,18 +103,134 @@
         </div>
     </div>
 </div>
+
+
+<div class="full" style="padding-left: 10%; background-image:url('src/assets/planeagement/smallerworldd.png'); background-size:100vw;">
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">How does the gameplay work?</p>
+    <div class="reactiveFlex">
+        <div style="display: block; margin-top: auto; margin-bottom: auto;">
+            <img src="/src/assets/planeagement/ideas1.png" alt="gameplay" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #4590ff solid; border-radius: 15px;" class="reactiveWidth" />
+            <p style="float: left; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-left: 5%;  margin-right: 0%; font-weight: 400; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">a control tower, made for an old idea</p>
+        </div>
+        
+        <p style="margin-left: 5%; font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
+            In planeagement, there usually is one simple goal: try to make and send as many planes to as many airports. Each time you play, you always have a challenge to complete. There are seven different objectives: total passengers, 
+            total money earned, airports unlocked, number of planes owned, total debt, airports lost and terminal level. In order to finish the challenge, you must always have a plane. Usually, you have a starting plane to use
+            and in order to start transporting passengers and making money, you have to assign the plane to another airport. There are 30 aiports in total around the world, including yours. You unlock an airport when you assign 
+            a plane to it for the first time. Once unlocked, an airport cannot be locked. Then once assigned, the plane will make the trip to the airport, and once it is filled to the passenger capacity, it will return and you make 
+            your money then. There are three different types of planes: a small plane (it has a small range and small capacity, but it is very cheap), normal plane (essentially a regular passenger plane, can travel most of the world
+             and has a lot more space than a small plane) and big plane (it's a big plane that can travel everywhere and has more capacity than a normal plane).
+        </p>
+    </div>
+</div>
+
+<div class="full" style="padding-left: 10%; background-image:url('src/assets/planeagement/smallerworldd2.png'); background-size:100vw;">
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">How does the gameplay work? cont.</p>
+    <div class="reactiveFlex">
+        <p style="font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
+            Each airport has a couple of different stats that influence how much money you will make and how many passengers will come. The first is popularity. Each time you complete a trip, the popularity will go up. This will increase
+            the profit per trip and the amount of passengers that want to fly to your airport. The next one is reputation. Once the airport becomes overcrowded, your reputation will go down. If you solve this overcrowding by sending more 
+            planes to that destination, your reputation will go back up to 100. But if the reputation hits 0, you lose that airport permanently. If the airport becomes too popular, a sudden disinterest will occur, and no one will want to
+            travel to your airport from that destination, and your popularity will go down to about 100% before people start to get interested again (this was implemented due to the first version of the game not having a popularity cap 
+            and making it so only one airport would be the most profitable, it wouldn't be fun just managing and sending as many planes to one destination because that made the most money). Another part of the gameplay is upgrading your 
+            terminal. Each upgrade gets you one upgrade point, and that can be used on various upgrades from seat capacity to money multiplier. 
+        </p>
+        <div style="display: block; margin-top: auto; margin-bottom: auto;">
+            <img src="/src/assets/planeagement/gameplay.png" alt="gameplay" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #4590ff solid; border-radius: 15px;" class="reactiveWidth" />
+           <!-- <p style="float: right; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-right: 0%; font-weight: 100; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">average gameplay</p> we'll save that for later -->
+        </div>
+    </div>
+</div>
+
+<div class="full" style="padding-left: 10%; background-image:url('src/assets/planeagement/smallerworldd.png'); background-size:100vw;">
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">How does the gameplay work? masterai</p>
+    <div class="reactiveFlex">
+        <div style="display: block; margin-top: auto; margin-bottom: auto;">
+            <img src="/src/assets/planeagement/ideas1.png" alt="gameplay" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #4590ff solid; border-radius: 15px;" class="reactiveWidth" />
+            <p style="float: left; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-left: 5%;  margin-right: 0%; font-weight: 400; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">a control tower, made for an old idea</p>
+        </div>
+        
+        <p style="margin-left: 5%; font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
+            Lastly in the gameplay, there is one entity that is called masterai. Its purpose is to try and make you lose your airports, often by making it took popular too quickly and making that airport overcrowd, or by making an  
+            airport so uninteresting that no one would ever want to travel from there to your airport. Other than that, masterai doesn't do too much else. The first trigger is 1000% popularity, and sometimes there is another trigger 
+            at a high percentage. 
+        </p>
+    </div>
+</div>
+
+<div class="full" style="padding-left: 10%; background-image:url('src/assets/planeagement/smallerworldd2.png'); background-size:100vw;">
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">What was the gameplay missing?</p>
+    <div class="reactiveFlex">
+        <p style="font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
+            The gameplay from the get go is flawed. It does not allow for much dispersion of airports, and even with the second update, it is much better to just focus on one airport at a time. In the initial release, you almost never would
+            send planes to multiple airports, you would just send all of your planes to that one airport. After the second update, during the first half of the game, it was better to spread out your planes, as the sudden disinterest pretty much
+            killed the majority of focusing on one airport at a time. But during the second half, you'd probably have like 5 airports that you would send your planes to, and the sudden disinterest would only occur in two of the aiports at max.
+            The game is also somewhat boring at times. It is a strategy game, but it does not have too too much strategy, as it compensates for the somewhat boring gameplay with rng, which in strategy games is almost never a good idea. Still,
+            in the more challenging challenges, it actually can be pretty fun and each action has to be calculated or else what often happens is that you lose all of the airports and you're about 50% of the way to the challenge. 
+        </p>
+        <div style="display: block; margin-top: auto; margin-bottom: auto;">
+            <img src="/src/assets/planeagement/gameplay.png" alt="gameplay" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #4590ff solid; border-radius: 15px;" class="reactiveWidth" />
+           <!-- <p style="float: right; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-right: 0%; font-weight: 100; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">average gameplay</p> we'll save that for later -->
+        </div>
+    </div>
+</div>
+
+<div style="height: 30vh; display: flex; overflow-x: scroll;">
+    <img src="src/assets/planeagement/smallerworldd2.png" style="height: 100%;" alt="placeholder">
+    <img src="src/assets/planeagement/smallerworldd.png" style="height: 100%;" alt="placeholder">
+    <img src="src/assets/planeagement/smallerworldd.png" style="height: 100%;" alt="placeholder">
+    <img src="src/assets/planeagement/smallerworldd.png" style="height: 100%;" alt="placeholder">
+    <img src="src/assets/planeagement/smallerworld.png" style="height: 100%;" alt="placeholder">
+    <img src="src/assets/planeagement/smallerworldd2.png" style="height: 100%;" alt="placeholder">
+    <img src="src/assets/planeagement/smallerworldd.png" style="height: 100%;" alt="placeholder">
+</div>
+
+<div class="full" style="padding-left: 10%; background-image:url('src/assets/planeagement/smallerworldd.png'); background-size:100vw;">
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">Gui design</p>
+    <div class="reactiveFlex">
+        <div style="display: block; margin-top: auto; margin-bottom: auto;">
+            <img src="/src/assets/planeagement/page7ui.png" alt="gui" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #0530ff solid; border-radius: 15px;" class="reactiveWidth" />
+            <p style="float: left; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-left: 5%;  margin-right: 0%; font-weight: 400; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">the gui</p>
+        </div>
+        
+        <p style="margin-left: 5%; font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
+            The entire gui is implemented through drawing calls hard coded. It is much easier to have guis being drawn to the screen as you can easily turn on and off what gui you want to show. Everything except the map, planes, airports and
+            the terminal is drawn to the screen real time. The gui emphasizes rounded corners, and has a distinct font that is often found on segmented displays like on microwaves. Most digits and stats are displayed with this font, while most
+            information and text is written in a different font for readability purposes. The gui was designed to show only the most important information at all times. That woud be the the planes used, the amount of money you have, your gate usage,
+            the objective progress, total passengers and the fuel cost. The gui was also designed all around the mouse. There is only one thing that cannot be done with the mouse: bulk buying. Everything else is either mouse based or can be done with
+            just the mouse. The menu is completely mouse based and almost nothing can be controlled by the keyboard. The menu does have a more colorful design in comparison to the in game gui, and does look a bit better. There are a couple flaws
+            with the gui, but the main one is the border around most text that looks pretty bad, it doesn't do the full border, but draws the text 4 times in each cardinal direction before drawing the text on top, thus making it look like it is more
+            pixelated. 
+        </p>
+    </div>
+</div>
+
+<div class="full" style="padding-left: 10%; background-image:url('src/assets/planeagement/smallerworldd2.png'); background-size:100vw;">
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">The problem with the gui</p>
+    <div class="reactiveFlex">
+        <p style="font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
+            There aren't many problems with the gui, but the biggest is that it's drawn. Sure that was the easiest way to do it, but the main problem with drawing the gui frame by frame (as opposed to making sprites and objects that represent
+            the same thing) is that there are no options for display scaling or any other support for aspect ratios. This is partially due to the game engine and partially due to the drawn gui. The other problem is that it is a bit cluttered in 
+            some spots. I have never taken a ui class, so I just made what I felt made sense and looked good. Of course what I think is not what the person next door might think, so the ui is subjective. The last problem with the gui is that 
+            some things actually overlap each other, leading to pressing a button when you're trying to leave or something like that. The biggest offender is the settings button in the menu, where in multiple different pages does it overlap the
+            gui in front of it. Why was it never fixed? Well it was quite hard to do for such a seemly simple fix. Plus I was burned out from developing the game the past 6 months (yes it took that long! I didn't spend too much time on it a day though).
+        </p>
+        <div style="display: block; margin-top: auto; margin-bottom: auto;">
+            <img src="/src/assets/planeagement/gameplay.png" alt="gameplay" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #4590ff solid; border-radius: 15px;" class="reactiveWidth" />
+           <!-- <p style="float: right; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-right: 0%; font-weight: 100; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">average gameplay</p> we'll save that for later -->
+        </div>
+    </div>
+</div>
 <!--
     what is planeagement
     how did it begin
     starting development
-    plane mechanics
     how the gameplay works - include the other countries airports and such
-    how the gameplay was implemented
+    how the gameplay works cont.
     gameplay - masterai
     what the gameplay is missing
     development screenshots - image slideshow
     gui design
-    how was the gui implemented
     the problem with the gui
     the problem with gms2
     gui in action (gameplay) - image slideshow

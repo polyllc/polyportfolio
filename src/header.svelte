@@ -1,7 +1,5 @@
 <script>
-import { each } from "svelte/internal";
 import Box from "./lib/box.svelte";
-import GithubLogo from "./lib/githubLogo.svelte";
 
 
 
