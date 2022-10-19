@@ -103,13 +103,13 @@ import GithubLogo from "./lib/githubLogo.svelte";
     <div class="{bg2}" style="min-height: 100vh;">
         <div style="background: rgba(0,0,0,0.5); padding-left: 10%;" class="full">
                 <div>
-                    <p style="font-size: 150px; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800;">About</p>
+                    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800;">About</p>
                     <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black; line-height: 160%;">
                         &emsp;Hey! My name is Poly, and welcome to my portfolio! This portfolio is a collection of projects that I have finished (or worked on) over the years since 2017. I started to program when I was eight in Scratch. My dad was watching a TED talk
                         about this new programming language made by MIT just for kids. He installed it on our family computer, and I just started to click the blocks together. I had no idea what I was doing, but something was happening on the screen, so I didn't care.
                         I gave up like a month after being introduced, but later when I was ten, people of course wanted to find any way to get games on their school computers, and I introduced them to Scratch. They instantly fell in love with it (not the programming, 
                         the games of course), and would sit on it 24/7 (well at least in school). This prompted my return to Scratch. I then made upwards of ten or twenty games when I was ten and eleven. Most of them did really badly, but one game in particular, was my
-                        favourite. It was called The Adventures of Stick Man, and was I proud of it. It was a simple platformer, but it was complete. Complete with levels, gameplay(!!!), leaderboards and more. I was so proud, I even told the people at a hair salon 
+                        favorite. It was called The Adventures of Stick Man, and was I proud of it. It was a simple platformer, but it was complete. Complete with levels, gameplay(!!!), leaderboards and more. I was so proud, I even told the people at a hair salon 
                         when my hair was being cut. I eventually moved on from block coding, to text coding. And to help publish my new games that weren't going to be on Scratch, I made a company.
                         <br><br>&emsp;I initially started up as Poly under the company Poly LLC, and my first project at Poly LLC
                         was to make a game. I started with a Geometry Dash style game, which I extensively developed over a year, with multiple notebooks filled with ideas. I bought a game engine called GameMaker Studio 2, and started to tinker around in it.
@@ -117,7 +117,7 @@ import GithubLogo from "./lib/githubLogo.svelte";
                         but it was my drawings and my code, all working. I worked on that for a long time, but nothing came out of it. <br><br>&emsp;In the meantime, I made my first website. Mind you, this was HTML 101 basic website, with awful color pairings and misaligned
                         text, but yet again, it was my website, available through the very same link you're using to see this website. <br><br>&emsp;While on vacation, I bought this book on PHP and MySQL, and after reading it, my multifunction website (that has no name other
                         than poly, it's called poly website under the website section) was dreamed up and created. I had put at least 500 hours into making that website, and it took up my most of my free time when I was twelve. But the hours I would spend with my friends
-                        playing around on that website were of course the best. I partly made that website for them, so we could have fun on it. After a while, I got busy with other things, and I stopped maitaining the website, until I had to shut it down because of 
+                        playing around on that website were of course the best. I partly made that website for them, so we could have fun on it. After a while, I got busy with other things, and I stopped maintaining the website, until I had to shut it down because of 
                         certain concerns.<br><br>&emsp;Anyways, most everything below this is well documented, so if you want to learn more about this website or the games that I made for Poly LLC, scroll on down and click the button. 
                     </p>
                 </div>
@@ -125,7 +125,7 @@ import GithubLogo from "./lib/githubLogo.svelte";
                 <hr style="margin-right:10%; margin-top: 4%;">
 
                 <div id="games">
-                    <p style="font-size: 150px; color: white; text-decoration: underline; text-decoration-color: #9043e2; margin: 0%; padding-top: 2%; font-weight: 800;">Games</p>
+                    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #9043e2; margin: 0%; padding-top: 2%; font-weight: 800;">Games</p>
                     <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black; line-height: 160%;">
                         &emsp;Starting in 2018, two games were published under the company Poly LLC. The first one, released on December 30th, 2018, was fdphysics. An ambitious game, a two player, 2D, shooting showdown in a variety of maps and modes. The game later received a couple of updates.
                         The second game, released on June 6th, 2020, was planeagement. A more casual plane management game, where you manage your planes going from your airport to others. An update was also later released. This description is very short because of the very extensive documentation
@@ -140,7 +140,7 @@ import GithubLogo from "./lib/githubLogo.svelte";
                 <hr style="margin-right:10%; margin-top: 4%;">
 
                 <div id="opensource">
-                    <p style="font-size: 150px; color: white; text-decoration: underline; text-decoration-color: blue; margin: 0%; padding-top: 2%; font-weight: 800;">Open Source</p>
+                    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: blue; margin: 0%; padding-top: 2%; font-weight: 800;">Open Source</p>
                     <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black; line-height: 160%;">
                         &emsp;Starting in 2020, I started to publish some of my code to GitHub. I initially made a file splitter that would split up files into smaller files, and stitch them back up. It ultimately did not work too well, but it was my first open source
                         project none the less. After that, I published my second, and much more polished, repository. It was jump-cutter-revamped, a clone of carykh's jump cutter in which he described it as a tool to get speed up video lectures. I wanted to 
@@ -168,7 +168,7 @@ import GithubLogo from "./lib/githubLogo.svelte";
                         </div>
                         <div class="reactiveFlex">
                             <Box title={"scrypty"} date={"2021-\n2022"}  description={"clone, detect, compile, install from any repository, automatically"} icon={githubLogo} iconLink="https://github.com/polyllc/scrypty" link="" language={languages[0]}/>
-                            <Box title={"disconnall"} date={"2021"}  description={"disconnects everyone from wifi around you!"} icon={githubLogo} iconLink="https://github.com/polyllc/disonnall" link="" language={languages[2]}/>
+                            <Box title={"disconnall"} date={"2021"}  description={"disconnects everyone from wifi around you!"} icon={githubLogo} iconLink="https://github.com/polyllc/disconnall" link="" language={languages[2]}/>
                             <Box title={"progflow"} date={"2021"}  description={"scripting for efficiency"} icon={githubLogo} iconLink="https://github.com/polyllc/progflow" link="" language={languages[2]}/>
                         </div>
                         <Box title={"jump cutter revamped"} date={"2020"}  description={"cuts out silent audio from videos to shorten the length"} icon={githubLogo} iconLink="https://github.com/polyllc/jump-cutter-revamped" link="" language={languages[2]}/> 
@@ -179,7 +179,7 @@ import GithubLogo from "./lib/githubLogo.svelte";
                 <hr style="margin-right:10%; margin-top: 4%;">
 
                 <div id="discordbots">
-                    <p style="font-size: 150px; color: white; text-decoration: underline; text-decoration-color: #687be8; margin: 0%; padding-top: 2%; font-weight: 800;">Discord Bots</p>
+                    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #687be8; margin: 0%; padding-top: 2%; font-weight: 800;">Discord Bots</p>
                     <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black; line-height: 160%;">
                         &emsp;I started to make Discord bots during the start of the pandemic (I had made some before, but they were very basic and not worth mentioning) when I had a lot of spare time and I would mostly spend my time on Discord talking to my friends.
                         Since I spent so much time on Discord, I thought "why not? I'll make some discord bots".<br><br>
@@ -218,7 +218,7 @@ import GithubLogo from "./lib/githubLogo.svelte";
                 <hr style="margin-right:10%; margin-top: 4%;">
 
                 <div id="websites"> 
-                    <p style="font-size: 150px; color: white; text-decoration: underline; text-decoration-color: #22ff56; margin: 0%; padding-top: 2%; font-weight: 800;">Websites</p>
+                    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #22ff56; margin: 0%; padding-top: 2%; font-weight: 800;">Websites</p>
                     <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black; line-height: 160%;">
                         &emsp;Back in 2017, I started to make websites for Poly LLC. The websites would all be hosted on polyllc.org (the same page you're viewing this on!). Initially, they were all static websites, with information about Poly LLC. But after picking
                          up a book on PHP and MySQL, I started to make actual dynamic websites (well at least it wouldn't be static). There is so much history with both of these websites, which I like to call polyllc.org and Poly Website (it was called phpfiles 

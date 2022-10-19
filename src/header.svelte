@@ -55,7 +55,7 @@ import Box from "./lib/box.svelte";
                 </div>  
                 <div class="boxDivider">
                     <Box title={"scrypty"} date={"2021-\n2022"}  description={"clone, detect, compile, install from any repository, automatically"} icon={githubLogo} iconLink="https://github.com/polyllc/scrypty" link="" language={languages[0]}/>
-                    <Box title={"disconnall"} date={"2021"}  description={"disconnects everyone from wifi around you!"} icon={githubLogo} iconLink="https://github.com/polyllc/disonnall" link="" language={languages[2]}/>
+                    <Box title={"disconnall"} date={"2021"}  description={"disconnects everyone from wifi around you!"} icon={githubLogo} iconLink="https://github.com/polyllc/disconnall" link="" language={languages[2]}/>
                     <Box title={"progflow"} date={"2021"}  description={"scripting for efficiency"} icon={githubLogo} iconLink="https://github.com/polyllc/progflow" link="" language={languages[2]}/>
                 </div>
                 <div class="boxDivider">

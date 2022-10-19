@@ -6,6 +6,7 @@ export let icon = "";
 export let iconLink = "";
 export let link;
 export let language;
+export let extraCss = "";
 
 import { css } from '@emotion/css';
 
@@ -21,7 +22,7 @@ let randomBorder = css`
 `
 </script>
 
-<div class="box {randomBorder}">
+<div class="box {randomBorder} {extraCss}">
     <a href={link}>
     <div class="headerOfBox">
         <p class="titleOfBox">{title}</p>
@@ -53,6 +54,7 @@ let randomBorder = css`
         border: #333 2px solid;
         display: block;
         min-width: 28%;
+        max-width: 120%;
         inline-size: min-content;
         line-height: 1;
         position: relative;
