@@ -100,13 +100,63 @@
     </div>
 </div>
 
+<div class="full" style="padding-left: 10%; background-image:url('src/assets/fdphysics/galaxymap.png'); background-size:100vw;">
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">How the gameplay works</p>
+    <div class="reactiveFlex">
+        <div style="display: block; margin-top: auto; margin-bottom: auto;">
+            <img src="/src/assets/fdphysics/s2.png" alt="gui" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #0530ff solid; border-radius: 15px;" class="reactiveWidth" />
+            <p style="float: left; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-left: 5%;  margin-right: 0%; font-weight: 400; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;"></p>
+        </div>
+        
+        <p style="margin-left: 5%; font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
+            The gameplay of fdphysics is actually really simple. You play against your opponent with weapons or guns (whatever you want to call them) and you try and get the most points, kills or whatever the objective is. As mentioned,
+            you can use the special attacks to gain an advantage against your opponent. You can also customize many different settings for the match: time limit, movement speed, bullet speed, gun reload time, jump height, suicide points,
+            gun damage, health, gravity, random guns and number of guns on map. The original idea for the customization was to have way more than this, but even these are janky at best, especially those which change the physics.
+            That's pretty much it. If you're coming from planeagement, you now realize how complicated it was in comparison. 
+        </p>
+    </div>
+</div>
+
+<div class="full" style="padding-left: 10%; background-image:url('src/assets/fdphysics/iceymountainsmap.png'); background-size:100vw;">
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">The modes</p>
+    <div class="reactiveFlex">
+        <p style="font-size: 2.5vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
+           There are six modes in the game, grouped up into main modes and minimodes. In the main modes, there is deathmatch, damagematch and physimatch. Deathmatch is a simple "most kills wins". Damage is also pretty simple, the most
+           damage inflicted wins. Physimatch is different. Everything is counted: how much ammo you use, the number of jumps you make, the damage you give, the amount of times you use your special attack, the amount you move, etc. 
+           Most of the time, the AI wins these because they are programmed to always charge their special attack and use it when you are in their sight. The minimodes were capture the flag, lights out and destroy the base. Capture the flag
+           is a simple "whoever holds the flag the longest wins". Lights out is actually pretty cool, you only have light around your player. And destroy the base is also simple destroy the opponents base to win. Minimodes are two player
+           only because the ai is way too bad to be able to play these, plus they would have an advantage in lights out. 
+        </p>
+        <div style="display: block; margin-top: auto; margin-bottom: auto;">
+            <img src="/src/assets/fdphysics/s4.png" alt="gameplay" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #4590ff solid; border-radius: 15px;" class="reactiveWidth" />
+           <p style="float: right; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-right: 0%; font-weight: 100; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">The lights out minimode</p>
+        </div>
+    </div>
+</div>
+
+<div class="full" style="padding-left: 10%; background-image:url('src/assets/fdphysics/lavakingdommap.png'); background-size:100vw;">
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">The maps</p>
+    <div class="reactiveFlex">
+        <div style="display: block; margin-top: auto; margin-bottom: auto;">
+            <img src="/src/assets/fdphysics/s2.png" alt="gui" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #0530ff solid; border-radius: 15px;" class="reactiveWidth" />
+            <p style="float: left; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-left: 5%;  margin-right: 0%; font-weight: 400; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;"></p>
+        </div>
+        
+        <p style="margin-left: 5%; font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
+            There are 11 maps and 15 generic maps in fdphysics. All of the main maps are custom made, and they all have the theme. You can see all of the backgrounds in the background. There are as follow: Deciduous Sylvan, Tropical Island,
+            Just. Space., Some Desert, Icy Mountains, Light Show, Lavaness, Might be a Castle, Not Sure if this is a Boat, The Original and The Final Fight. The generic maps are all based on The Original and there are 15 of them. 
+            They are only available in two player becaus
+        </p>
+    </div>
+</div>
+
 <!--
     what is planeagement
     how did it begin
     starting development
-    how the gameplay works - include the other countries airports and such
-    how the gameplay works cont.
-    gameplay - masterai
+    how the gameplay works
+    the modes
+    maps
     what the gameplay is missing
     development screenshots - image slideshow
     gui design
