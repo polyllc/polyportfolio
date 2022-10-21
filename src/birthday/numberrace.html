@@ -1,0 +1,207 @@
+<html>
+<head>
+    <title>Number Race</title>
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAIAAAC1nk4lAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIiSURBVGhD7ZUxUsMwEEU5CBXDTI5BS5Eqp0nHKdLlBqm4QGbSU6fNATKcwcj292a92pWVKCwmoze/AEnYz9KueGr+IVXaiyrtRZX2okp74Su9WzQfi2azxa+3MpY+rtuHKlljQSG+0l2KX/ar0qvmjIGOU7MZvHd7jN2Go3SAvOOpa/CVZpVzOGHkBrylz1tbmtUPYjSukD6susXG6UFGeVSxNF6sJW4AIZ2zEdqxXF8eRwy00ODo0WzjhY0sD9uMvoe/biBTeo9HjA5rGFSvlN5PHG5c01aFYFwvswxp+ugQZZu1YwmoWxVL05ePzmQ4AeOGVaWNiJNKboZuo0hrg8naCORJJwogLkeg7Zb6J/RSUpzYjvxGjLmXtOyNidoIFEjfqzwC/FGojZRDgXR6cW4jdvDF/QeYB9hSIJ1z5Yl3mxVFJbHFD8q/mwsl0nSswmMwCBHtb0qzR7WZECiTDvQeauILKyFN52YuuFAsHaCKpFiNn5Jm35+sjcBY+m+ZuI4uzEd6+nomZiONytQ6IWIm0sM2T7VgzzykqZWnWrBnTo2YTZX2IiX9/fxKwVAeL59LCoYyeHv/omDIQJfmujyYtuG6PJg24Lo8mI54FGkhKoJFGkJUBIsihKgIFo2p0pEoDxZFCEsRLBrzKNIBIUrBtI0QpWDaQIhSMB3xQNI9V+ly8nU5Obo9KenZUqW9qNJeVGkvqrQXVdqLKu1D0/wAcEvAXaFHbm0AAAAASUVORK5CYII=">
+    </head>
+    <body>
+        <div id="help" align="center">
+        <h1>Help</h1>
+            <hr>
+            <p style='font-size: 20px;'>Type the numbers as fast as you can! Type the wrong number and you lose a life. Run out of time and you lose. Try and get the most points!</p>
+            <br><button onclick="document.getElementById('help').style.display = 'none'; gameStart();">Ok!</button>
+        </div>
+        
+        <audio src="yes.wav" id="beep"></audio>
+        <audio src="wrong.wav" id="boop"></audio>
+        <div id="gameover" align="center">
+    <h1 style="color: red;">Game Over</h1>
+        <hr>
+        <p style="font-size: 30px;" id="gameoverp"></p><br>
+         <div id="data">   <p>You said</p><br>
+        <p style="color:white;" id="nump"></p><br>
+        <p>Right Number</p><br>
+             <p style="color:white;" id="rnump"></p></div>
+    </div>
+        
+        
+        <div id="maingame">
+    <div align="center" id="header">
+        <h1 style="font-size: 48px;">Number Race</h1>
+        </div>
+         <div id="stats" align="center">
+        <p class="pstats" id="lives">3 Lives | </p>
+        <p class="pstats" id="points">0 Points | </p>
+        <p class="pstats" id="time">Time: 0</p>
+        </div><br>
+            <div id="main">
+            <div id="numbers" align="center">
+                
+                <p id="n4" class="unum">1</p>
+                <p id="n3" class="unum">2</p>
+                <p id="n2" class="unum">5</p>
+                <p id="n1">1</p>
+              
+                </div>
+                <div id="input" align="center">
+                <p id="inputp"></p>
+                     <p style="font-size: 48px; margin: 0px; padding: 0px;" id="rating"></p>
+                </div>
+                <br>
+               
+            </div>
+        </div>
+        <script>
+            var keypressed = 0;
+            var time = 10;
+            var points = 0;
+            var lives = 5;
+            var pressed = 0;
+            var timeoffset = 0;
+            var numarray = [Math.floor(Math.random() * 10), Math.floor(Math.random() * 10),Math.floor(Math.random() * 10),Math.floor(Math.random() * 10)];
+        document.addEventListener("keypress", function(e){
+            keypressed = e.keyCode;
+            pressed = 1;
+        }, false);
+        keypressed = 48;
+            function gameStart(){
+         var inter = setInterval(function(){
+                //Set the values in the tags
+                document.getElementById("lives").innerHTML = lives + " Lives | ";
+                document.getElementById("points").innerHTML = points + " Points | ";
+                document.getElementById("time").innerHTML = "Time: " + Math.floor(time);
+                document.getElementById("n4").innerHTML = numarray[3];
+                document.getElementById("n3").innerHTML = numarray[2];
+                document.getElementById("n2").innerHTML = numarray[1];
+                document.getElementById("n1").innerHTML = numarray[0];
+                if(keypressed < 58 && keypressed > 47){
+                document.getElementById("inputp").innerHTML = keypressed - 48;
+                }
+                time -= 0.01  + timeoffset;
+                if(time <= 0){
+                    gameOver();
+                    clearInterval(inter);
+                }
+                if(keypressed - 48 == numarray[0] && pressed == 1){
+                    time++;
+                    points++;
+                    newNumber();
+                    pressed = 0;
+                    document.getElementById("rating").style.color = "#00ff00";
+                    document.getElementById("rating").innerHTML = "Good";
+                    document.getElementById("beep").currentTime = 0;
+                    document.getElementById("beep").play();
+                }
+                if(pressed == 1 && keypressed - 48 != numarray[0]){
+                    lives--;
+                    newNumber();
+                    pressed = 0;
+                    document.getElementById("rating").style.color = "#ff0000";
+                    document.getElementById("rating").innerHTML = "Bad";
+                    document.getElementById("boop").currentTime = 0;
+                    document.getElementById("boop").play();
+                }
+                if(lives == 0){
+                    gameOver();
+                    clearInterval(inter);
+                }
+                if(timeoffset < 0.04){
+                    timeoffset = points / 5000;
+                }
+            }, 10);
+            }
+            
+            function newNumber(){
+                numarray[0] = numarray[1];
+                numarray[1] = numarray[2];
+                numarray[2] = numarray[3];
+                numarray[3] = Math.floor(Math.random() * 10);
+            }
+        
+            function gameOver(){
+                document.getElementById("gameover").style.display = "block";
+                if(lives < 1){
+                document.getElementById("gameoverp").innerHTML = "You ran out of lives! You got " + points + " points! Try again by reloading the page.";
+                document.getElementById("nump").innerHTML = keypressed - 48;
+                document.getElementById("rnump").innerHTML = numarray[0];
+                }
+                if(time <= 0){
+                    document.getElementById("gameoverp").innerHTML = "You ran out of time! You got " + points + " points! Try again by reloading the page."; 
+                    document.getElementById("data").style.display = "none";
+                }
+            }
+        </script>
+        <style>
+            html{
+                font-family: "Segoe UI", monospace;
+                color: #efefef;
+                background-color: #444444;
+            }
+            body{
+                margin: 0px;
+            }
+            #header{
+                padding: 1px;
+                background-color: #333333;
+            }
+            .pstats{
+            display: inline-block;
+            margin: 0px;
+            font-size: 30px;
+            }
+            #stats{
+            background-color: #222222;
+            padding: 0px;
+            width: auto;
+            }
+            #help{
+            width: 50%;
+            height: 30%;
+            z-index: 4;
+            background-color: #222222;
+            position: absolute;
+            margin-left: 25%;
+            margin-top: 10%;
+            padding: 10px;
+            }
+            #maingame{
+            z-index: 1;
+            }
+            .unum{
+                color: #afafaf;
+                display: inline-block;
+                font-size: 60px;
+                margin-right: 5%;
+            }
+            #n1{
+                border-right: solid 1px #ffffff;
+                border-left: solid 1px #ffffff;
+                color: #f9f9f9;
+                display: inline-block;
+                margin-right: 22.5%;
+                font-size: 60px;
+                margin-bottom: 0px;
+            }
+            #inputp{
+                color: #fefefe;
+                margin-top: 0px;
+                font-size: 140px;
+                
+            }
+            #input{
+                margin: 0px;
+                padding: 0px;
+                
+            }
+            #gameover{
+                width: 50%;
+                height: 71%;
+                z-index: 500;
+                background-color: #222222;
+                position: absolute;
+                margin-left: 25%;
+                margin-top: 10%;
+                display: none;
+            }
+        </style>
+    </body>
+</html>

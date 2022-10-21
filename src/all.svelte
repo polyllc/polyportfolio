@@ -9,7 +9,8 @@
         {name: "C++", color: "#f34b7d"},
         {name: "PHP", color: "#4f5d95"},
         {name: "HTML&CSS", color: "#ccc"},
-        {name: "GMS2", color: "#3345ff"}
+        {name: "GMS2", color: "#3345ff"},
+        {name: "Java", color: "#b07219"}
     ];
     
     //from itch's website
@@ -96,7 +97,7 @@
     <div class="full" style="{bg} height: 100vh" >
         <div style="background-size: 10%; background-image:url('src/assets/polytiles2.png'); background-repeat:repeat; text-align: center;" class="full">
             <div style="background: rgba(0,0,0,0); text-align: center;" class="full">
-                    <p id="alltitle">all projects</p>
+                    <p><span id="alltitle">all projects</span></p>
                     <div id="arrows" on:click={arrowClick}>
                         <img src="src/assets/arrows.png" alt="\/" class="arrow" id="a1" style={a1}>
                         <img src="src/assets/arrows.png" alt="\/" class="arrow" id="a2" style={a2}>
@@ -208,6 +209,27 @@
             </div>
             <div class="reactiveWidth" style="position: relative; margin: auto; margin-left: 1%; min-width: 80% !important;">
                 <Box title={"jump cutter revamped"} date={"2020"}  description={"cuts out silent audio from videos to shorten the length"} icon={githubLogo} iconLink="https://github.com/polyllc/jump-cutter-revamped" link="" language={languages[2]}
+                extraCss="{reactiveFlex}"/>
+            </div>
+        </div>
+
+        <hr style="margin-right: 5%; margin-top: 2%; margin-bottom: 2%; margin-left: 5%;">
+
+        <div class="reactiveFlex" id="bc2021">
+            <div class="reactiveWidth box" style="display: block !important; max-width: 80vw;
+            min-width: 50vw;
+            align-self: center;
+            position: relative;
+            align-content: center;">
+                <p style="font-size: 6vh; color: white; text-decoration: underline; text-decoration-color: #b07219; margin: 0%; padding-top: 2%; font-weight: 800; margin-left: 2%">battlecode 2021</p>
+                <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; text-shadow: 0 0 15pt black; line-height: 160%;">
+                    Battlecode is a programming competition that is hosted by MIT, and every year, they make an entirely different game based on some sort of premise. This time, politics have hit Mars, and you must
+                    take over your opponent's party by getting more votes than them or "influencing" (attacking) the enemy base, or enlightenment center.<br>
+                    <b>Usage:</b> Make sure to have Java 8 installed as the default, then follow the <a href="https://github.com/battlecode/battlecode21-scaffold" style="color: #afffaf;">battlecode21-scaffold</a>
+                </p>
+            </div>
+            <div class="reactiveWidth" style="position: relative; margin: auto; margin-left: 1%; min-width: 80% !important;">
+                <Box title={"bc2021"} date={"2021"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2021" link="" language={languages[6]}
                 extraCss="{reactiveFlex}"/>
             </div>
         </div>
@@ -529,11 +551,12 @@
         top: 0;
         position:absolute;
         margin-top: 17%;
-        text-shadow: 0 0 5pt rgb(0,0,0);
-        text-decoration: underline;
-        text-decoration-color: #fbc200;
         transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
         min-width: 380px;
+        background: linear-gradient(45deg, #fbc200 33%, #0f0 66%, #00f 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
     }
     #alltitle:hover{
         font-size: 25vh;
@@ -565,7 +588,9 @@
         margin-left:5%;
     }
 
-    
+    a:visited {
+        color: #afffaf;
+    }
     
     
 

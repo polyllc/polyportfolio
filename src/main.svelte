@@ -162,16 +162,16 @@ import GithubLogo from "./lib/githubLogo.svelte";
                     </p>
                     <div id="openSourceDiv">
                         <div class="reactiveFlex">
-                            <Box title={"discord-gameboy"} date={"2020"}  description={"a gameboy emulator that's a discord bot"} icon={githubLogo} iconLink="https://github.com/polyllc/discord-gameboy" link="" language={languages[0]}/>
-                            <Box title={"alexa"} date={"2020-\n2022"}  description={"alexa is a feature rich music discord bot, from voice commands, to playlists"} icon={githubLogo} iconLink="https://github.com/polyllc/alexa" link="" language={languages[0]}/>
-                            <Box title={"poly portfolio"} date={"2022"}  description={"a portfolio of my works"} icon={githubLogo} iconLink="https://github.com/polyllc/polyportfolio" link="" language={languages[1]}/>
+                            <Box title={"discord-gameboy"} date={"2020"}  description={"a gameboy emulator that's a discord bot"} icon={githubLogo} iconLink="https://github.com/polyllc/discord-gameboy" link="./all.html#discordgameboy" language={languages[0]}/>
+                            <Box title={"alexa"} date={"2020-\n2022"}  description={"alexa is a feature rich music discord bot, from voice commands, to playlists"} icon={githubLogo} iconLink="https://github.com/polyllc/alexa" link="./all.html#alexa" language={languages[0]}/>
+                            <Box title={"poly portfolio"} date={"2022"}  description={"a portfolio of my works"} icon={githubLogo} iconLink="https://github.com/polyllc/polyportfolio" link="./all.html#polyportfolio" language={languages[1]}/>
                         </div>
                         <div class="reactiveFlex">
-                            <Box title={"scrypty"} date={"2021-\n2022"}  description={"clone, detect, compile, install from any repository, automatically"} icon={githubLogo} iconLink="https://github.com/polyllc/scrypty" link="" language={languages[0]}/>
-                            <Box title={"disconnall"} date={"2021"}  description={"disconnects everyone from wifi around you!"} icon={githubLogo} iconLink="https://github.com/polyllc/disconnall" link="" language={languages[2]}/>
-                            <Box title={"progflow"} date={"2021"}  description={"scripting for efficiency"} icon={githubLogo} iconLink="https://github.com/polyllc/progflow" link="" language={languages[2]}/>
+                            <Box title={"scrypty"} date={"2021-\n2022"}  description={"clone, detect, compile, install from any repository, automatically"} icon={githubLogo} iconLink="https://github.com/polyllc/scrypty" link="./all.html#scrypty" language={languages[0]}/>
+                            <Box title={"disconnall"} date={"2021"}  description={"disconnects everyone from wifi around you!"} icon={githubLogo} iconLink="https://github.com/polyllc/disconnall" link="./all.html#disconnall" language={languages[2]}/>
+                            <Box title={"progflow"} date={"2021"}  description={"scripting for efficiency"} icon={githubLogo} iconLink="https://github.com/polyllc/progflow" link="./all.html#progflow" language={languages[2]}/>
                         </div>
-                        <Box title={"jump cutter revamped"} date={"2020"}  description={"cuts out silent audio from videos to shorten the length"} icon={githubLogo} iconLink="https://github.com/polyllc/jump-cutter-revamped" link="" language={languages[2]}/> 
+                        <Box title={"jump cutter revamped"} date={"2020"}  description={"cuts out silent audio from videos to shorten the length"} icon={githubLogo} iconLink="https://github.com/polyllc/jump-cutter-revamped" link="./all.html#jumpcutter" language={languages[2]}/> 
                     </div>
                 </div>
 
@@ -202,13 +202,13 @@ import GithubLogo from "./lib/githubLogo.svelte";
                     </p>
                     <div>
                         <div class="reactiveFlex">
-                            <Box title={"discord-gameboy"} date={"2020"}  description={"a gameboy emulator that's a discord bot"} icon={githubLogo} iconLink="https://github.com/polyllc/discord-gameboy" link="" language={languages[0]}/>
-                            <Box title={"alexa"} date={"2020-\n2022"}  description={"alexa is a feature rich music discord bot, from voice commands, to playlists"} icon={githubLogo} iconLink="https://github.com/polyllc/alexa" link="" language={languages[0]}/>
-                            <Box title={"voting bot"} date={"2020"}  description={"a simple voting bot"} icon="" iconLink="" link="" language={languages[0]}/>
+                            <Box title={"discord-gameboy"} date={"2020"}  description={"a gameboy emulator that's a discord bot"} icon={githubLogo} iconLink="https://github.com/polyllc/discord-gameboy" link="./all.html#discordgameboy" language={languages[0]}/>
+                            <Box title={"alexa"} date={"2020-\n2022"}  description={"alexa is a feature rich music discord bot, from voice commands, to playlists"} icon={githubLogo} iconLink="https://github.com/polyllc/alexa" link="./all.html#alexa" language={languages[0]}/>
+                            <Box title={"voting bot"} date={"2020"}  description={"a simple voting bot"} icon="" iconLink="" link="./all#voting" language={languages[0]}/>
                         </div>
                         <div class="reactiveFlex">
-                            <Box title={"log bot"} date={"2020"}  description={"logs a server to another created just for logging"} icon="" iconLink="" link="" language={languages[0]}/>
-                            <Box title={"auto counter"} date={"2020"}  description={"auto counts in a channel and makes sure everyone is counting correctly"} icon="" iconLink="" link="" language={languages[0]}/>
+                            <Box title={"log bot"} date={"2020"}  description={"logs a server to another created just for logging"} icon="" iconLink="" link="./all.html#log" language={languages[0]}/>
+                            <Box title={"auto counter"} date={"2020"}  description={"auto counts in a channel and makes sure everyone is counting correctly"} icon="" iconLink="" link="./all.html#auto" language={languages[0]}/>
                         </div>
                     </div>
                 </div> 
@@ -239,12 +239,12 @@ import GithubLogo from "./lib/githubLogo.svelte";
                     </p>
                     <div>
                         <div class="reactiveFlex">
-                            <Box title={"polyllc.org"} date={"2017-\n2020"}  description={"the main website for poly"} icon="" iconLink="" link="" language={languages[4]}/>
-                            <Box title={"poly website"} date={"2017-\n2019"}  description={"a feature rich website, with videos, profiles, email and more"} icon="" iconLink="" link="" language={languages[3]}/>
-                            <Box title={"PolyForums"} date={"2019"}  description={"a social media site with tags as the way to find new content"} icon="" iconLink="" link="" language={languages[3]}/>
+                            <Box title={"polyllc.org"} date={"2017-\n2020"}  description={"the main website for poly"} icon="" iconLink="" link="./all.html#polyllc" language={languages[4]}/>
+                            <Box title={"poly website"} date={"2017-\n2019"}  description={"a feature rich website, with videos, profiles, email and more"} icon="" iconLink="" link="./all.html#phpfiles" language={languages[3]}/>
+                            <Box title={"PolyForums"} date={"2019"}  description={"a social media site with tags as the way to find new content"} icon="" iconLink="" link="./all.html#polyforums" language={languages[3]}/>
                         </div>
                         <div class="reactiveFlex">
-                            <Box title={"poly birthday games"} date={"2018"}  description={"simple games for poly's birthday"} icon="" iconLink="" link="" language={languages[0]}/>
+                            <Box title={"poly birthday games"} date={"2018"}  description={"simple games for poly's birthday"} icon="" iconLink="" link="./all.html#birthday" language={languages[0]}/>
                             <Box title={"poly portfolio"} date={"2022"}  description={"a portfolio of my works"} icon={githubLogo} iconLink="https://github.com/polyllc/polyportfolio" link="index.html" language={languages[1]}/>
                         </div>
                     </div>

@@ -1,0 +1,450 @@
+<html>
+<head>
+    <title>
+    Color Match
+    </title>
+        <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAIAAAC1nk4lAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIiSURBVGhD7ZUxUsMwEEU5CBXDTI5BS5Eqp0nHKdLlBqm4QGbSU6fNATKcwcj292a92pWVKCwmoze/AEnYz9KueGr+IVXaiyrtRZX2okp74Su9WzQfi2azxa+3MpY+rtuHKlljQSG+0l2KX/ar0qvmjIGOU7MZvHd7jN2Go3SAvOOpa/CVZpVzOGHkBrylz1tbmtUPYjSukD6susXG6UFGeVSxNF6sJW4AIZ2zEdqxXF8eRwy00ODo0WzjhY0sD9uMvoe/biBTeo9HjA5rGFSvlN5PHG5c01aFYFwvswxp+ugQZZu1YwmoWxVL05ePzmQ4AeOGVaWNiJNKboZuo0hrg8naCORJJwogLkeg7Zb6J/RSUpzYjvxGjLmXtOyNidoIFEjfqzwC/FGojZRDgXR6cW4jdvDF/QeYB9hSIJ1z5Yl3mxVFJbHFD8q/mwsl0nSswmMwCBHtb0qzR7WZECiTDvQeauILKyFN52YuuFAsHaCKpFiNn5Jm35+sjcBY+m+ZuI4uzEd6+nomZiONytQ6IWIm0sM2T7VgzzykqZWnWrBnTo2YTZX2IiX9/fxKwVAeL59LCoYyeHv/omDIQJfmujyYtuG6PJg24Lo8mI54FGkhKoJFGkJUBIsihKgIFo2p0pEoDxZFCEsRLBrzKNIBIUrBtI0QpWDaQIhSMB3xQNI9V+ly8nU5Obo9KenZUqW9qNJeVGkvqrQXVdqLKu1D0/wAcEvAXaFHbm0AAAAASUVORK5CYII=">
+    </head>
+<body>
+    <div id="master">
+            <div id="gameover" align="center">
+    <h1 style="color: red;">Game Over</h1>
+        <hr>
+        <p style="font-size: 30px;" id="gameoverp"></p><br>
+            <p>You said</p><br>
+        <div id="gamecolor"><p style="text-shadow: 5px 2px 6px #000000; color:white;" id="colorp"></p></div><br><br><br>
+        <p>Right Color</p><br>
+        <div id="rgamecolor"><p style="text-shadow: 5px 2px 6px #000000; color:white;" id="rcolorp"></p></div>
+    </div>
+        <div id="help" align="center">
+    <h1>Help</h1>
+        <hr>
+        <p style="font-size: 30px;"> Type in the appropriate values into the boxes! Get a point per each color and see how long you last!</p>
+        <br>
+        <p>This game is ment for people that want to learn or advance in the skill of finding which color they want in css or anything that they need hex values RGB values or colors. If you want to play, go ahead! But it might be a bit challenging.....</p>
+<button onclick="gotit()">Got It!</button>
+    </div>
+            
+    <div id="game">
+    <div id="header" align="center">
+    <h1 style="margin-top: 20px;">Color Match!</h1>
+        <hr>
+        <h4>Match the color!</h4>
+            <div id="stats" align="center">
+        <p class="pstats" id="lives">3 Lives | </p>
+        <p class="pstats" id="rounds">Round 1 | </p>
+        <p class="pstats" id="points">0 Points</p>
+        </div>
+    </div>
+    <div id="sidebar">
+        <h2>Color Bank</h2>
+        <hr>
+        <ul>
+        <li>Blue</li>
+            <li>Green</li>
+            <li>Yellow</li>
+            <li>Red</li>
+            <li>Purple</li>
+            <li>Black</li>
+            <li>Grey</li>
+            <li>Aqua</li>
+            <li>Beige</li>
+            <li>Brown</li>
+            <li>White</li>
+            <li>Cyan</li>
+            <li>Fuchsia</li>
+        </ul>
+        </div>
+    <div id="main" align="center">
+    <div id="color">
+        </div>
+        <div id="colordiv">
+        <div id="rgb">
+        <p style="font-size: 30px;">RGB</p><label>R </label><input type="number" id="r" min=0 max=255>
+            <label>G </label><input type="number" id="g" min=0 max=255>
+            <label>B </label><input type="number" id="b" min=0 max=255>
+        </div>
+        <div id="hex">        <p style="font-size: 30px;">Hex Value</p><label>R </label><input type="text" id="rhex" size=2>
+      <label>G </label>      <input type="text" id="ghex" size=2>
+          <label>B </label>  <input type="text" id="bhex" size=2></div>
+            <div id="text"> <p style="font-size: 30px;">Text</p><input type="text" id="textcolor">
+           </div>
+         <button onclick="nextRound()">Submit</button>
+        </div><br>
+        
+        </div></div>
+
+    <script>
+    var points = 0;
+    var lives = 5;
+    var round = 1;
+    var colors = ['blue', 'green', 'yellow', 'red', 'purple', 'black', 'grey', 'aqua', 'beige', 'brown', 'white', 'cyan', 'fuchsia'];
+    var color;
+    var type = 1;
+        
+    function randomHex(){
+        var string;
+         var num = Math.floor(Math.random() * 16);
+        switch(num){
+                case 0: string = "0";  break;   
+                case 1: string = "1";  break;  
+                case 2: string = "2";  break; 
+                case 3: string = "3";  break;  
+                case 4: string = "4";  break;  
+                case 5: string = "5";  break;  
+                case 6: string = "6";  break;  
+                case 7: string = "7";  break;  
+                case 8: string = "8";  break;  
+                case 9: string = "9";  break;  
+                case 10: string = "a";  break;  
+                case 11: string = "b";  break;  
+                case 12: string = "c";  break;  
+                case 13: string = "d";  break;  
+                case 14: string = "e";  break;  
+                case 15: string = "f";  break; 
+            }
+        for(var i = 0; i < 5; i++){
+           var num = Math.floor(Math.random() * 16);
+            switch(num){
+                case 0: string = string.concat("0"); break;
+                case 1: string = string.concat("1"); break;
+                case 2: string = string.concat("2"); break;
+                case 3: string = string.concat("3"); break;
+                case 4: string = string.concat("4"); break;
+                case 5: string = string.concat("5"); break;
+                case 6: string = string.concat("6"); break;
+                case 7: string = string.concat("7"); break;
+                case 8: string = string.concat("8"); break;
+                case 9: string = string.concat("9"); break;
+                case 10: string = string.concat("a"); break;
+                case 11: string = string.concat("b"); break;
+                case 12: string = string.concat("c"); break;
+                case 13: string = string.concat("d"); break;
+                case 14: string = string.concat("e"); break;
+                case 15: string = string.concat("f"); break;  
+            }
+        }
+        return string;
+    }
+        
+    function randomRGB(){
+        var n1 = Math.floor(Math.random() * 256);
+        var n2 = Math.floor(Math.random() * 256);
+        var n3 = Math.floor(Math.random() * 256);
+        var string = n1 + "*";
+        //string = string.concat("*");
+        string = string.concat(n2);
+        string = string.concat("*");
+        string = string.concat(n3);
+        return string;
+    }
+        
+    function randomColor(){
+        return colors[Math.floor(Math.random() * 13)];
+    }
+        
+    function gotit(){
+        document.getElementById("help").style.display = "none";
+        gameStart();
+    }
+        
+        
+    function gameStart(){
+            document.getElementById("text").style.display = "contents";
+            color = randomColor();
+            document.getElementById("color").style.backgroundColor = color;
+            type = 1;
+        setInterval(function(){
+            document.getElementById("lives").innerHTML = lives + " Lives | ";
+            document.getElementById("points").innerHTML = points + " Points";
+            document.getElementById("rounds").innerHTML = "Round " + round + " | ";
+            if(lives == 0){
+                gameOver();
+            }
+        },10);
+    }
+        function nextRound(){
+            switch(type){
+                case 1: 
+                    console.log("hi");
+                    if(document.getElementById("textcolor").value.toLowerCase() === color){
+                    round++;
+                    points += type * round * 10;
+                    newRound();
+                    }     
+                    else{
+                        lives--;
+                        if(lives == 0){
+                            gameOver();
+                            break;
+                        }
+                        round++;
+                        newRound();
+                    }
+                    break;
+                     case 2: 
+                    if(gotRGB()){
+                    round++;
+                    points += type * round * 10;
+                    newRound();
+                    }     
+                    else{
+                        lives--;
+                        if(lives == 0){
+                            gameOver();
+                            break;
+                        }
+                        round++;
+                        newRound();
+                    }
+                    break;
+                     case 3: 
+                    if(gotHex()){
+                    round++;
+                    points += type * round * 10;
+                    newRound();
+                    }     
+                    else{
+                        lives--;
+                        if(lives == 0){
+                            gameOver();
+                            break;
+                        }
+                        round++;
+                        newRound();
+                    }
+                    break;
+                    
+           }
+        }
+        function newRound(){
+        
+             document.getElementById("text").style.display = "none";
+            document.getElementById("rgb").style.display = "none";
+            document.getElementById("hex").style.display = "none";
+            if(round < 10){
+              document.getElementById("text").style.display = "contents";
+            color = randomColor();
+            document.getElementById("color").style.backgroundColor = color;
+            type = 1;  
+            }
+            if(round < 20 && round > 9){
+            if(Math.floor(Math.random() * 2) == 0){
+              document.getElementById("text").style.display = "contents";
+            color = randomColor();
+            document.getElementById("color").style.backgroundColor = color;
+            type = 1;  
+            }
+                else{
+                    document.getElementById("rgb").style.display = "contents";
+            color = randomRGB();
+            var colorarray = color.split("*");
+            var colorstring = "rgb(" + colorarray[0] + ", " + colorarray[1] + ", " + colorarray[2] + ")";
+            document.getElementById("color").style.backgroundColor = colorstring;
+            type = 2;   
+                }
+            }
+            if(round > 20){
+                switch(Math.floor(Math.random() * 3)){
+                    case 0:
+              document.getElementById("text").style.display = "contents";
+            color = randomColor();
+            document.getElementById("color").style.backgroundColor = color;
+            type = 1;  break;
+                    case 1: 
+                        document.getElementById("rgb").style.display = "contents";
+            color = randomRGB();
+            var colorarray = color.split("*");
+            var colorstring = "rgb(" + colorarray[0] + ", " + colorarray[1] + ", " + colorarray[2] + ")";
+            document.getElementById("color").style.backgroundColor = colorstring;
+            type = 2;   break;
+                    case 2: 
+                        document.getElementById("hex").style.display = "contents";
+            color = randomHex();
+            var colorstring = "#" + color;
+            document.getElementById("color").style.backgroundColor = colorstring;
+            type = 3;   
+            }
+        }
+    
+        }
+            
+            function gameOver(){
+                document.getElementById("gameover").style.display = "block";
+                document.getElementById("gameoverp").innerHTML = "Good job! You got " + points + " points. Reload the page to play again";
+                switch(type){
+                    case 1: document.getElementById("gamecolor").style.backgroundColor = document.getElementById("textcolor").value; 
+                        document.getElementById('colorp').innerHTML = document.getElementById("textcolor").value;
+                        document.getElementById("rgamecolor").style.backgroundColor = color;
+                document.getElementById("rcolorp").innerHTML = color;
+                        break;
+                        
+                        
+                    case 2: document.getElementById("gamecolor").style.backgroundColor = "rgb(" + document.getElementById("r").value + ", " + document.getElementById("g").value + ", " + document.getElementById("b").value + ")";
+                        document.getElementById('colorp').innerHTML = "rgb(" + document.getElementById("r").value + ", " + document.getElementById("g").value + ", " + document.getElementById("b").value + ")"; 
+                            var colorarray = color.split("*");
+            var colorstring = "rgb(" + colorarray[0] + ", " + colorarray[1] + ", " + colorarray[2] + ")";
+                        document.getElementById("rgamecolor").style.backgroundColor = colorstring;
+                document.getElementById("rcolorp").innerHTML = colorstring;
+                        break;
+                        
+                    case 3: document.getElementById("gamecolor").style.backgroundColor = "#" + document.getElementById("rhex").value + document.getElementById("ghex").value + document.getElementById("bhex").value;
+                         document.getElementById('colorp').innerHTML = "#" + document.getElementById("rhex").value + document.getElementById("ghex").value + document.getElementById("bhex").value; 
+                        document.getElementById("rgamecolor").style.backgroundColor = "#" + color;
+                document.getElementById("rcolorp").innerHTML = "#" + color;
+                        break;
+                }
+                
+                
+            }
+        
+        function gotRGB(){
+            var val1 = document.getElementById("r").value;
+            var val2 = document.getElementById("g").value;
+            var val3 = document.getElementById("b").value;
+            var total = 0;
+            var splitarr = color.split("*");
+            
+            if(val1 > splitarr[0] - 100 && val1 < splitarr[0] + 100){
+                total++;
+            }
+            if(val2 > splitarr[1] - 100 && val2 < splitarr[1] + 100){
+                total++;
+            }
+            if(val3 > splitarr[2] - 100 && val3 < splitarr[2] + 100){
+                total++;
+            }
+            if(total == 3){
+                return 1;
+            }
+            else{
+                return 0;
+            }
+        }
+        
+        
+        
+        function hexToRgb(hex) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
+    } //Made by an amazing stack overflow user :)      
+        
+    
+         function gotHex(){
+            var val1 = document.getElementById("rhex").value;
+            var val2 = document.getElementById("ghex").value;
+            var val3 = document.getElementById("bhex").value;
+            var total = 0;
+            var hexrgb = hexToRgb("#" + val1 + val2 + val3);
+            var splitarr = hexToRgb(color);
+             
+            if(hexrgb["r"] > splitarr["r"] - 100 && hexrgb["r"] < splitarr["r"] + 100){
+                total++;
+            }
+            if(hexrgb["g"] > splitarr["g"] - 100 && hexrgb["g"] < splitarr["g"] + 100){
+                total++;
+            }
+            if(hexrgb["b"] > splitarr["b"] - 100 && hexrgb["b"] < splitarr["b"] + 100){
+                total++;
+            }
+            if(total == 3){
+                return 1;
+            }
+            else{
+                return 0;
+            }
+        }
+        
+    
+        
+    </script>
+    <style>
+        html{
+            background: #444444;
+            font-family: "Ubuntu", monospace;
+            color: #aaaaaa;
+        }
+        hr{
+            border: solid;
+            border-color: black;
+        }
+        body{
+            margin: 0px;
+        }
+        #stats{
+            display: inline-block;
+        }
+        .pstats{
+            display: inline-block;
+            margin-top: 0px;
+            font-size: 30px;
+        }
+        #color{
+            margin-top: 3%;
+            margin-left:0%;
+            width: 20%;
+            height: 20%;
+            background-color: orange;
+        }
+        #rgb{
+         display: none;   
+        }
+        #hex{
+            display: none;
+        }
+        #text{
+            display: none;
+        }
+        #help{
+            width: 50%;
+            height: 50%;
+            z-index: 4;
+            background-color: #222222;
+            position: absolute;
+            margin-left: 25%;
+            margin-top: 10%;
+            padding: 10px;
+        }
+        #gameover{
+            width: 50%;
+            height: 71%;
+            z-index: 500;
+            background-color: #222222;
+            position: absolute;
+            margin-left: 25%;
+            margin-top: 10%;
+            display: none;
+        }
+        #game{
+            z-index: -1;
+        }
+        #gamecolor{
+            width: 12%; 
+            height: 12%;
+            margin-left: 45%;
+            position: absolute;
+          
+            margin-top: 1px;
+        }
+         #rgamecolor{
+            width: 12%; 
+            height: 12%;
+            margin-left: 45%;
+            position: absolute;
+            
+            margin-top: 1px;
+        }
+        #sidebar{
+            float:left;
+            width: 10%;
+        }
+        #colordiv{
+            margin-right: 10%;
+        }
+        </style></div>
+    </body>
+</html>

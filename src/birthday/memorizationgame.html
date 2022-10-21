@@ -1,0 +1,228 @@
+<html>
+<head>
+    <title>
+    Memorization
+    </title>
+        <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAIAAAC1nk4lAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIiSURBVGhD7ZUxUsMwEEU5CBXDTI5BS5Eqp0nHKdLlBqm4QGbSU6fNATKcwcj292a92pWVKCwmoze/AEnYz9KueGr+IVXaiyrtRZX2okp74Su9WzQfi2azxa+3MpY+rtuHKlljQSG+0l2KX/ar0qvmjIGOU7MZvHd7jN2Go3SAvOOpa/CVZpVzOGHkBrylz1tbmtUPYjSukD6susXG6UFGeVSxNF6sJW4AIZ2zEdqxXF8eRwy00ODo0WzjhY0sD9uMvoe/biBTeo9HjA5rGFSvlN5PHG5c01aFYFwvswxp+ugQZZu1YwmoWxVL05ePzmQ4AeOGVaWNiJNKboZuo0hrg8naCORJJwogLkeg7Zb6J/RSUpzYjvxGjLmXtOyNidoIFEjfqzwC/FGojZRDgXR6cW4jdvDF/QeYB9hSIJ1z5Yl3mxVFJbHFD8q/mwsl0nSswmMwCBHtb0qzR7WZECiTDvQeauILKyFN52YuuFAsHaCKpFiNn5Jm35+sjcBY+m+ZuI4uzEd6+nomZiONytQ6IWIm0sM2T7VgzzykqZWnWrBnTo2YTZX2IiX9/fxKwVAeL59LCoYyeHv/omDIQJfmujyYtuG6PJg24Lo8mI54FGkhKoJFGkJUBIsihKgIFo2p0pEoDxZFCEsRLBrzKNIBIUrBtI0QpWDaQIhSMB3xQNI9V+ly8nU5Obo9KenZUqW9qNJeVGkvqrQXVdqLKu1D0/wAcEvAXaFHbm0AAAAASUVORK5CYII=">
+    </head>
+    <body><audio src="yes.wav" id="beep"></audio>
+        <audio src="wrong.wav" id="boop"></audio>
+           <div id="gameover" align="center">
+    <h1 style="color: red;">Game Over</h1>
+        <hr>
+        <p style="font-size: 30px;" id="gameoverp"></p><br>
+         <div id="data">   <p>You said</p><br>
+        <p style="color:white;" id="nump"></p><br>
+        <p>Right Number</p><br>
+             <p style="color:white;" id="rnump"></p></div>
+    </div>
+        <div id="help" align="center">
+        <h1>Help</h1>
+            <hr>
+            <p style='font-size: 20px;'>Memorize the numbers that the game types. Get one wrong, lose a life. Run out of time, game over! Try and get the most possible points!</p>
+            <br><button onclick="document.getElementById('help').style.display = 'none'; gameStart();">Ok!</button>
+        </div>
+    <div id='mastergame' align='center'>
+        <div id="header" align="center">
+        <h1 style="font-size: 60px;">Memorization Game</h1>
+        </div>
+        <div id="stats" align="center">
+        <p class="pstats" id="lives">3 Lives | </p>
+        <p class="pstats" id="rounds">Round 1 | </p>
+        <p class="pstats" id="points">0 Points | </p>
+        <p class="pstats" id="time">Time: 0</p>
+        </div><br>
+        <div id="memside">
+        <h1 style="font-size: 48px;">Game's Side</h1>
+        <hr>
+        <p style="font-size: 80px; border-right: solid 1px #ffffff; border-left: solid 1px #ffffff" id="compinput">0</p>
+        <hr>
+        </div>
+        <div id="personside">
+        <h1 style="font-size: 48px;">Your Side</h1>
+        <hr>
+        <p style="font-size: 80px; border-right: solid 1px #ffffff; border-left: solid 1px #ffffff" id='youinput'>0</p>
+        <hr>
+        </div>
+        <div class='clearfix'></div>
+        <p style="font-size: 60px;" id="turns"></p>
+        </div>
+        <script>
+            
+            var time = 0;
+            var lives = 5;
+            var points = 0;
+            var round = 1;
+            var numarray = [Math.floor(Math.random() * 9) + 1, Math.floor(Math.random() * 10)];
+            var currentnum = 0;
+            var currentpressed = 0;
+            var keypressed = 0;
+            var pressed = 0;
+            var youturn = 0;
+            var timeoffset = 0;
+            document.addEventListener("keypress", function(e){
+            keypressed = e.keyCode;
+            pressed = 1;
+            if(youturn){
+            if(numarray[currentpressed] != keypressed - 48){
+                lives--;
+                document.getElementById("boop").currentTime = 0;
+                document.getElementById("boop").play();
+            }
+            else{
+                document.getElementById("beep").currentTime = 0;
+                document.getElementById("beep").play();
+                if(currentpressed < round){
+                currentpressed++;
+                }
+                points += round * 10;
+            }
+            if(currentpressed == round){
+                nextRound();
+            }
+            }
+            }, false);
+            keypressed = 48;
+            inter = 0;
+        function gameStart(){
+            var inter = setInterval(function(){
+                document.getElementById("lives").innerHTML = lives + " Lives | ";
+                document.getElementById("rounds").innerHTML = "Round " + round + " | ";
+                document.getElementById("points").innerHTML = points + " Points | ";
+                document.getElementById("time").innerHTML = "Time: " + Math.floor(time);
+                document.getElementById("compinput").innerHTML = numarray[currentnum];
+                if(youturn){
+                    document.getElementById("turns").innerHTML = "Your Turn!"
+                }
+                else{
+                    document.getElementById("turns").innerHTML = "Game's Turn!"
+                }
+                
+                if(youturn){
+                time -= 0.01;
+                }
+                if(keypressed < 58 && keypressed > 47){
+                document.getElementById("youinput").innerHTML = keypressed - 48;
+                }
+                if(!youturn){
+                    if(timeoffset == 150){
+                        if(currentnum < round - 1){
+                            currentnum++;
+                            timeoffset = 0;
+                            document.getElementById("beep").currentTime = 0;
+                            document.getElementById("beep").play();
+                        }
+                    }
+                    timeoffset++;
+                    if(currentnum == round - 1){
+                        youturn = 1;
+                        time = round + 1;
+                    }
+                }
+                
+                //Console logging
+                console.log("Numarray: " + numarray);
+                console.log("Currenynum: " + currentnum);
+                console.log("Currenypressed: " + currentpressed);
+                console.log("Keypressed: " +  keypressed - 48);
+                console.log("pressed: " + pressed);
+                console.log("youturn: " + youturn);
+                
+                if(lives < 1){
+                    gameOver();
+                }
+                if(time <= 0){
+                    gameOver();
+                }
+            }, 10);
+        }
+            
+        function nextRound(){
+            round++;
+            numarray[round] = Math.floor(Math.random() * 10);
+            while(numarray[round] == numarray[round - 1]){
+                numarray[round] = Math.floor(Math.random() * 10);
+            }
+            youturn = 0;
+            currentnum = 0;
+            timeoffset = 0;
+            currentpressed = 0;
+        }
+            
+            
+        function gameOver(){
+                document.getElementById("gameover").style.display = "block";
+                if(lives < 1){
+                document.getElementById("gameoverp").innerHTML = "You ran out of lives! You got " + points + " points! Try again by reloading the page.";
+                document.getElementById("nump").innerHTML = keypressed - 48;
+                document.getElementById("rnump").innerHTML = numarray[0];
+                }
+                if(time <= 0){
+                    document.getElementById("gameoverp").innerHTML = "You ran out of time! You got " + points + " points! Try again by reloading the page."; 
+                    document.getElementById("data").style.display = "none";
+                }
+            clearInterval(inter);
+            }
+        </script>
+        <style>
+            html{
+                color: #eeeeee;
+                font-family: "Roboto", monospace;
+                background-color: #3c3c3c;
+            }
+            #header{
+                width: 100%;
+                background-color: #2e2e2e;
+                padding: 0;
+            }
+            body{
+                margin: 0px;
+            }
+            #memside{
+                float: left;
+                margin-left: 0px;
+                padding-left: 25%;
+                padding-top: 0%;
+            }
+            #personside{
+                float: left;
+                padding-left: 15%;
+                padding-top: 0%; 
+            }
+            #clearfix{
+                clear: both;
+            }
+            #stats{
+                display: inline-block;
+            }
+            .pstats{
+                display: inline-block;
+                margin-top: 0px;
+                font-size: 30px;
+            }
+            #mastergame{
+                z-index: 1;
+            }
+             #help{
+            width: 50%;
+            height: 50%;
+            z-index: 4;
+            background-color: #222222;
+            position: absolute;
+            margin-left: 25%;
+            margin-top: 10%;
+            padding: 10px;
+        }
+            #gameover{
+                width: 50%;
+                height: 71%;
+                z-index: 500;
+                background-color: #222222;
+                position: absolute;
+                margin-left: 25%;
+                margin-top: 10%;
+                display: none;
+            }
+        </style>
+    </body>
+</html>
