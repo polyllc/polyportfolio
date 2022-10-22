@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>
+Text Shadow Maker
+</title>
+    <link rel="icon" href="http://polyllc.org/png.png"/>
+</head>
+<body>
+<textarea cols=40 rows=10 id="textt"></textarea><br />
+<h1 id='ts'></h1>
+<button onclick="up()" style="margin-left: 3.5%;">/\</button><br />
+<button onclick="left()"><-</button>
+<button onclick="straight()">--</button>
+<button onclick="curly()">~~</button>
+<button onclick="right()">-></button><br />
+<button onclick="down()" style="margin-left: 3.5%;">\/</button>
+<br />
+<input id="color" type="color" />
+    <br>
+    <h1 id="css">
+    
+    </h1>
+<script>
+var x = 1;
+var y = 1;
+var r = 1;
+var tex = document.getElementById('textt').value;
+setInterval(function(){
+tex = document.getElementById("textt").value;
+document.getElementById('ts').innerHTML = tex;
+color = document.getElementById('color').value;
+document.getElementById("ts").style = "text-shadow: " + x + "px " + y + "px " + r + "px " + color + ";";
+       document.getElementById("css").innerHTML = "css | text-shadow: " + x + "px " + y + "px " + r + "px " + color + ";";
+}, 1);
+function up(){
+  y += -1;
+}
+function down(){
+  y += 1;
+}
+function right(){
+  x += 1;
+}
+function left(){
+  x += -1;
+}
+function straight(){
+  if(r > 0){
+  r += -1;
+}
+}
+function curly(){
+  r += 1;
+}
+ 
+</script>
+<style>
+body{
+  margin: 0px;
+  text-shadow: 1 1 1 #000000;
+}
+</style>
+</body>
+</html>

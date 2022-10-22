@@ -1,0 +1,61 @@
+<html id="html">
+<head>
+    <title>
+gradients
+    </title>
+    <link rel="icon" href="http://polyllc.org/png.png"/>
+    </head>
+   <body>
+<input type="color" id="c1"/>
+       <input type="color" id="c2"/>
+       <input type="color" id="c3"/>
+       <input type="color" id="c4"/>
+       <input type="color" id="c5"/>
+       <input type="color" id="c6"/>
+    <select id="o">
+       <option value="to right">right</option>
+           <option value="to left">left</option>
+           <option value="to top">up</option>
+           <option value="to bottom">down</option>
+        
+       </select>
+       <div style="width: 500; height: 500 background:;" id="dd"></div>
+       <h1 id="val"></h1>
+       <script>
+   var c1 = document.getElementById("c1");
+            var c2 = document.getElementById("c2");
+            var c3 = document.getElementById("c3");
+            var c4 = document.getElementById("c4");
+            var c5 = document.getElementById("c5");
+            var c6 = document.getElementById("c6");
+           
+           setInterval(function(){
+               var option = document.getElementById("o");
+
+                  var c1 = document.getElementById("c1");
+            var c2 = document.getElementById("c2");
+            var c3 = document.getElementById("c3");
+            var c4 = document.getElementById("c4");
+            var c5 = document.getElementById("c5");
+            var c6 = document.getElementById("c6");
+             var tthing = document.getElementById('dd');
+                   
+                   tthing.style = "background: linear-gradient(" + option.value +", " + c1.value + ", "  + c2.value + ", "  + c3.value + ", " + c4.value + ", " + c5.value + ", " + c6.value + "); height: 500; width: 500;";
+               
+               
+               document.getElementById("val").innerHTML = "CSS background: linear-gradient(" + option.value +", " + c1.value + ", "  + c2.value + ", "  + c3.value + ", " + c4.value + ", " + c5.value + ", " + c6.value + ");";
+
+           },10);
+           
+   
+       </script>
+       <style>
+           #p{
+               float:left;
+               border-right: solid;
+               
+           }
+         
+       </style>
+    </body>
+</html>

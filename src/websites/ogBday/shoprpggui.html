@@ -1,0 +1,972 @@
+<html>
+<head>
+    <title>
+    Shop RPG - GUI Edition
+    </title>
+     <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAIAAAC1nk4lAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIiSURBVGhD7ZUxUsMwEEU5CBXDTI5BS5Eqp0nHKdLlBqm4QGbSU6fNATKcwcj292a92pWVKCwmoze/AEnYz9KueGr+IVXaiyrtRZX2okp74Su9WzQfi2azxa+3MpY+rtuHKlljQSG+0l2KX/ar0qvmjIGOU7MZvHd7jN2Go3SAvOOpa/CVZpVzOGHkBrylz1tbmtUPYjSukD6susXG6UFGeVSxNF6sJW4AIZ2zEdqxXF8eRwy00ODo0WzjhY0sD9uMvoe/biBTeo9HjA5rGFSvlN5PHG5c01aFYFwvswxp+ugQZZu1YwmoWxVL05ePzmQ4AeOGVaWNiJNKboZuo0hrg8naCORJJwogLkeg7Zb6J/RSUpzYjvxGjLmXtOyNidoIFEjfqzwC/FGojZRDgXR6cW4jdvDF/QeYB9hSIJ1z5Yl3mxVFJbHFD8q/mwsl0nSswmMwCBHtb0qzR7WZECiTDvQeauILKyFN52YuuFAsHaCKpFiNn5Jm35+sjcBY+m+ZuI4uzEd6+nomZiONytQ6IWIm0sM2T7VgzzykqZWnWrBnTo2YTZX2IiX9/fxKwVAeL59LCoYyeHv/omDIQJfmujyYtuG6PJg24Lo8mI54FGkhKoJFGkJUBIsihKgIFo2p0pEoDxZFCEsRLBrzKNIBIUrBtI0QpWDaQIhSMB3xQNI9V+ly8nU5Obo9KenZUqW9qNJeVGkvqrQXVdqLKu1D0/wAcEvAXaFHbm0AAAAASUVORK5CYII=">
+    </head>
+    <body><audio src="wrong.wav" id="boop"></audio>
+        <div id="promptbuy" align='center'>
+        <h1 style="font-size: 48px;">
+            Buy Item
+            </h1>
+            <hr>
+            <p id="buytext"></p>
+            <br>
+            <button id="yesbuy">Yes</button><button style="margin-left: 5%;" id="nobuy" onclick="document.getElementById('promptbuy').style.display = 'none';">No</button>
+        </div>
+        <div id="popupbox" align='center'>
+            <p id="popupboxtext" style="font-size: 30px;"></p>
+            <br>
+            <button id="popupboxbutton" onclick=" popupbox = 0; document.getElementById('popupbox').style.opacity = 0; document.getElementById('popupbox').style.visibility = 'hidden';">Yes</button>
+        </div>
+        <div id="mastergame">
+    <div align='center' id="statheader">
+        <p class="pstats" id='money'> 0 Money</p>
+        <p class="pstats" id='health'> 100 Health</p>
+        <p class="pstats" id='points'> 0 Points</p>
+        <p class="pstats" id='round'> Round 1</p>
+        </div>
+        <div id="battle">
+        <img id="you" src="you.png">
+        <p id='badhealth'>100</p><img id="bad" src="bad.png">
+        </div>
+             <div id="blurshop">
+        <div id="shop" align="center">
+       
+            <h1>Shop</h1>
+            <hr>
+            <table border="1" id="shoptable" align="center">
+            <tr>
+                <th>
+                Weapon/Tool
+                </th>
+                <th>
+                Level
+                </th>
+                </tr>
+                <tr onclick="promptBuy(1, swordlvl);">
+                <td id="swordn" onclick="promptBuy(1, swordlvl);">
+                    <div class='tooltip'>
+                    Sword
+                     <span class="tooltiptext">Swords to a fair amount of damage, and can rarely have critical shots. It sometimes misses too.</span></div>
+                    </td>
+                    <td id="swordlvl">
+                    1
+                    </td>
+                </tr>
+            
+                <tr>
+                
+                <td id="bown" onclick="promptBuy(2, bowlvl);">
+                        <div class="tooltip">
+                    Bow
+                            <span class="tooltiptext"> The Bow has high chances to have a critical hit, but base attack has low damage.</span></div>
+                    </td>
+                    <td id="bowlvl">
+                    1
+                    </td>
+                    
+                    </tr>
+                <tr>
+                <td id="hammern" onclick="promptBuy(3, hammerlvl);">
+                    <div class="tooltip">
+                    Hammer
+                     <span class="tooltiptext">Hammers do a lot of damage, but can miss at times.</span></div>
+                    </td>
+                    <td id="hammerlvl">
+                    1
+                    </td>
+                </tr>
+                
+                <tr>
+                <td id="armorn" onclick="promptBuy(4, armorlvl);">
+                    <div class="tooltip">
+                    Armor
+                     <span class="tooltiptext">Armor protects you by adding more health.</span></div>
+                    </td>
+                    <td id="armorlvl">
+                    1
+                    </td>
+                </tr>
+                
+                <tr>
+                <td id="magicn" onclick="promptBuy(5, magiclvl);">
+                    <div class="tooltip">
+                    Magic
+                     <span class="tooltiptext">Magic doens't do much damage, but has special effects that help you in the game.</span></div>
+                    </td>
+                    <td id="magiclvl">
+                    1
+                    </td>
+                </tr>
+            </table></div>
+            </div>
+            <div id="attackpanel">
+            <div id="shopround">
+            <div style="width: 80%; height: 20%;"  onclick="health = maxhealth;
+                enemyhealth = 100 + round + Math.floor(Math.random() * round); battle = 1; round++;" id="nextroundbutton" class="button">
+                Next Round
+                </div></div>
+                <div id="attackround">
+                <div id="attacks">
+                <div class="button" onclick="attack(0);" style="width: 40%; height: 50%; margin-left: 5%; margin-top: 1%; display: inline-block; float: left;" id="fistsbutton">
+                Fists
+                </div>
+                <div class="button" onclick="attack(1);" style="width: 40%; height: 50%; margin-left: 5%; margin-top: 1%; display: inline-block; float: left;" id="swordbutton">
+                Sword
+                </div>
+                <div class="button" onclick="attack(2);" style="width: 40%; height: 50%;  margin-left: 5%; margin-top: 1%; display: inline-block; float: left;" id="bowbutton">
+                Bow
+                </div>
+                <div class="button" onclick="attack(3);" style="width: 40%; height: 50%;  margin-left: 5%; margin-top: 1%; display: inline-block; float: left;" id="hammerbutton">
+                Hammer
+                </div>
+                <div class="button" onclick="attack(4);" style="width: 40%; height: 50%;  margin-left: 5%; margin-top: 1%; display: inline-block; float: left;" id="magicbutton">
+                Magic
+                </div>
+            </div>
+                <div id="attackstats">
+                <table border="1" id="attacktable">
+                <tr>
+                    <td>
+                    Damage
+                    </td>
+                    <td id='damagedone'>
+                    0
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                    Critical
+                    </td>
+                    <td id='criticaldone'>
+                    x1
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                    Missed
+                    </td>
+                    <td id='missed'>
+                    No
+                    </td>
+                    <tr>
+                    <td>
+                    Effect Done
+                    </td>
+                    <td id='effectdone'>
+                    None
+                    </td>
+                    </tr>
+                    
+                </table>
+                    </div></div>
+        </div>
+        </div>
+        <script>
+            
+            
+            function getCookie(cname) {
+                var name = cname + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var ca = decodedCookie.split(';');
+                for(var i = 0; i <ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+        }
+        return "";
+    }//yay w3schools to the rescue
+            
+            function setCookie(cname, cvalue, exdays) {
+                    var d = new Date();
+                    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+                    var expires = "expires="+ d.toUTCString();
+                    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }//yet again
+            
+            
+           // if(!getCookie("save")){
+            var swordlvl = 0;
+            var bowlvl = 0;
+            var hammerlvl = 0;
+            var money = 0;
+            var health = 200;
+            var points = 0;
+            var round = 1;
+            var popupbox = 0;
+            var battle = 1;
+            var enemyhealth = 100;
+            var turn = 1;
+            var maxhealth = 200;
+            var armorlvl = 0;
+            var magiclvl = 0;
+            var effect = "None";
+            var enemyonfire = 0;
+            var enemyparalyzed = 0;
+            var enemypoisoned = 0;
+            var enemyfrozen = 0;
+            var tutorial = 0;
+          //  }
+            /*
+            else{
+            var valarray = getCookie("save").split("*");
+                
+            var swordlvl = valarray[2];
+            var bowlvl = valarray[3];
+            var hammerlvl = valarray[4];
+            var money = valarray[0];
+            var health = valarray[1];
+            var points = valarray[8];
+            var round = valarray[7];
+            var popupbox = 0;
+            var battle = 1;
+            var enemyhealth = 100;
+            var turn = 1;
+            var maxhealth = valarray[1];
+            var armorlvl = valarray[5];
+            var magiclvl = valarray[6];
+            var effect = "None";
+            var enemyonfire = 0;
+            var enemyparalyzed = 0;
+            var enemypoisoned = 0;
+            var enemyfrozen = 0;
+            }*/
+            function updateHTML(){
+                //Update ALL the HTML
+                document.getElementById("money").innerHTML = Math.floor(money) + " Money";
+                document.getElementById("health").innerHTML = health + " Health";
+                document.getElementById("points").innerHTML = points + " Points";
+                document.getElementById("round").innerHTML = "Round " + round;
+                document.getElementById("swordlvl").innerHTML = swordlvl;
+                document.getElementById("bowlvl").innerHTML = bowlvl;
+                document.getElementById("hammerlvl").innerHTML = hammerlvl;
+                document.getElementById("armorlvl").innerHTML = armorlvl;
+                document.getElementById("magiclvl").innerHTML = magiclvl;
+                if(battle){
+                    document.getElementById("attackround").style.display = "block";
+                    document.getElementById("shopround").style.display = "none";
+                    document.getElementById("badhealth").innerHTML = Math.floor(enemyhealth);
+                    document.getElementById("nextroundbutton").style.display = "none";
+                    document.getElementById("blurshop").style.opacity = 0.5;
+                }
+                else{
+                    document.getElementById("attackround").style.display = "none";
+                    document.getElementById("shopround").style.display = "block";
+                    document.getElementById("nextroundbutton").style.display = "block";
+                    document.getElementById("blurshop").style.opacity = 1;
+                }
+                if(swordlvl != 0){
+                    document.getElementById("swordbutton").style.display = "block";
+                }
+                else{
+                    document.getElementById("swordbutton").style.display = "none";
+                }
+                
+                if(bowlvl != 0){
+                    document.getElementById("bowbutton").style.display = "block";
+                }
+                else{
+                    document.getElementById("bowbutton").style.display = "none";
+                }
+                
+                if(hammerlvl != 0){
+                    document.getElementById("hammerbutton").style.display = "block";
+                }
+                else{
+                    document.getElementById("hammerbutton").style.display = "none";
+                }
+                
+                if(magiclvl != 0){
+                    document.getElementById("magicbutton").style.display = "block";
+                }
+                else{
+                    document.getElementById("magicbutton").style.display = "none";
+                }
+            }
+            
+            
+           var inter =  setInterval(function(){
+            if(tutorial == 0){
+                
+                
+                if(popupbox == 0){
+                    tutorial++;
+                }
+                popup("Hi, I will be teaching you to play Shop RPG: GUI Edition.", "Ok.");
+            }
+            if(tutorial == 1){
+                if(popupbox == 0){
+                    tutorial++;
+                }
+                popup("To attack this guy, you go to the right and click one of the buttons. If you have enough weapongs bought, you can scroll up and down.", "Ok.");
+            }
+            if(tutorial == 2){
+                
+               
+                if(popupbox == 0){
+                    tutorial++;
+                }
+                popup("If you look below the attacks, you will see a table that has stats about your lastest attack.", "Nice.");
+            }
+            if(tutorial == 3){
+               
+                
+                if(popupbox == 0){
+                    tutorial++;
+                }
+                 popup("The damage is the total amount of damage and it includes the critical damage too. Critical gives more damage.", ":).");
+            }
+            if(tutorial == 4){
+           
+               
+                if(popupbox == 0){
+                    tutorial++;
+                }
+                popup("The missed box shows if you have missed or not. The damage will show a 0 if missed. The effects will show what effect you sent to the enemy when using magic. This can be Fire, Frozen, Poison or Paralyze", "Pretty cool.");
+               
+            }
+            if(tutorial == 5){
+              
+               
+                if(popupbox == 0){
+                    tutorial++;
+                }
+                popup("To use the shop, you can not be in battle. To buy something, you must click the name of the item you wish to click.", "Oke.");
+            }
+            if(tutorial == 6){
+                
+                
+                if(popupbox == 0){
+                    tutorial++;
+                    clearInterval(inter);
+                }
+                popup("Well then, have fun :)", "I will!");
+            }
+            
+                
+                
+            }, 10);
+            
+            
+            
+            
+            
+        function promptBuy(weaponid, lvl){
+            if(!battle){
+            switch(weaponid){
+                case 1:
+                if(money >= 100*(swordlvl+1) + (100 * (swordlvl + 1) * 1.7 / 2)){
+                if(lvl == 0){
+                document.getElementById("buytext").innerHTML = "Would you like to buy the sword?";
+                }
+                else{
+                  document.getElementById("buytext").innerHTML = "Would you like to upgrade the sword?";  
+                }
+                document.getElementById("yesbuy").onclick = function(){ 
+                    swordlvl++; 
+                    money -= 100*swordlvl + (100 * swordlvl * 1.7 / 2);
+                    document.getElementById("promptbuy").style.display = "none";
+                }
+                document.getElementById("promptbuy").style.display = "block";
+                }
+                else{
+                document.getElementById("buytext").innerHTML = "You don't have enough money to buy the sword...";  
+                document.getElementById("yesbuy").innerHTML = "Ok";
+                document.getElementById("nobuy").style.display = "none";
+                document.getElementById("yesbuy").onclick = function(){
+                    document.getElementById("promptbuy").style.display = "none";
+                    document.getElementById("yesbuy").innerHTML = "Yes";
+                    document.getElementById("nobuy").style.display = "block";
+                }  
+                document.getElementById("promptbuy").style.display = "block";
+                }
+                if(swordlvl == 10){
+                    document.getElementById("swordn").innerHTML = "Super Sword";
+                }
+                if(swordlvl == 20){
+                    document.getElementById("swordn").innerHTML = "Master Sword";
+                }
+                if(swordlvl == 30){
+                    document.getElementById("swordn").innerHTML = "Grandmaster Sword";
+                }
+                break;
+                    
+                    
+                case 2:
+                if(money >= 110*(bowlvl+1) + (110 * (bowlvl + 1) * 1.5 / 2)){
+                if(lvl == 0){
+                document.getElementById("buytext").innerHTML = "Would you like to buy the bow?";
+                }
+                else{
+                  document.getElementById("buytext").innerHTML = "Would you like to upgrade the bow?";  
+                }
+                document.getElementById("yesbuy").onclick = function(){ 
+                    money -= 110*(bowlvl+1) + (110 * (bowlvl + 1) * 1.5 / 2);
+                    bowlvl++; 
+                    document.getElementById("promptbuy").style.display = "none";
+                }
+                document.getElementById("promptbuy").style.display = "block";
+                }
+                else{
+                document.getElementById("buytext").innerHTML = "You don't have enough money to buy the bow...";  
+                document.getElementById("yesbuy").innerHTML = "Ok";
+                document.getElementById("nobuy").style.display = "none";
+                document.getElementById("yesbuy").onclick = function(){
+                    document.getElementById("promptbuy").style.display = "none";
+                    document.getElementById("yesbuy").innerHTML = "Yes";
+                    document.getElementById("nobuy").style.display = "block";
+                }  
+                document.getElementById("promptbuy").style.display = "block";
+                }
+                if(bowlvl == 10){
+                    document.getElementById("bown").innerHTML = "Super Bow";
+                }
+                if(bowlvl == 20){
+                    document.getElementById("bown").innerHTML = "Master Bow";
+                }
+                if(bowlvl == 30){
+                    document.getElementById("bown").innerHTML = "Grandmaster Bow";
+                }
+                break;
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                case 3:
+                if(money >= 120*(hammerlvl+1) + (120 * (hammerlvl + 1) * 1.4 / 1.8)){
+                if(lvl == 0){
+                document.getElementById("buytext").innerHTML = "Would you like to buy the hammer?";
+                }
+                else{
+                  document.getElementById("buytext").innerHTML = "Would you like to upgrade the hammer?";  
+                }
+                document.getElementById("yesbuy").onclick = function(){ 
+                    hammerlvl++; 
+                    money -= 120*(hammerlvl) + (120 * (hammerlvl) * 1.4 / 1.8);
+                    document.getElementById("promptbuy").style.display = "none";
+                }
+                document.getElementById("promptbuy").style.display = "block";
+                }
+                else{
+                document.getElementById("buytext").innerHTML = "You don't have enough money to buy the hammer...";  
+                document.getElementById("yesbuy").innerHTML = "Ok";
+                document.getElementById("nobuy").style.display = "none";
+                document.getElementById("yesbuy").onclick = function(){
+                    document.getElementById("promptbuy").style.display = "none";
+                    document.getElementById("yesbuy").innerHTML = "Yes";
+                    document.getElementById("nobuy").style.display = "block";
+                }  
+                document.getElementById("promptbuy").style.display = "block";
+                }
+                if(hammerlvl == 10){
+                    document.getElementById("hammern").innerHTML = "Super Hammer";
+                }
+                if(hammerlvl == 20){
+                    document.getElementById("hammern").innerHTML = "Master Hammer";
+                }
+                if(hammerlvl == 30){
+                    document.getElementById("hammern").innerHTML = "Grandmaster Hammer";
+                }
+                break;
+                    
+                
+                    
+                
+                    
+            
+                    
+                 case 4:
+                if(money >= 150*(armorlvl+1) + (100 * (armorlvl + 1) * 1.2 / 1.6)){
+                if(lvl == 0){
+                document.getElementById("buytext").innerHTML = "Would you like to buy armor?";
+                }
+                else{
+                  document.getElementById("buytext").innerHTML = "Would you like to upgrade your armor?";  
+                }
+                document.getElementById("yesbuy").onclick = function(){ 
+                    armorlvl++; 
+                    money -= 150*(armorlvl) + (100 * (armorlvl) * 1.2 / 1.6);
+                    document.getElementById("promptbuy").style.display = "none";
+                }
+                document.getElementById("promptbuy").style.display = "block";
+                }
+                else{
+                document.getElementById("buytext").innerHTML = "You don't have enough money to buy armor...";  
+                document.getElementById("yesbuy").innerHTML = "Ok";
+                document.getElementById("nobuy").style.display = "none";
+                document.getElementById("yesbuy").onclick = function(){
+                    document.getElementById("promptbuy").style.display = "none";
+                    document.getElementById("yesbuy").innerHTML = "Yes";
+                    document.getElementById("nobuy").style.display = "block";
+                }  
+                document.getElementById("promptbuy").style.display = "block";
+                }
+                if(armorlvl == 10){
+                    document.getElementById("armorn").innerHTML = "Super Armor";
+                }
+                if(armorlvl == 20){
+                    document.getElementById("armorn").innerHTML = "Master Armor";
+                }
+                if(armorlvl == 30){
+                    document.getElementById("armorn").innerHTML = "Grandmaster Armor";
+                }
+                break;
+                    
+                    
+                    
+                 case 5:
+                if(money >= 100*(magiclvl+1) + (120 * (magiclvl + 1) * 1.4 / 1.7)){
+                if(lvl == 0){
+                document.getElementById("buytext").innerHTML = "Would you like to buy magic?";
+                }
+                else{
+                  document.getElementById("buytext").innerHTML = "Would you like to upgrade magic?";  
+                }
+                document.getElementById("yesbuy").onclick = function(){ 
+                    magiclvl++; 
+                    money -= 100*(magiclvl) + (120 * (magiclvl) * 1.4 / 1.7);
+                    document.getElementById("promptbuy").style.display = "none";
+                }
+                document.getElementById("promptbuy").style.display = "block";
+                }
+                else{
+                document.getElementById("buytext").innerHTML = "You don't have enough money to buy magic...";  
+                document.getElementById("yesbuy").innerHTML = "Ok";
+                document.getElementById("nobuy").style.display = "none";
+                document.getElementById("yesbuy").onclick = function(){
+                    document.getElementById("promptbuy").style.display = "none";
+                    document.getElementById("yesbuy").innerHTML = "Yes";
+                    document.getElementById("nobuy").style.display = "block";
+                }  
+                document.getElementById("promptbuy").style.display = "block";
+                }
+                if(magiclvl == 10){
+                    document.getElementById("magicn").innerHTML = "Super Magic";
+                }
+                if(magiclvl == 20){
+                    document.getElementById("magicn").innerHTML = "Master Magician";
+                }
+                if(magiclvl == 30){
+                    document.getElementById("magicn").innerHTML = "Grandmaster Magician";
+                }
+                break;
+                    
+                    
+                    
+                    
+                    
+                
+                
+                default:break;
+           }  
+          }
+         }
+            
+            
+        setInterval(function(){
+            maxhealth = 200 + (armorlvl * 10);
+            updateHTML();
+            if(battle){
+            if(health < 1){
+                popup("You ran out of lives!", ":(");
+                setCookie("save", "lol", -666);
+                throw new Error("");
+            }
+            if(turn == 0){
+                if(enemypoisoned){
+                    enemyhealth -= Math.floor(Math.random() * 20);
+                    enemypoisoned--;
+                }
+                if(Math.floor(Math.random() * 20) == 5){
+                    var crit = (Math.floor(Math.random() * 10 + ((round / 10) - 1)) / 10) + 1;
+                }
+                        if(Math.floor(Math.random() * 30 + round) == 3){
+                        
+                        }
+                        else{
+                            if(!enemyfrozen && !enemyparalyzed){
+                            if(crit){
+                                if(enemyonfire){
+                                health -= ((20 + round + ((round / 10) - 1)) * crit) / 2;
+                                document.getElementById("boop").currentTime = 0;
+                                document.getElementById("boop").play();
+                                }
+                                else{
+                                health -= (20 + round + ((round / 10) - 1)) * crit;
+                                document.getElementById("boop").currentTime = 0;
+                                document.getElementById("boop").play();
+                                }
+                            }
+                            else{
+                                if(enemyonfire){
+                                health -= (20 + round + ((round / 10) - 1)) / 2;
+                                document.getElementById("boop").currentTime = 0;
+                                document.getElementById("boop").play();
+                                }
+                                else{
+                                health -= 20 + round + ((round / 10) - 1);  
+                                document.getElementById("boop").currentTime = 0;
+                                document.getElementById("boop").play();
+                                }
+                            }
+                            }
+                        }
+                
+                if(enemyfrozen){
+                    enemyfrozen = 0;
+                }
+                if(Math.floor(Math.random() * 4) == 2){
+                    enemyparalyzed = 0;
+                }
+                turn = 1;
+                
+            }
+            
+            if(enemyhealth < 1){
+                var amearned = Math.floor(((round * 100) * ((Math.floor(Math.random() * 12) / 18) + 1)));
+                money += amearned;
+                switch(Math.floor(Math.random() * 6) + 1){
+                    case 1: popup("You won the round! You got " + amearned + " money!", "Yay!"); break;
+                        
+                        case 2: popup("You won the round! You got " + amearned + " money!", "Nice!"); break;
+                        
+                        case 3: popup("You won the round! You got " + amearned + " money!", "Ok!"); break;
+                
+                        case 4: popup("You won the round! You got " + amearned + " money!", "Why not!"); break;
+                        
+                    case 5: popup("You won the round! You got " + amearned + " money!", ":^)"); break;
+                        
+                        case 6: popup("You won the round! You got " + amearned + " money!", "( ͡° ͜ʖ ͡°)"); break;
+                }
+                battle = 0;
+                health = maxhealth;
+                enemyhealth = 100 + round + Math.floor(Math.random() * round);
+                points += 100 * round;
+            }
+            }
+            var save = money + "*" + maxhealth + "*" + swordlvl + "*" + bowlvl + "*" + hammerlvl + "*" + armorlvl + "*" + magiclvl + "*" + round + "*" + points;
+            setCookie("save", save, 365);
+        }, 10);
+            
+            
+            
+        function attack(weapon){
+            if(battle){
+                switch(weapon){
+                    case 0:
+                        enemyhealth -= 15;
+                        updateAttackStats(20, "x1", "No", "None");
+                        break;
+                    case 1:
+                        if(Math.floor(Math.random() * 20) == 5){
+                            var crit = (Math.floor(Math.random() * 20 + (swordlvl - 1)) / 10) + 1;
+                        }
+                        if(Math.floor(Math.random() * 10) == 3){
+                        updateAttackStats(0, "x1", "Yes", "None"); 
+                        }
+                        else{
+                            if(crit){
+                                updateAttackStats(20 + (swordlvl - 1) * crit, "x" + crit, "No", "None");
+                                enemyhealth -= 20 + (swordlvl - 1) * crit;
+                                document.getElementById("boop").currentTime = 0;
+                                document.getElementById("boop").play();
+                            }
+                            else{
+                                updateAttackStats(20 + (swordlvl - 1), "x1", "No", "None");
+                                enemyhealth -= 20 + (swordlvl - 1); 
+                                document.getElementById("boop").currentTime = 0;
+                                document.getElementById("boop").play();
+                            }
+                        }
+                        break;
+                        
+                        
+                        
+                        
+                        case 2:
+                        if(Math.floor(Math.random() * 2) == 1){
+                            var crit = (Math.floor(Math.random() * 10 + (bowlvl - 1)) / 10) + 1;
+                        }
+                            if(crit){
+                                updateAttackStats(Math.floor((10 + (bowlvl - 1)) * crit), "x" + crit, "No", "None");
+                                enemyhealth -= (10 + (bowlvl - 1)) * crit;
+                                document.getElementById("boop").currentTime = 0;
+                                document.getElementById("boop").play();
+                            }
+                            else{
+                                updateAttackStats(10 + (bowlvl - 1), "x1", "No", "None");
+                                enemyhealth -= 10 + (bowlvl - 1); 
+                                document.getElementById("boop").currentTime = 0;
+                                document.getElementById("boop").play();
+                            }
+                        
+                        break;
+                        
+                        
+                        
+                        
+                        case 3:
+                        if(Math.floor(Math.random() * 5) == 3){
+                        updateAttackStats(0, "x1", "Yes", "None"); 
+                        }
+                        else{
+                                updateAttackStats(35 + (hammerlvl - 1), "x1", "No", "None");
+                                enemyhealth -= 35 + (hammerlvl - 1); 
+                                document.getElementById("boop").currentTime = 0;
+                                document.getElementById("boop").play();
+                        }
+                        break;
+                        
+                    case 4:
+                        switch(Math.floor(Math.random() * 5) + 1){
+                                case 1: effect = "Fire"; updateAttackStats(10, "x1", "No", "Fire");
+                                enemyonfire = 1;
+                                break;
+                            
+                                case 2:
+                                if(magiclvl >= 10){
+                                effect = "Frozen"; updateAttackStats(10, "x1", "No", "Frozen");
+                                enemyfrozen = 1;
+                                } 
+                                break; 
+                        
+                                case 3:
+                                if(magiclvl >= 20){
+                                effect = "Poison"; updateAttackStats(10, "x1", "No", "Poison");
+                                enemypoisoned = 3;
+                                } 
+                                break;
+                        
+                                case 4:
+                                if(magiclvl >= 30){
+                                effect = "Paralyzed"; updateAttackStats(10, "x1", "No", "Paralyze");
+                                enemyonfire = 1;
+                                } 
+                                break; 
+                        }
+                        enemyhealth -= 10;
+                        document.getElementById("boop").currentTime = 0;
+                        document.getElementById("boop").play();
+                }
+                turn = 0;
+            }
+        }    
+            
+        function updateAttackStats(damage, critical, missed, effect){
+            document.getElementById("damagedone").innerHTML = damage;
+            document.getElementById("criticaldone").innerHTML = critical;
+            document.getElementById("missed").innerHTML = missed;
+            document.getElementById("effectdone").innerHTML = effect;
+        }
+            
+            
+            function popup(text, buttontext){
+                if(popupbox == 0){
+                    popupbox = 1;
+                    document.getElementById("popupbox").style.opacity = 1;
+                    document.getElementById("popupbox").style.visibility = "visible";
+                    document.getElementById("popupboxtext").innerHTML = text;
+                    document.getElementById("popupboxbutton").innerHTML = buttontext;
+                }
+            }
+            
+            
+        popup("Hi and welcome to Shop RPG GUI edition! This is a remake of the old shop rpg that can be found on poly's website polyllc.org :). It was made in 3 days so don't expect much. It isn't really a rpg.", "Nice");
+        </script>
+        <style>
+            html{
+                color: #fefefe;
+                background-color: #3a3a3a;
+                font-family: "Yu Gothic UI", monospace;
+            }
+            #statheader{
+                background-color: #1f1f1f;
+                height: 8%;
+            }
+            .pstats{
+                display: inline-block;
+                font-size: 20px;
+                color: #ffffff;
+                margin-left: 5%;
+                text-align: center;
+            }
+            body{
+                margin: 0px;
+            }
+            #mastergame{
+                z-index: 0;
+            }
+            #battle{
+                background: linear-gradient(to bottom, #aaaaaa, #9a9a9a, #9f9f9f, #5d5d5d);
+                height: 32%;
+                padding: 2%;
+            }
+            #you{
+                margin-left: 10%;
+                float: left;
+                display: inline-block;
+            }
+            #bad{
+                margin-left: 52%;
+                float:left;
+                display: inline-block;
+            }
+            #badhealth{
+                margin-left: 57%;
+                float:left;
+                display: inline-block;
+                font-size: 20px;
+            }
+            #shop{
+                width: 50%;
+                float: left;
+                overflow-y: scroll;
+                background: linear-gradient(to bottom, #8a8a8a, #9a9a9a, #8f8f8f, #919191, #888888);
+                height: 52%;
+            }
+            #attackpanel{
+                width: 50%;
+                float: left;
+                overflow-y: scroll;
+                background: linear-gradient(to bottom, #8a8a8a, #9a9a9a, #8f8f8f, #919191, #888888);
+                height: 50%;
+                padding-top: 1%;
+                padding-bottom: 0%;
+            }
+            #shoptable{
+                border-color: #111111;
+                width: 95%;
+                border: solid 3px;
+                text-align: center;
+                border-collapse: collapse;
+            }
+            #shoptable th{
+                background-color: #4499ff;
+            }
+            #shoptable tr{
+                background-color: #aaaaaa;
+            }
+            #shoptable tr:nth-child(even){
+                background-color: #888888;
+            }
+            #shoptable tr:hover{
+                background-color: #cecece;
+            }
+            #promptbuy{
+                background-color: rgba(80, 40, 40, 0.8);
+                display: none;
+                width: 35%;
+                height: 35%;
+                margin-left: 32%;
+                margin-top: 15%;
+                z-index: 4;
+                position: absolute;
+                border: solid 4px #442222;
+                transition: opacity 0.5s;
+            }
+             #popupbox{
+                background-color: rgba(100, 40, 40, 1);
+                /*display: none;*/
+                 visibility: hidden;
+                width: 30%;
+                margin-left: 33%;
+                margin-top: 8%;
+                padding: 1%;
+                z-index: 4;
+                position: absolute;
+                border: solid 4px #442222;
+                transition: opacity 0.5s;
+            }
+            .tooltip {
+    position: relative;
+    display: inline-block;
+
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 240px;
+    background-color: #aaaaaa;
+    color: #000000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -110px;
+    
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 0.9;
+}
+            
+            .button{
+                background-color: #afafaf;
+                color: #0f0f0f;
+                border: solid 3px #000000;
+                text-align: center;
+                padding: auto;
+                padding-top: 4%;
+                padding-bottom: 0%;
+                margin: auto;
+            }
+            .button:hover{
+                background-color: #8f8f8f;
+            }
+            
+            #attacks{
+                display: inline-block;
+                overflow: auto;
+                text-align: center;
+                height: 50%;
+                width: 100%;
+                font-size: 48px;
+            }
+            #attacktable{
+                border-color: #111111;
+                width: 100%;
+                border: solid 3px;
+                text-align: center;
+                border-collapse: collapse;
+                height: 50%;
+            }
+            #attacktable tr{
+                background-color: #9a9a9a;
+            }
+            #attacktable tr:nth-child(even){
+                background-color: #787878;
+            }
+            #attacktable tr:hover{
+                background-color: #c0c0c0;
+            }
+            #nextroundbutton{
+                display: none;
+                height: 2%;
+                width: 60%;
+                font-size: 40px;
+            }
+            #blurshop{
+                opacity: 0.5;
+                background-color: black;
+                display: block;
+            }
+            
+        </style>
+    </body>
+</html>

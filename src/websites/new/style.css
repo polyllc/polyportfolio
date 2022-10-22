@@ -1,0 +1,60 @@
+#topbar{
+    background: #393530;
+    box-shadow: 0px 3px 15px #111;
+    position: sticky;
+}
+#topbar a{
+    margin-top: auto;
+    padding: 10px;
+    margin-bottom: auto;
+    font-size: 40px;
+    vertical-align: top;
+    color: white !important;
+    text-decoration: none !important;
+    margin-left: 1%;
+    background: inherit;
+    font-weight: 900; 
+}
+#topbar a:active{
+    background: #2669bf;
+}
+.current{
+    background: #2669bf;
+}
+body{
+    margin: 0;
+    font-family:  "Calibri", serif;
+    background: #333333;
+    color: white;
+    overflow-x: hidden;
+}
+#footer{
+    box-shadow: 0px -3px 15px #111;
+    background: #333;
+    display:block;
+    position: relative;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+}
+#footer a{
+    color: #999;
+    font-size: 2vh;
+    text-decoration: underline;
+}
+#footer p{
+    display: block;
+}
+#main{
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-bottom: 5vh;
+    padding: 5px;
+}
+#main h1{
+    font-size: 50px;
+}
+#main p{
+   font-size: 20px;
+}
