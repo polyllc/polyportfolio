@@ -495,7 +495,7 @@
             align-content: center;">
                 <p style="font-size: 6vh; color: white; text-decoration: underline; text-decoration-color: #f1e05a; margin: 0%; padding-top: 2%; font-weight: 800; margin-left: 2%">ytdl search downloader</p>
                 <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; text-shadow: 0 0 15pt black; line-height: 160%;">
-                    Searches youtube, donwloads the first video, converts to mp3. Insane<br>
+                    Searches youtube, downloads the first video, converts to mp3. Insane<br>
                     <b>Usage:</b> Uses ytdl-core, simpleyt, sanitize-filename, use npm to download. Not sure if it works anymore (many updates have come out after I make these things!)
                 </p>
             </div>

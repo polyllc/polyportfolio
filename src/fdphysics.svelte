@@ -37,8 +37,7 @@
 <Header/>
 
 
-<div class="full" style="background-image: url('src/assets/fdphysics/bg.png');  background-size:100vw 100vh; height: 100vh" >
-    <div style="background-size: 4vw; text-align: center;" class="full">
+<div class="full" style="background: url('src/assets/fdphysics/bg.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh" >
         <div style="background: rgba(0,0,0,0); text-align: center;" class="full">
                 <img src="src/assets/fdphysics logo.png" alt="PolyPortfolio" id="planetitle"><br>
                 <div id="arrows" on:click={arrowClick}>
@@ -47,10 +46,10 @@
                     <img src="src/assets/arrows.png" alt="\/" class="arrow" id="a3" style={a3}>
                 </div>
         </div>
-    </div>
+        <iframe src="https://itch.io/embed/350142?border_width=0&amp;bg_color=0076b8&amp;fg_color=ffffff" title="fdphysics" width="550" height="165" frameborder="0"><a href="https://polyllc.itch.io/fdphysics">fdphysics by Poly LLC</a></iframe>
 </div>
 
-<div class="full" style="padding-left: 10%; background-image:url('src/assets/fdphysics/desertmap.png'); background-size:100vw;">
+<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/desertmap.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
     <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">What is fdphysics?</p>
     <div class="reactiveFlex">
         <p style="font-size: 2.5vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
@@ -66,7 +65,7 @@
     </div>
 </div>
 
-<div class="full" style="padding-left: 10%; background-image:url('src/assets/fdphysics/castle.png'); background-size:100vw;">
+<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/castle.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
     <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">How did it being?</p>
     <div class="reactiveFlex">
         <div style="display: block; margin-top: auto; margin-bottom: auto;">
@@ -83,7 +82,7 @@
     </div>
 </div>
 
-<div class="full" style="padding-left: 10%; background-image:url('src/assets/fdphysics/dicidoussylvan.png'); background-size:100vw;">
+<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/dicidoussylvan.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
     <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">Starting development</p>
     <div class="reactiveFlex">
         <p style="font-size: 2.5vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
@@ -100,7 +99,7 @@
     </div>
 </div>
 
-<div class="full" style="padding-left: 10%; background-image:url('src/assets/fdphysics/galaxymap.png'); background-size:100vw;">
+<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/galaxymap.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
     <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">How the gameplay works</p>
     <div class="reactiveFlex">
         <div style="display: block; margin-top: auto; margin-bottom: auto;">
@@ -117,7 +116,7 @@
     </div>
 </div>
 
-<div class="full" style="padding-left: 10%; background-image:url('src/assets/fdphysics/iceymountainsmap.png'); background-size:100vw;">
+<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/iceymountainsmap.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
     <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">The modes</p>
     <div class="reactiveFlex">
         <p style="font-size: 2.5vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
@@ -134,7 +133,7 @@
     </div>
 </div>
 
-<div class="full" style="padding-left: 10%; background-image:url('src/assets/fdphysics/lavakingdommap.png'); background-size:100vw;">
+<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/lavakingdommap.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
     <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">The maps</p>
     <div class="reactiveFlex">
         <div style="display: block; margin-top: auto; margin-bottom: auto;">

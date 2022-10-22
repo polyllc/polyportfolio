@@ -1,0 +1,157 @@
+<html>,
+    <body>
+<h1 id="bob"></h1>
+    <script>
+          var elements = ["H",
+                              "He",
+                              "Li",
+                              "Be",
+                              "B",
+                              "C",
+                              "N",
+                              "O",
+                              "F",
+                              "Ne",
+                              "Na",
+                              "Mg",
+                              "Al",
+                              "Sl",
+                              "P",
+                              "S",
+                              "Cl",
+                              "Ar",
+                              "K",
+                              "Ca",
+                              "Sc",
+                              "Ti",
+                              "V",
+                              "Cr",
+                              "Mn",
+                              "Fe",
+                              "Co",
+                              "Ni",
+                              "Cu",
+                              "Zn",
+                              "Ga",
+                              "Ge",
+                              "As",
+                              "Se",
+                              "Br",
+                              "Kr",
+                                ""];
+        var o1 
+        o1 = prompt(" what is the max # of elements per compound (Max 5)")
+        var t2
+        t2 = prompt(" what is the max amount of the same elements on the compound ex. o2 there are 2 atoms of o (max 30)")
+        
+        if(o1 == 1){
+          var arrayJustBecause = [elements[Math.floor(Math.random() * 35)],
+                                        elements[Math.floor(Math.random() * 35)]]
+        }
+        else{
+           if(o1 == 2){
+            var arrayJustBecause = [elements[Math.floor(Math.random() * 35)],
+                                        elements[Math.floor(Math.random() * 35)]]
+            }
+            else{
+                 if(o1 == 3){
+               var arrayJustBecause = [elements[Math.floor(Math.random() * 35)],
+                                        elements[Math.floor(Math.random() * 35)],
+                                        elements[Math.floor(Math.random() * 35)]]; // always undefined?
+             
+            }
+            else{
+                         if(o1 == 4){
+               var arrayJustBecause = [elements[Math.floor(Math.random() * 35)],
+                                        elements[Math.floor(Math.random() * 35)],
+                                        elements[Math.floor(Math.random() * 35)], // always undefined?
+                                        elements[Math.floor(Math.random() * 35)]];
+                             
+            }
+                    else{
+                           if(o1 == 5){
+               var arrayJustBecause = [elements[Math.floor(Math.random() * 35)],
+                                        elements[Math.floor(Math.random() * 35)],
+                                        elements[Math.floor(Math.random() * 35)],
+                                        elements[Math.floor(Math.random() * 35)],
+                                        elements[Math.floor(Math.random() * 35)]];
+            }
+            else{
+           alert("invaled amount");
+                
+            }
+                    }
+            }
+                }
+        }
+         var newArrayYay = [,,,,]
+       for(var i = 0; i < arrayJustBecause.length; i++){
+        console.log(arrayJustBecause[i])
+
+        }
+         var just = arrayJustBecause.length
+         var hiImBobAndImHereToHelp
+        var iddd = document.getElementById("bob")
+        iddd = arrayJustBecause[1];
+        for(var i = 0; i < arrayJustBecause.length; i++){
+        console.log(arrayJustBecause[i])
+        }
+        for(var i = 0; i < arrayJustBecause.length; i++){
+            
+             newArrayYay [i] = arrayJustBecause[i]
+        }
+         for(var i = 0; i < just; i++){
+            
+             hiImBobAndImHereToHelp = Math.floor(Math.random() * t2 + 1)
+            
+            arrayJustBecause[i] = (newArrayYay[i] + hiImBobAndImHereToHelp) 
+        }
+        for(var i = 0; i < arrayJustBecause.length; i++){
+        console.log(arrayJustBecause[i])
+       
+        }
+        
+        var bobIsHere = 0
+      
+        /*
+        if(arrayJustBecause.length = 2){
+            bobIsHere = (arrayJustBecause[0] + arrayJustBecause[1])
+            alert("worked 2")
+        }
+         if(arrayJustBecause.length = 3){
+              bobIsHere = (arrayJustBecause[0] + arrayJustBecause[1] + arrayJustBecause[2])
+              alert("worked 3")
+        }
+         if(arrayJustBecause.length = 4){
+              bobIsHere = (arrayJustBecause[0] + arrayJustBecause[1] + arrayJustBecause[2] + arrayJustBecause[3])
+              alert("worked 4")
+        }
+         if(arrayJustBecause.length = 5){
+            bobIsHere = (arrayJustBecause[0] + arrayJustBecause[1] + arrayJustBecause[2] + arrayJustBecause[3] + arrayJustBecause[4]) 
+            alert("worked 5")
+        }
+        */
+       switch(just){
+           case 2: bobIsHere = arrayJustBecause[0] + arrayJustBecause[1]
+         
+           break
+           case 3: bobIsHere = arrayJustBecause[0] + arrayJustBecause[1] + arrayJustBecause[2]
+          
+           break
+           case 4: bobIsHere = arrayJustBecause[0] + arrayJustBecause[1] + arrayJustBecause[2] + arrayJustBecause[3]
+           
+           break
+           case 5: bobIsHere = arrayJustBecause[0] + arrayJustBecause[1] + arrayJustBecause[2] + arrayJustBecause[3] + arrayJustBecause[4]
+          
+           break
+       }
+       
+      
+       
+       document.getElementById('bob').innerHTML = bobIsHere
+        
+        
+        
+    </script>
+    </body>
+</html>
