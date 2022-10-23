@@ -373,7 +373,7 @@
         </div>
         
         <p style="margin-left: 5%; font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
-            No matter the flaws, I still love this game. It was the first true game that I made that didn't look awful (design wise), and I put in at least 700-800 hours making it (yes I really did have no life when making this game). I still
+            No matter the flaws, I still love this game. It was the first true game that I made that didn't look awful (design wise), and I put in at least 300-400 hours making it (yes I really did have no life when making this game). I still
             have fond memories making this game, and every little detail of the game, from the one easter egg (that is so hidden I even forgot where I put it!) to the design of the planes to the names of the challenges, making this game is 
             something that I had so much fun with. Looking back, I did kind of rush the game, straining myself with useless deadlines. I think at a certain point, so much work was required in order to improve the littlest things. My beautiful
             spaghetti code had its limits, and working with it (when I never refactored for a reason) was not pleasant to say the least. But this game is something that I find insane that some 14 year old kid can made. All four things: art,

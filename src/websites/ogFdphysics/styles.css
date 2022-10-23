@@ -1,0 +1,66 @@
+        a{
+            font-family: monospace;
+            font-size: 22px;
+            color: white;
+              background-color:black;
+        }
+        html{
+            font-family: monospace;
+background: black;
+      
+        }
+        h1{
+            font-family: monospace;
+            
+            color: white;
+        }
+        p,li, blockquote{
+            font-family: monospace;
+            font-size: 18px;
+            color: white;
+            background-blend-mode: hue;
+            text-align: center;
+            background-color:black;
+        }
+        h5{
+            font-size: 8px;
+            color: white;
+              background-color:black;
+        }
+        h1{
+            font-size: 48px;
+            color: white;
+              background-color:black;
+        }
+         h6{
+         color: white;
+             text-align: center;
+               background-color:black;
+        }
+        hr{
+        
+            
+            border-color: white;
+       
+        }
+/*
+     FILE ARCHIVED ON 18:48:57 Dec 17, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 03:04:29 Oct 23, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 120.333
+  exclusion.robots: 0.084
+  exclusion.robots.policy: 0.077
+  RedisCDXSource: 0.864
+  esindex: 0.007
+  LoadShardBlock: 100.989 (3)
+  PetaboxLoader3.datanode: 267.343 (5)
+  CDXLines.iter: 15.837 (3)
+  load_resource: 272.965 (2)
+  PetaboxLoader3.resolve: 77.007 (2)
+*/

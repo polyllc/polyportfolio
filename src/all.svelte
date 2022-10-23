@@ -94,7 +94,7 @@
 <Header/>
 
 <div id="scrollContainer" style=" overflow-x:hidden; transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);">
-    <div class="full" style="{bg} height: 100vh" >
+    <div class="full" style="{bg} height: 100%; margin: 0;">
         <div style="background-size: 10%; background-image:url('src/assets/polytiles2.png'); background-repeat:repeat; text-align: center;" class="full">
             <div style="background: rgba(0,0,0,0); text-align: center;" class="full">
                     <p><span id="alltitle">all projects</span></p>
@@ -572,6 +572,8 @@
 
     #scrollContainer {
         background: linear-gradient(135deg, #252f89,#252f89,#101c7f,#212b6c,#262b6c,#24319d);
+        padding: 0;
+        margin: 0;
     }
 
     .box {

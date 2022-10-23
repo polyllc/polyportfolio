@@ -232,7 +232,7 @@ import GithubLogo from "./lib/githubLogo.svelte";
                         &emsp;In 2018, Poly LLC celebrated its first birthday, and with that, some mini Javascript based games were made for the event. These games are really simple games that really need no introduction, so click on the link, and it'll bring you to the 
                         original spinner that was put on the polyllc.org website. That site will also give some extra detail to each game. 
                         <br><br>
-                        &emsp;Lastly is this website. This website is the one stop for most of the things I have made since 2017, so around 5 years of work. It was intended to show off my work for college, but it's also made so I can see all of my works compiled into one 
+                        &emsp;Lastly is this website. This website is the one stop for most of the things I have made since 2017, so around 5 years of work. It was intended to show off my work for college, but it's also made so I can see all of my works compiled into one
                         neat source, and look at it. 
                         <br><br>
                         &emsp;So click around, you'll probably find at least <i>something</i> interesting (I hope). Enjoy!

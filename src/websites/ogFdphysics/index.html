@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=0.7">
+<meta name="description" content="The Official Site of Poly LLC">
+    <title>Poly - Main Menu</title>
+
+<link rel="icon" href="../ogReleasedpng.png">
+<style >
+        a{
+            font-family: monospace;
+            font-size: 22px;
+            color: white;
+              background-color:black;
+        }
+        html{
+            font-family: monospace;
+background: black;
+      
+        }
+        h1{
+            font-family: monospace;
+            
+            color: white;
+        }
+        p,li, blockquote{
+            font-family: monospace;
+            font-size: 18px;
+            color: white;
+            background-blend-mode: hue;
+            text-align: center;
+            background-color:black;
+        }
+        h5{
+            font-size: 8px;
+            color: white;
+              background-color:black;
+        }
+        h1{
+            font-size: 48px;
+            color: white;
+              background-color:black;
+        }
+         h6{
+         color: white;
+             text-align: center;
+               background-color:black;
+        }
+        hr{
+        
+            
+            border-color: white;
+       
+        }
+    #wheel{
+                width:300px;
+                height:300px;
+                margin-left: 10%;
+                text-align: center;
+                display: inline;
+                float:left;
+                border-radius: 50%;
+              
+                
+                
+            }
+            #o1{
+                float: left;
+                background-color: #00ff00;
+                border-top-left-radius: 100%;
+                width: 150px;
+                height: 150px;
+            }
+            #o2{
+                float: left;
+                background-color: #ffff00;
+                border-top-right-radius: 100%;
+                width: 150px;
+                height: 150px;
+            }
+            #o3{
+                float: left;
+                background-color: #ff0000;
+                border-bottom-left-radius: 100%;
+                width: 150px;
+                height: 150px;
+            }
+            #o4{
+                float: left;
+                background-color: #0000ff;
+                border-bottom-right-radius: 100%;
+                width: 150px;
+                height: 150px;
+            }
+            .clearfix{
+                clear: both; 
+            }
+            .op{
+                margin-top: 35%;
+                background-color: rgba(0,0,0,0.2);
+            }
+            #triangle{
+                width: 20px;
+                height: 20px;
+                margin-left: 51%;
+                margin-top: 27%;
+                border-right: solid 4px #000000;
+                border-top: solid 4px #000000;
+                transform: rotate(-45deg);
+            }
+            #wheeldiv{
+                background-color: #444444;
+                padding: 25px;
+              
+            }
+            #prizediv{
+                float:left;
+              margin-left:25%;
+            margin-top: 132px;
+                color: white;
+            }
+    body{
+        margin: 0px;
+    }
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+
+                    <script>
+            var num = 0;
+            var realnum = 0;
+            var spining = 0;
+            var option = "";
+            var optionlink = "";
+            var randomnum = Math.floor(Math.random() * 2000) + 1000;
+        function spin(){
+            if(!spining){
+            spining = 1;
+            realnum = 0;
+            randomnum = Math.floor(Math.random() * 5000) + 2000;
+            var inter = setInterval(function(){
+            document.getElementById("wheel").style.transform = "rotate(" + num + "deg)";
+            num += 10;
+            realnum += 10;
+            if(num > 359){
+                num = 0;
+            }
+            if(realnum > randomnum){
+                spining = 0;
+                clearInterval(inter);
+                if(num > 0 && num < 90){
+                    option = "Memorization";
+                    optionlink = "/polybday/memorizationgame.html";
+                }
+                if(num > 90 && num < 180){
+                    option = "Color Game";
+                    optionlink = "/polybday/colorgame.html";
+                }
+                if(num > 180 && num < 270){
+                    option = "Shop RPG: GUI Edition";
+                    optionlink = "/polybday/shoprpggui.html";
+                }
+                if(num > 270 && num < 359){
+                    option = 'Number Race';
+                    optionlink = "/polybday/numberrace.html"
+                }
+                document.getElementById("prize").innerHTML = "You got " + option + "!<br><a href='" + optionlink + "'>Click Here to Play</a>";
+            }
+                console.log(num);
+            }, 0.1);
+            }
+        }
+        </script>
+    </head>
+
+<body>
+  
+
+    <div id="Main">
+     <div id="pic"><img alt="Banner" src="banner.png" allign="top" id="banner" width="2543"></div>
+  <a href="index.html"><img alt="Main Menu" src="homeico.png" id="home"></a>
+        
+        <a href="../ogReleasedProducts.html"><img alt="Products" src="Productsico.png" id="product"></a>
+      <a href="fdphysics.html"><img alt="fdphysics" src="fdphysics.png" id="fdphysics" height="50"></a>
+        <a href="../ogReleasedContact.html"><img alt="Contact" src="contactusico.png" id="contact"></a>
+  
+        <a href="../ogReleasedAbout.html"><img alt="About" src="aboutusico.png" id="about"></a>
+      
+        <a href="../ogReleasedTheFuture.html"><img alt="Future Things" src="futureico.png" id="future"></a>
+           <a href="../ogReleasednews.html"><img alt="News" src="newsico.jpg" id="news"></a><!-------
+      coming soon
+        <a href="../ogReleased/scripts/club.html">Programming Club Website (School Club)</a>-->
+        
+      <script src="resize.js"></script>  
+    </div> 
+   <a href="../ogReleasedphpfiles" style="font-size: 24px; margin-left:10px;">User Main Menu </a><a href="../ogReleasedphpfiles/signin.php" style="font-size: 24px;  margin-left:10px;"> Signin </a><a href="../ogReleasedphpfiles/signup.php" style="font-size: 24px;  margin-left:10px;"> Signup</a> 
+      <br>
+          <p style="font-size: 12px;">This site uses cookies and google analytics so I can keep you signed in and make this site better to see where to improve :)</p>
+      
+  <p id="ssl" style="font-size: 16px;">We now have real ssl!</p><p>
+     <a href="../ogReleasedprivacy.html" style="font-size: 16px;">Privacy Policy</a>
+
+
+    </p><h1 id="dummy">Poly...... :)</h1>
+    
+    <div align="center"><!--
+   <p>Here is the birthday spinner for Poly's Birthday in 2018!</p>
+    </div><br>
+     <div id="wheeldiv">
+        <div id='wheel'>
+        <div id="o1" class="block">
+            <p class="op">Shop RPG</p>
+            </div>
+            <div id="o2" class="block">
+            <p class="op">Color Game</p>
+            </div>
+            <br>
+    
+
+            <div id="o3" class="block">
+            <p class="op">Number Race</p>
+            </div>
+            <div id="o4" class="block">
+            <p class="op">Memorization</p>
+            </div>
+            <br><br>
+            <div class="clearfix"></div>
+        </div><br>
+
+            <div id="prizediv">
+         <button onclick="spin();">Spin!</button>
+       
+        <h1 id="prize">
+        
+                </h1></div>    <div class="clearfix"></div>-->
+        </div><br><br>
+    <div id="main" align="center">
+     <p id="dummy1">Poly is a llc that is striving to bring the good into good price.<br> We (me right now(a 14 year old(and my dad))) at Poly try to get really good software to people like you for a great price.<br> Everything reasonable.<br> Nothing overpriced. </p>
+<blockquote>"User experience is the most important thing, even after quality" - Poly LLC 2017</blockquote>
+    <br>
+    <br>
+    <br>
+<hr id="dummy2">
+       <br>
+    <br>    <br>
+     <p id="dummy3">Since you're still here then let me give you a tour 
+of what Poly wants to make. Games and Website Services. Poly wants to 
+make good games that are fun to play and easy to pick up. Our first game
+ is <a href="fdphysics.html">fdphysics</a>,
+ which is a 2d, 2 player shooting showdown with lots of physics. Another
+ thing that poly is working on is PolyForums. PolyForums is a normal 
+forums, but it's a tag based forums. Tags are the way you can make your 
+post different and people can follow you and those tags. PolyForums will
+ also be heavily community moderated, so no stupid ai banning your post 
+for no real reason. There are a couple of games in developement, and the
+ first game should be out in December. The next game after that should 
+take awhile as it's a big one ;).</p>
+    
+    <br>
+    <br>
+        
+    <br>    <hr id="dummy4"><br><br><br>
+    <br><br><h3 style="color: white; ">Maybe get on that Discord train?</h3><a href="https://discord.gg/AEtNGYH">https://discord.gg/AEtNGYH</a><p></p><br><br><br>
+     <p id="dummy6">Products <a href="../ogReleasedProducts.html"> Again :P</a>.</p>
+      <button onclick="change()">Jazz up this page with colors 
+      </button><h5>  (colours for you triggered british people)</h5>
+        <script>
+            var colors = ["blue","green","red","yellow","purple","orange","cyan",'black',"darkorange","grey","white"];
+        function change(){
+                document.body.style.backgroundColor = colors[Math.floor(Math.random() * 11)];
+        }
+                  
+        </script>
+
+        
+    <h6 id="dummy7">Defenitly Not Copyrighted by Poly </h6>
+    <h5>Are we doing jokes now?</h5>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <p id="dummy8">this is the end of the page. Did you want to see this?</p>
+    </div>
+ <h6>No Copyright Banner �(ha get pranked)</h6>
+       
+    
+    <script>
+var id = document.getElementById('banner')
+id.width = screen.width
+</script>
+<script>
+var id = document.getElementById('banner')
+id.width = screen.width
+</script><script>
+var id = document.getElementById('banner')
+id.width = screen.width
+</script><script>
+var id = document.getElementById('banner')
+id.width = screen.width
+</script><script>
+var id = document.getElementById('banner')
+id.width = screen.width
+</script><script>
+var id = document.getElementById('banner')
+id.width = screen.width
+</script><script>
+var id = document.getElementById('banner')
+id.width = screen.width
+</script><script>
+var id = document.getElementById('banner')
+id.width = screen.width
+</script>
+    
+
+
+
+</body></html>
+<!--
+     FILE ARCHIVED ON 20:29:38 Nov 02, 2019 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 03:04:27 Oct 23, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 76.077
+  exclusion.robots: 0.179
+  exclusion.robots.policy: 0.173
+  cdx.remote: 0.057
+  esindex: 0.008
+  LoadShardBlock: 51.821 (3)
+  PetaboxLoader3.datanode: 74.383 (4)
+  CDXLines.iter: 16.422 (3)
+  load_resource: 171.379
+  PetaboxLoader3.resolve: 131.99
+-->
