@@ -144,7 +144,88 @@
         <p style="margin-left: 5%; font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
             There are 11 maps and 15 generic maps in fdphysics. All of the main maps are custom made, and they all have the theme. You can see all of the backgrounds in the background. There are as follow: Deciduous Sylvan, Tropical Island,
             Just. Space., Some Desert, Icy Mountains, Light Show, Lavaness, Might be a Castle, Not Sure if this is a Boat, The Original and The Final Fight. The generic maps are all based on The Original and there are 15 of them. 
-            They are only available in two player becaus
+            They are only available in two player because the AI was not good enough to be on those maps because they would always get stuck on the blocks and somehow clip through them? They were mad men. 
+        </p>
+    </div>
+</div>
+
+<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/iceymountainsmap.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">What the gameplay is missing</p>
+    <div class="reactiveFlex">
+        <p style="font-size: 2.5vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
+           This game is missing only a bit of gameplay. I feel like the game itself right now has plenty of good gameplay, and does not feel boring to play (sometimes like planeagement). The only thing that is missing is some extra variety (such as items)
+           and the speed. The game is pretty slow. The gravity is too floaty and the movement speed is just too slow, leading to the game feeling like it is very slow, rather than the fast paced action that I intended to have. The reason why I didn't do that 
+           was because I was afraid that the speed of the movement and the heavier gravity would pose a problem with the collision, but I just thought that because I never tested it out. Alas, it can be customized in the physics settings.
+        <div style="display: block; margin-top: auto; margin-bottom: auto;">
+            <img src="/src/assets/fdphysics/s4.png" alt="gameplay" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #4590ff solid; border-radius: 15px;" class="reactiveWidth" />
+           <p style="float: right; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-right: 0%; font-weight: 100; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">The lights out minimode</p>
+        </div>
+    </div>
+</div>
+
+<div style=" background: linear-gradient(135deg, #252f89,#252f89,#101c7f,#212b6c,#262b6c,#24319d); padding: 5%">
+    <div style="height: 45vh; display: flex; overflow-x: scroll; box-shadow: 0px 0px 15px 15px rgba(0,0,0,0.5);">
+        <img src="src/assets/planeagement/d1.png" style="height: 100%;" alt="placeholder">
+        <img src="src/assets/planeagement/d2.png" style="height: 100%;" alt="placeholder">
+        <img src="src/assets/planeagement/d3.png" style="height: 100%;" alt="placeholder">
+        <img src="src/assets/planeagement/d4.png" style="height: 100%;" alt="placeholder">
+        <img src="src/assets/planeagement/d5.png" style="height: 100%;" alt="placeholder">
+        <img src="src/assets/planeagement/d6.png" style="height: 100%;" alt="placeholder">
+        <img src="src/assets/planeagement/d7.png" style="height: 100%;" alt="placeholder">
+        <img src="src/assets/planeagement/d8.png" style="height: 100%;" alt="placeholder">
+        <img src="src/assets/planeagement/d9.png" style="height: 100%;" alt="placeholder">
+        <img src="src/assets/planeagement/d10.png" style="height: 100%;" alt="placeholder">
+        <div style="display: block; margin-top: auto; margin-bottom: auto; position: absolute;">
+        <p style="word-break: keep-all; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-left: 5%;font-weight: 100; background: rgba(20,20,20,0.8); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 5%; left: 4vw;">development screenshots</p>
+        </div>
+    </div>
+</div>
+
+<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/lavakingdommap.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">Gui design & problems</p>
+    <div class="reactiveFlex">
+        <div style="display: block; margin-top: auto; margin-bottom: auto;">
+            <img src="/src/assets/fdphysics/s2.png" alt="gui" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #0530ff solid; border-radius: 15px;" class="reactiveWidth" />
+            <p style="float: left; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-left: 5%;  margin-right: 0%; font-weight: 400; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;"></p>
+        </div>
+        
+        <p style="margin-left: 5%; font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
+            The gui was designed to be only controllable with the keyboard due to me not caring about giving mouse support. Plus I really didn't feel like adding support for the mouse as there were so many gui elements, especially when it came to customizing
+            the game. The gui's design has no real direction, you can see that many elements don't mix well, and don't match at all. It does have pixel density differences that are very apparent, like you can see the difference from the heart representing the
+            health and the text. The main problem with the gui is actually not the gui, but the ux. It is mainly again keyboard based, but it does have mouse buttons. It creates kinda of an annoying experience where you have to move from your keyboard to your
+            mouse pretty often, even if most of the elements are keyboard controlled. Also when going through the menus, sometimes going back goes to a different menu, as I did not create the menu system to actually remember where you were before (like now
+            I know to just use an array and pop the last element to see where the user was before).
+        </p>
+    </div>
+</div>
+
+<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/iceymountainsmap.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">Encountered problems while developing</p>
+    <div class="reactiveFlex">
+        <p style="font-size: 2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
+           This game was my first published game, so it was a first for me in many different ways. With learning new things, one is bound to make many mistakes, and mistake did I make. The first biggest problem was how should I even go about making the AI?
+           Rather than making a flow chart or relational graph, I just used a lot of if statements to try and get the AI to do certain things when certain flags hit. Of course this lead to so many problems, like the ai just not responding because non of the
+           flags were being hit, and when it had nothing better to do, it woulnd't even try to go after the player, but just focus on getting one gun that was underneath it, and it would get stuck on the platform above (mind you there was not a pathfinding
+           algorithm, I did not know how to make those). That was probably the biggest problem while developing, but there were many more, so I'll just list them here: the special attack text would not flash for player 2, even though it had the same code,
+           slopes would almost never work because of the fact that it was one pixel higher, therefore a wall in the player object's eyes, you could easily get stuck in a wall by using knockback into it at a corner, sometimes sounds would indefinitely play
+           over each other when stuck in a wall or just pressing against one, causing 100 wall hit sounds to play at once indefinitely, and many more (that I forgot about, this was 4 years ago!).
+        <div style="display: block; margin-top: auto; margin-bottom: auto;">
+            <img src="/src/assets/fdphysics/s4.png" alt="gameplay" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #4590ff solid; border-radius: 15px;" class="reactiveWidth" />
+           <p style="float: right; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-right: 0%; font-weight: 100; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">The lights out minimode</p>
+        </div>
+    </div>
+</div>
+
+<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/lavakingdommap.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">Features I wanted to implement</p>
+    <div class="reactiveFlex">
+        <div style="display: block; margin-top: auto; margin-bottom: auto;">
+            <img src="/src/assets/fdphysics/s2.png" alt="gui" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #0530ff solid; border-radius: 15px;" class="reactiveWidth" />
+            <p style="float: left; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-left: 5%;  margin-right: 0%; font-weight: 400; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;"></p>
+        </div>
+        
+        <p style="margin-left: 5%; font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
+            
         </p>
     </div>
 </div>
@@ -158,9 +239,7 @@
     maps
     what the gameplay is missing
     development screenshots - image slideshow
-    gui design
-    the problem with the gui
-    the problem with gms2
+    gui design & the problem with the gui
     gui in action (gameplay) - image slideshow
     encountered problems while developing
     features that I wanted to implement
