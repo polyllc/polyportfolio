@@ -46,7 +46,7 @@
                     <img src="src/assets/arrows.png" alt="\/" class="arrow" id="a3" style={a3}>
                 </div>
         </div>
-        <iframe src="https://itch.io/embed/350142?border_width=0&amp;bg_color=0076b8&amp;fg_color=ffffff" title="fdphysics" width="550" height="165" frameborder="0"><a href="https://polyllc.itch.io/fdphysics">fdphysics by Poly LLC</a></iframe>
+        <iframe style="position: absolute; display: block; left: 1%; bottom: 1%;" src="https://itch.io/embed/350142?border_width=0&amp;bg_color=0076b8&amp;fg_color=ffffff" title="fdphysics" width="550" height="165" frameborder="0"><a href="https://polyllc.itch.io/fdphysics">fdphysics by Poly LLC</a></iframe>
 </div>
 
 <div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/desertmap.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
@@ -66,7 +66,7 @@
 </div>
 
 <div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/castle.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
-    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">How did it being?</p>
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">How did it begin?</p>
     <div class="reactiveFlex">
         <div style="display: block; margin-top: auto; margin-bottom: auto;">
             <img src="/src/assets/fdphysics/s2.png" alt="gui" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #0530ff solid; border-radius: 15px;" class="reactiveWidth" />
@@ -74,7 +74,7 @@
         </div>
         
         <p style="margin-left: 5%; font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
-            Before even making fdphysics, I was making another game called form. It was a 2d platformer but with many vehicles and guns and blocks to place and go around the map (you can see a block that was placed below the player). It was
+            Before even making fdphysics, I was making another game called form.. It was a 2d platformer but with many vehicles and guns and blocks to place and go around the map (you can see a block that was placed below the player). It was
             too ambitious, one of the ideas was to make an entire programming language to make a simple game engine inside the game, and people could upload those levels online for people to play (like Mario Maker). I never finished it, but 
             while making the guns in the game, I thought "huh, this would be cool as like a simple 2d fighting game". And so, I started to make fdphysics. The name fdphysics came from the fact that physics were supposed to be a big part of the
             game, where you can customize all parts of the physics and the fd part is a secret. 
@@ -94,7 +94,7 @@
         </p>
         <div style="display: block; margin-top: auto; margin-bottom: auto;">
             <img src="/src/assets/fdphysics/s3.png" alt="gameplay" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #4590ff solid; border-radius: 15px;" class="reactiveWidth" />
-           <p style="float: right; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-right: 0%; font-weight: 100; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;"></p>
+           
         </div>
     </div>
 </div>
@@ -103,8 +103,8 @@
     <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">How the gameplay works</p>
     <div class="reactiveFlex">
         <div style="display: block; margin-top: auto; margin-bottom: auto;">
-            <img src="/src/assets/fdphysics/s2.png" alt="gui" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #0530ff solid; border-radius: 15px;" class="reactiveWidth" />
-            <p style="float: left; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-left: 5%;  margin-right: 0%; font-weight: 400; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;"></p>
+            <img src="/src/assets/fdphysics/s6.png" alt="gui" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #0530ff solid; border-radius: 15px;" class="reactiveWidth" />
+           
         </div>
         
         <p style="margin-left: 5%; font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
@@ -137,8 +137,8 @@
     <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">The maps</p>
     <div class="reactiveFlex">
         <div style="display: block; margin-top: auto; margin-bottom: auto;">
-            <img src="/src/assets/fdphysics/s2.png" alt="gui" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #0530ff solid; border-radius: 15px;" class="reactiveWidth" />
-            <p style="float: left; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-left: 5%;  margin-right: 0%; font-weight: 400; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;"></p>
+            <img src="/src/assets/fdphysics/s7.png" alt="gui" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #0530ff solid; border-radius: 15px;" class="reactiveWidth" />
+            
         </div>
         
         <p style="margin-left: 5%; font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
@@ -149,7 +149,7 @@
     </div>
 </div>
 
-<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/iceymountainsmap.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
+<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/map of the coolness of the boat.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
     <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">What the gameplay is missing</p>
     <div class="reactiveFlex">
         <p style="font-size: 2.5vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
@@ -157,36 +157,19 @@
            and the speed. The game is pretty slow. The gravity is too floaty and the movement speed is just too slow, leading to the game feeling like it is very slow, rather than the fast paced action that I intended to have. The reason why I didn't do that 
            was because I was afraid that the speed of the movement and the heavier gravity would pose a problem with the collision, but I just thought that because I never tested it out. Alas, it can be customized in the physics settings.
         <div style="display: block; margin-top: auto; margin-bottom: auto;">
-            <img src="/src/assets/fdphysics/s4.png" alt="gameplay" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #4590ff solid; border-radius: 15px;" class="reactiveWidth" />
-           <p style="float: right; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-right: 0%; font-weight: 100; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">The lights out minimode</p>
+            <img src="/src/assets/fdphysics/s8.png" alt="gameplay" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #4590ff solid; border-radius: 15px;" class="reactiveWidth" />
+           <p style="float: right; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-right: 0%; font-weight: 100; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">The physics control</p>
         </div>
     </div>
 </div>
 
-<div style=" background: linear-gradient(135deg, #252f89,#252f89,#101c7f,#212b6c,#262b6c,#24319d); padding: 5%">
-    <div style="height: 45vh; display: flex; overflow-x: scroll; box-shadow: 0px 0px 15px 15px rgba(0,0,0,0.5);">
-        <img src="src/assets/planeagement/d1.png" style="height: 100%;" alt="placeholder">
-        <img src="src/assets/planeagement/d2.png" style="height: 100%;" alt="placeholder">
-        <img src="src/assets/planeagement/d3.png" style="height: 100%;" alt="placeholder">
-        <img src="src/assets/planeagement/d4.png" style="height: 100%;" alt="placeholder">
-        <img src="src/assets/planeagement/d5.png" style="height: 100%;" alt="placeholder">
-        <img src="src/assets/planeagement/d6.png" style="height: 100%;" alt="placeholder">
-        <img src="src/assets/planeagement/d7.png" style="height: 100%;" alt="placeholder">
-        <img src="src/assets/planeagement/d8.png" style="height: 100%;" alt="placeholder">
-        <img src="src/assets/planeagement/d9.png" style="height: 100%;" alt="placeholder">
-        <img src="src/assets/planeagement/d10.png" style="height: 100%;" alt="placeholder">
-        <div style="display: block; margin-top: auto; margin-bottom: auto; position: absolute;">
-        <p style="word-break: keep-all; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-left: 5%;font-weight: 100; background: rgba(20,20,20,0.8); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 5%; left: 4vw;">development screenshots</p>
-        </div>
-    </div>
-</div>
 
-<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/lavakingdommap.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
+<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/map of tropical island.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
     <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">Gui design & problems</p>
     <div class="reactiveFlex">
         <div style="display: block; margin-top: auto; margin-bottom: auto;">
-            <img src="/src/assets/fdphysics/s2.png" alt="gui" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #0530ff solid; border-radius: 15px;" class="reactiveWidth" />
-            <p style="float: left; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-left: 5%;  margin-right: 0%; font-weight: 400; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;"></p>
+            <img src="/src/assets/fdphysics/s9.png" alt="gui" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #0530ff solid; border-radius: 15px;" class="reactiveWidth" />
+            <p style="float: left; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-left: 5%;  margin-right: 0%; font-weight: 400; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">Keyboard + Mouse gui</p>
         </div>
         
         <p style="margin-left: 5%; font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
@@ -199,7 +182,7 @@
     </div>
 </div>
 
-<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/iceymountainsmap.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
+<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/castle.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
     <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">Encountered problems while developing</p>
     <div class="reactiveFlex">
         <p style="font-size: 2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
@@ -210,22 +193,92 @@
            slopes would almost never work because of the fact that it was one pixel higher, therefore a wall in the player object's eyes, you could easily get stuck in a wall by using knockback into it at a corner, sometimes sounds would indefinitely play
            over each other when stuck in a wall or just pressing against one, causing 100 wall hit sounds to play at once indefinitely, and many more (that I forgot about, this was 4 years ago!).
         <div style="display: block; margin-top: auto; margin-bottom: auto;">
-            <img src="/src/assets/fdphysics/s4.png" alt="gameplay" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #4590ff solid; border-radius: 15px;" class="reactiveWidth" />
-           <p style="float: right; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-right: 0%; font-weight: 100; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">The lights out minimode</p>
+            <img src="/src/assets/fdphysics/s10.png" alt="gameplay" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #4590ff solid; border-radius: 15px;" class="reactiveWidth" />
+           <p style="float: right; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-right: 0%; font-weight: 100; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">the ai is set on getting that gun below it</p>
+        </div>
+    </div>
+</div>
+
+<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/desertmap.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">Features I wanted to implement</p>
+    <div class="reactiveFlex">
+        <div style="display: block; margin-top: auto; margin-bottom: auto;">
+            <img src="/src/assets/fdphysics/s11.png" alt="gui" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #0530ff solid; border-radius: 15px;" class="reactiveWidth" />
+            <p style="float: left; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-left: 5%;  margin-right: 0%; font-weight: 400; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">Simply more modes needed</p>
+        </div>
+        
+        <p style="margin-left: 5%; font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
+            I wanted to add many features while developing this game, most of which I couldn't find an easy way to implement (I wasn't the best at programming back then). First off, I wanted to add online play. I actually did develop it, but the server I developed
+            was in no way ready to be in production, I simply could not make it work in scale (even if no one would play it). I wanted to add some items too, to make the gameplay more varied, as only 20 guns, some of which are very similar, is not that much variety.
+            It would be also really cool to add so many of the ideas I had that were too small to be separate features into items. I also wanted to implement way more minimodes and modes, as well as customization for said modes. I feel like this game has so much
+            potential in terms of adding modes, and I just didn't implement them. I feel like many features were omitted because as I made the game, I would get much better at programming, and some of my earlier code, that was the most important code, was really
+            bad, and implementing new ideas would take more and more time as the game was never developed to accommodate new features. 
+        </p>
+    </div>
+</div>
+
+<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/dicidoussylvan.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">Music</p>
+    <div class="reactiveFlex">
+        <p style="font-size: 2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
+           Wow, this game does not have great music. I had only had about 3 years of experience of playing piano (not very well mind you), so that was my only method of actually doing something related to music (well except for listening to it). And the result?
+           Mistimed music with mismatched instruments. In the end, it really doesn't matter how the music sounds, as you can easily turn it off, and I found most of the time that music was not really needed at all. But I needed to have music, what kind of game
+           doesn't have music? It was my first time making music, and somehow I made 10 songs in about 3 weeks, that's even faster than planeagement! I used this online music creation tool and a free trial to their premium tier so I could have more instruments.
+           I remember even driving home after a road trip, I would open up my school laptop and connect to my phone's mobile hotspot and continue to make music. Unlike planeagement's music, I don't have any real connection with this soundtrack, except for the
+           original map's song. 
+        </p>
+        <div style="display: block; margin-top: auto; margin-bottom: auto;">
+            <img src="/src/assets/fdphysics/s12.png" alt="gameplay" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #4590ff solid; border-radius: 15px;" class="reactiveWidth" />
+           <p style="float: right; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-right: 0%; font-weight: 100; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">The volume where it should be</p>
+        </div>
+    </div>
+</div>
+
+<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/galaxymap.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">Publishing</p>
+    <div class="reactiveFlex">
+        <div style="display: block; margin-top: auto; margin-bottom: auto;">
+            <img src="/src/assets/fdphysics/s13.png" alt="gui" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #0530ff solid; border-radius: 15px;" class="reactiveWidth" />
+            <p style="float: left; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-left: 5%;  margin-right: 0%; font-weight: 400; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">This is the updated itch page, still is very similar to the first one</p>
+        </div>
+        
+        <p style="margin-left: 5%; font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
+            In the week leading up to the day of publishing, I started my first ever game page on itch.io. I created all of the beautiful artwork that can be seen on the page today, and wrote all of the captivating descriptions of the game. If you didn't
+            pick up on the sarcasm, the page did not look very good. But whatever, it was my first game ever being published! I finished the entire page and the trailer in just 2 days because I was so excited to publish my first game ever. I was of course
+            expecting for the game to sell thousands on the first day, and sell so many more later. Of course reality hit, and to this day, no one has paid for the game. I was disappointed, but that did not stop me from developing the game to update it.
+        </p>
+    </div>
+</div>
+
+<div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/iceymountainsmap.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">Updates</p>
+    <div class="reactiveFlex">
+        <p style="font-size: 2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
+            This game was updated fairly regularly. The first couple of updates were nothing too notable, as simple feature here, some bug fixes there. But v2.0 was a big update. It introduced so many new features, such as minimodes, a new menu, generic maps
+            and more. This update was the one I thought to myself "yeah, this is what fdphysics was supposed to be in the first place". This update started to veer off from actually playing around with the physics part of fdphysics, as I realized that was
+            just too broken, and I wanted to add more features than fixing the physics in the game that was the old code I had made over 2 years before (remember, fdphysics took its physics from form.). There was one more update after this that added discord
+            rich presence. After that, I really wanted to add online play, and I actually did make the entire update, but the server was in no way ready for production. I wanted to convert it over to C++ from GameMaker Studio 2 (not an engine for making servers),
+            but after I realized how hard sockets are and networking, especially with secure networking, I put down the towel and walked away. 
+        </p>
+        <div style="display: block; margin-top: auto; margin-bottom: auto;">
+            <img src="/src/assets/fdphysics/s14.png" alt="gameplay" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #4590ff solid; border-radius: 15px;" class="reactiveWidth" />
+           <p style="float: right; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-right: 0%; font-weight: 100; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;">Update v2.0 on itch</p>
         </div>
     </div>
 </div>
 
 <div class="full" style="padding-left: 10%; background:url('src/assets/fdphysics/lavakingdommap.png') no-repeat 50% 50%; background-size: cover; min-height: 100vh; ">
-    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">Features I wanted to implement</p>
+    <p style="font-size: 7vh; color: white; text-decoration: underline; text-decoration-color: #fbc200; margin: 0%; top: 10%; padding-top: 8%; font-weight: 800; word-break: break-all;">Conclusion</p>
     <div class="reactiveFlex">
         <div style="display: block; margin-top: auto; margin-bottom: auto;">
-            <img src="/src/assets/fdphysics/s2.png" alt="gui" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #0530ff solid; border-radius: 15px;" class="reactiveWidth" />
-            <p style="float: left; font-size: 2vh; color: white; font-weight: 0; line-height: 160%; margin-left: 5%;  margin-right: 0%; font-weight: 400; background: rgba(20,20,20,0.6); border-left: 5px #45ff40 solid; border-radius: 15px; padding: 1%;"></p>
+            <img src="/src/assets/fdphysics/polylogo2.png" alt="gui" style="width: 40vw; height: auto; margin-left: 5%; display: block; border-left: 5px #0530ff solid; border-radius: 15px;" class="reactiveWidth" />
+          
         </div>
         
         <p style="margin-left: 5%; font-size: 2.2vh; color: white; margin-top: 2%; font-weight: 0; line-height: 160%; width: 50%; background: rgba(20,20,20,0.6); border-left: 5px #fbc200 solid; border-radius: 15px; padding: 2%;" class="reactiveWidth">
-            
+            I love this game. I love playing it, I loved playing with friends for hours on end, I loved developing it, I loved playtesting it, I loved removing bugs, I loved making music, I loved drawing for this game. There were so many good memories that I
+            made with this game, most of them that I look back on fondly. I want to go back and keep developing the game, I actually plan to remake the game one day because I love it so much, but actually make it well this time. Even if the visuals do look
+            pretty bad (ok not as bad as like a scratch game drawn with the built in drawing program), the game is just so fun. Out of the two games I made, this one is my favorite, and I will keep going back to it. Thank you for reading.
         </p>
     </div>
 </div>
@@ -245,7 +298,7 @@
     features that I wanted to implement
     music
     publishing 
-    first and last update
+    updates
     conclusion
 
 -->
