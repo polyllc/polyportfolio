@@ -20,7 +20,6 @@ import Box from "./lib/box.svelte";
     let githubLogo = `<img src="src/assets/GitHub-Mark-Light-120px-plus.png" width="50" height="50" class="githubLogo">`; //from githubs own website
 </script>
 
-
 <div id="header" class="centered">
         <div id="headerDropDownGames" class="headerDropDown">
             <a class="headerLink" id="headerLinkGames" href="./index.html#games">Games</a>
