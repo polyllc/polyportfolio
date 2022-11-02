@@ -163,14 +163,16 @@ import Box from "./lib/box.svelte";
     #headerDropDownGames:hover #headerDropDownGamesContent {
          opacity: 1;
          visibility: visible;
+         overflow-y: scroll;
     }
 
     #headerDropDownGames {
         z-index: 4;
     }
 
-    #headerDropDownGamesContent {
-        max-width: 80vh;
+    #headerDropDownGamesContent  {
+        overflow-y: scroll !important;
+        max-width: 100vh;
         min-width: 50vw;
         display: inline-block;
         position: absolute;
@@ -196,6 +198,9 @@ import Box from "./lib/box.svelte";
         box-shadow: 0 0 0pt black;
         border-radius: 15px;
         transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+        max-height: 40vh;
+        overflow-x: scroll;
+      
     }
 
     #planeagement:hover {
@@ -228,6 +233,7 @@ import Box from "./lib/box.svelte";
         border-radius: 15px;
         transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
         text-decoration: none !important;
+        max-height: 40vh;
     }
 
     #fdphysics:hover {
