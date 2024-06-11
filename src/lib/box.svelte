@@ -7,6 +7,7 @@ export let iconLink = "";
 export let link;
 export let language;
 export let extraCss = "";
+export let type = "";
 
 import { css } from '@emotion/css';
 
@@ -36,10 +37,11 @@ let randomBorder = css`
     </div>
     <div class="languageBox">
         <dot class="languagedot" style="background-color: {language.color}"></dot><p class="language">{language.name}</p>
+        <em><p class="extraText">{type}</p></em>
     </div>
     </a>
 </div>
-
+<!--inline-size: min-content;-->
 <style>
 
     .box {
@@ -55,7 +57,6 @@ let randomBorder = css`
         display: block;
         min-width: 28%;
         max-width: 120%;
-        inline-size: min-content;
         line-height: 1;
         position: relative;
         transition: all 0.35s cubic-bezier(0.215, 0.610, 0.355, 1);
@@ -127,6 +128,18 @@ let randomBorder = css`
         bottom: 0.177vh;
         position: absolute;
         text-shadow: 0 0 5px black;
+        white-space: nowrap;
+    }
+
+    .extraText {
+        font-size: 1.6vh;
+        color: #fbc200;
+        display: inline-block;
+        left: 0vh;
+        bottom: 1.877vh;
+        position: absolute;
+        text-shadow: 0 0 5px black;
+        white-space: nowrap;
     }
 
     .languagedot {

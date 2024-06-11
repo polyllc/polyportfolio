@@ -50,15 +50,16 @@ import Box from "./lib/box.svelte";
                 <div class="boxDivider">
                     <Box title={"discord-gameboy"} date={"2020"}  description={"a gameboy emulator that's a discord bot"} icon={githubLogo} iconLink="https://github.com/polyllc/discord-gameboy" link="./all.html#discordgameboy" language={languages[0]}/>
                     <Box title={"alexa"} date={"2020-\n2022"}  description={"alexa is a feature rich music discord bot, from voice commands, to playlists"} icon={githubLogo} iconLink="https://github.com/polyllc/alexa" link="./all.html#alexa" language={languages[0]}/>
-                    <Box title={"poly portfolio"} date={"2022"}  description={"a portfolio of my works"} icon={githubLogo} iconLink="https://github.com/polyllc/polyportfolio" link="./all.html#polyportfolio" language={languages[1]}/>
+                    <Box title={"poly portfolio"} date={"2022-\n2024"}  description={"a portfolio of my works"} icon={githubLogo} iconLink="https://github.com/polyllc/polyportfolio" link="./all.html#polyportfolio" language={languages[1]}/>
                 </div>  
                 <div class="boxDivider">
                     <Box title={"scrypty"} date={"2021-\n2022"}  description={"clone, detect, compile, install from any repository, automatically"} icon={githubLogo} iconLink="https://github.com/polyllc/scrypty" link="./all.html#scrypty" language={languages[0]}/>
-                    <Box title={"disconnall"} date={"2021"}  description={"disconnects everyone from wifi around you!"} icon={githubLogo} iconLink="https://github.com/polyllc/disconnall" link="./all.html#disconnall" language={languages[2]}/>
+                    <Box title={"C++ Tester"} date={"2024"}  description={"simple C++ tester library"} icon={githubLogo} iconLink="https://github.com/polyllc/cpptester" link="./all.html#cpptester" language={languages[2]}/>
                     <Box title={"progflow"} date={"2021"}  description={"scripting for efficiency"} icon={githubLogo} iconLink="https://github.com/polyllc/progflow" link="./all.html#progflow" language={languages[2]}/>
                 </div>
                 <div class="boxDivider">
                     <Box title={"jump cutter revamped"} date={"2020"}  description={"cuts out silent audio from videos to shorten the length"} icon={githubLogo} iconLink="https://github.com/polyllc/jump-cutter-revamped" link="./all.html#jumpcutter" language={languages[2]}/>
+                    <Box title={"disconnall"} date={"2021"}  description={"disconnects everyone from wifi around you!"} icon={githubLogo} iconLink="https://github.com/polyllc/disconnall" link="./all.html#disconnall" language={languages[2]}/>
                 </div>
             </div>
         </div>
@@ -88,7 +89,7 @@ import Box from "./lib/box.svelte";
                 </div>  
                 <div class="boxDivider">
                     <Box title={"poly birthday games"} date={"2018"}  description={"simple games for poly's birthday"} icon="" iconLink="" link="./birthday.html" language={languages[0]}/>
-                    <Box title={"poly portfolio"} date={"2022"}  description={"a portfolio of my works"} icon={githubLogo} iconLink="https://github.com/polyllc/polyportfolio" link="./index.html" language={languages[1]}/>
+                    <Box title={"poly portfolio"} date={"2022-\n2024"}  description={"a portfolio of my works"} icon={githubLogo} iconLink="https://github.com/polyllc/polyportfolio" link="./index.html" language={languages[1]}/>
                 </div>
             </div>
         </div>
@@ -163,7 +164,7 @@ import Box from "./lib/box.svelte";
     #headerDropDownGames:hover #headerDropDownGamesContent {
          opacity: 1;
          visibility: visible;
-         overflow-y: scroll;
+        
     }
 
     #headerDropDownGames {
@@ -171,7 +172,7 @@ import Box from "./lib/box.svelte";
     }
 
     #headerDropDownGamesContent  {
-        overflow-y: scroll !important;
+        overflow-y: show !important;
         max-width: 100vh;
         min-width: 50vw;
         display: inline-block;
@@ -199,7 +200,7 @@ import Box from "./lib/box.svelte";
         border-radius: 15px;
         transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
         max-height: 40vh;
-        overflow-x: scroll;
+       
       
     }
 

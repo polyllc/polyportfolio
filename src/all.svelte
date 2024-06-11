@@ -553,7 +553,7 @@
         margin-top: 17%;
         transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
         min-width: 380px;
-        background: linear-gradient(45deg, #fbc200 33%, #0f0 66%, #00f 100%);
+        background: linear-gradient(45deg, rgb(251, 194, 0) 33%, #0f0 66%, #00f 100%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
@@ -564,10 +564,10 @@
     }
 
     .full {
-        min-height: 100vh; 
+        min-height: 102.5vh; 
         max-width: 100vw;
         position: relative;
-
+        margin-top: -2% !important;
     }
 
     #scrollContainer {
