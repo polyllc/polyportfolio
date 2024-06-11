@@ -6,7 +6,7 @@
 
     let githubLogo = `<img src="src/assets/GitHub-Mark-Light-120px-plus.png" width="50" height="50" class="githubLogo">`; //from githubs own website
     let download = `<img src="src/assets/download.png" width="50" height="50" class="githubLogo">`; 
-    let polylogo = `<img src="src/assets/polytiles2.png" width="50" height="50" class="githubLogo">`
+    let polylogo = `<img src="src/assets/polyangle.png" width="50" height="50" class="githubLogo">`
 
     let languages = [
         {name: "Javascript", color: "#f1e05a"},
@@ -59,10 +59,26 @@
     let randomBorder = css`
         &:hover {
             border: rgb(${a}, ${b}, ${c}, 1) 2px solid;
-            background-color: rgb(${a-100}, ${b-100}, ${c-100}, 0.66);
+            background-color: rgb(${a-100}, ${b-100}, ${c-100}, 0.2);
         }
     `
-
+    $: bg = `
+    background: ${bgGC[0]};
+    `;  
+    let bgGC = ["#24513d", "rgba(38,38,140,0.6)",  "#2f2f88", "rgba(38,78,49,0.6)"];
+    let bgControl= 0;
+    function changeBgColor() {
+        let tempbg = `background: linear-gradient(45deg, ${bgGC[0]} 0% ${clamp(bgControl-250, 0, 100)/10}%, ${bgGC[1]} ${bgControl}%);`;
+        bg = tempbg;
+        bgControl+=.2;
+        if(bgControl >= 350){
+            bgGC.unshift(bgGC.pop());
+            bgControl = 0;
+        }
+    }
+    setInterval(() => {
+        changeBgColor();
+    },15);
 
     $: changeOverlayBG = css`background: linear-gradient(${135}deg, #252f89,#252f89,#101c7f, rgba(0,0,0,0) ${120 * clamp(1 - window.scrollY / 400, 0, 1)}%);`;
 
@@ -137,16 +153,24 @@
         overflow-y: hidden;
         padding: 2%;
         z-index: 3;
-        margin: 0.5%;
+        margin: 5%;
         box-shadow: 0 0 5pt black;
-        background-color: rgba(255, 255, 255, 0.06);
+        background-color: rgba(24, 24, 24, 0.55);
         border: #333 2px solid;
         display: block;
         min-width: 28%;
         max-width: 120%;
         line-height: 1;
         position: relative;
-        transition: all 0.35s cubic-bezier(0.215, 0.610, 0.355, 1);
+        transition: all 0.75s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+    }
+
+    #tester {
+        background: linear-gradient(135deg, #24513d 0%, rgba(40,40,100,1) 120%);
+        background-image: url("src/assets/polytiles2.png");
+        background-repeat: repeat;
+        background-size: 10%;
     }
 
 </style>
@@ -176,60 +200,69 @@
     </p>
 </div>
 </div> -->
-<div style="background: linear-gradient(135deg, #252f49,#101c3f,#212b3c, #24313d 0%, rgba(0,0,0,1) 120%);">
-<div class="boxDivider">
-    <Box title={"about"} date={"2017-\n2024"} description="Welcome to my portfolio! This is a collection of works from years 2017 to 2024. They vary in quality as well as in scale, but I do hope you look around." 
-    icon={polylogo} language={languages[7]} link={"/"} />
-</div>
-<div class="boxHolder {randomBorder}">
-    <Box title={"about"} date={"2017-\n2024"} description="Welcome to my portfolio! This is a collection of works from years 2017 to 2024. They vary in quality as well as in scale, but I do hope you look around." 
-        icon={polylogo} language={languages[7]} link={"/"} extraCss={"width: 300% !important; max-width: 999% !important;"}/>
+<div style="" id="tester">
+    <div id="overground" style="{bg}">
     <div class="boxDivider">
-        <Box title={"discord-gameboy"} date={"2020"}  description={"a gameboy emulator that's a discord bot"} icon={githubLogo} iconLink="https://github.com/polyllc/discord-gameboy" link="./all.html#discordgameboy" language={languages[0]} type="Open Source Project, Discord Bot"/>
-        <Box title={"alexa"} date={"2020-\n2022"}  description={"alexa is a feature rich music discord bot, from voice commands, to playlists"} icon={githubLogo} iconLink="https://github.com/polyllc/alexa" link="./all.html#alexa" language={languages[0]} type="Open Source Project, Discord Bot"/>
-        <Box title={"poly portfolio"} date={"2022-\n2024"}  description={"a portfolio of my works"} icon={githubLogo} iconLink="https://github.com/polyllc/polyportfolio" link="./all.html#polyportfolio" language={languages[1]} type="Open Source Project, Website"/>
-    </div>  
-    <div class="boxDivider">
-        <Box title={"scrypty"} date={"2021-\n2022"}  description={"clone, detect, compile, install from any repository, automatically"} icon={githubLogo} iconLink="https://github.com/polyllc/scrypty" link="./all.html#scrypty" language={languages[0]} type="Open Source Project"/>
-        <Box title={"C++ Tester"} date={"2024"}  description={"simple C++ tester library"} icon={githubLogo} iconLink="https://github.com/polyllc/cpptester" link="./all.html#cpptester" language={languages[2]} type="Open Source Project"/>
-        <Box title={"progflow"} date={"2021"}  description={"scripting for efficiency"} icon={githubLogo} iconLink="https://github.com/polyllc/progflow" link="./all.html#progflow" language={languages[2]} type="Open Source Project"/>
+        <Box title={"about"} date={"2017-\n2024"} description="Welcome to my portfolio! This is a collection of works from years 2017 to 2024. They vary in quality as well as in scale, but I do hope you look around." 
+        icon={polylogo} language={languages[7]} link={"/"} />
+    </div>
+
+    <div class="boxHolder {randomBorder}">
+        <Box title={"about"} date={"2017-\n2024"} description="Welcome to my portfolio! This is a collection of works from years 2017 to 2024. They vary in quality as well as in scale, but I do hope you look around." 
+            icon={polylogo} language={languages[7]} link={"/"} extraCss={css`width: 300% !important; max-width: 999% !important; inline-size: fit-content !important;`}/>
+        <div class="boxDivider">
+            <Box title={"discord-gameboy"} date={"2020"}  description={"a gameboy emulator that's a discord bot"} icon={githubLogo} iconLink="https://github.com/polyllc/discord-gameboy" link="./all.html#discordgameboy" language={languages[0]} type="Open Source Project, Discord Bot"/>
+            <Box title={"alexa"} date={"2020-\n2022"}  description={"alexa is a feature rich music discord bot, from voice commands, to playlists"} icon={githubLogo} iconLink="https://github.com/polyllc/alexa" link="./all.html#alexa" language={languages[0]} type="Open Source Project, Discord Bot"/>
+            <Box title={"poly portfolio"} date={"2022-\n2024"}  description={"a portfolio of my works"} icon={githubLogo} iconLink="https://github.com/polyllc/polyportfolio" link="./all.html#polyportfolio" language={languages[1]} type="Open Source Project, Website"/>
+        </div>  
+        <div class="boxDivider">
+            <Box title={"scrypty"} date={"2021-\n2022"}  description={"clone, detect, compile, install from any repository, automatically"} icon={githubLogo} iconLink="https://github.com/polyllc/scrypty" link="./all.html#scrypty" language={languages[0]} type="Open Source Project"/>
+            <Box title={"C++ Tester"} date={"2024"}  description={"simple C++ tester library"} icon={githubLogo} iconLink="https://github.com/polyllc/cpptester" link="./all.html#cpptester" language={languages[2]} type="Open Source Project"/>
+            <Box title={"progflow"} date={"2021"}  description={"scripting for efficiency"} icon={githubLogo} iconLink="https://github.com/polyllc/progflow" link="./all.html#progflow" language={languages[2]} type="Open Source Project"/>
+        </div>
+        <div class="boxDivider">
+            <Box title={"jump cutter revamped"} date={"2020"}  description={"cuts out silent audio from videos to shorten the length"} icon={githubLogo} iconLink="https://github.com/polyllc/jump-cutter-revamped" link="./all.html#jumpcutter" language={languages[2]} type="Open Source Project"/>
+            <Box title={"disconnall"} date={"2021"}  description={"disconnects everyone from wifi around you!"} icon={githubLogo} iconLink="https://github.com/polyllc/disconnall" link="./all.html#disconnall" language={languages[2]} type="Open Source Project"/>
+            <Box title={"voting bot"} date={"2020"}  description={"a simple voting bot"} icon="" iconLink="" link="./all.html#voting" language={languages[0]} type="Discord Bot"/>
+        </div>
+    </div>
+
+
+    <div class="boxHolder {randomBorder}">
+        <Box title={"open source"} date={"2017-\n2024"} description="Here is a small list of the various open source programs I've made over the years. All of them are available on GitHub." 
+            icon={polylogo} language={languages[7]} link={"/"} extraCss={css`width: 300% !important; max-width: 999% !important; inline-size: fit-content !important;`}/>
+        <div class="boxDivider">
+            <Box title={"log bot"} date={"2020"}  description={"logs a server to another created just for logging"} icon="" iconLink="" link="./all.html#log" language={languages[0]} type="Discord Bot"/>
+            <Box title={"auto counter"} date={"2020"}  description={"auto counts in a channel and makes sure everyone is counting correctly"} icon="" iconLink="" link="./all.html#auto" language={languages[0]} type="Discord Bot"/>
+            <Box title={"polyllc.org"} date={"2017-\n2020"}  description={"the main website for poly"} icon="" iconLink="" link="./polyllc.html" language={languages[4]} type="Website"/>
+        </div>
+        <div class="boxDivider">
+            <Box title={"poly website"} date={"2017-\n2019"}  description={"a feature rich website, with videos, profiles, email and more"} icon="" iconLink="" link="./polywebsite.html" language={languages[3]} type="Website"/>
+            <Box title={"PolyForums"} date={"2019"}  description={"a social media site with tags as the way to find new content"} icon="" iconLink="" link="./polyforums.html" language={languages[3]} type="Website"/>
+            <Box title={"poly birthday games"} date={"2018"}  description={"simple games for poly's birthday"} icon="" iconLink="" link="./birthday.html" language={languages[0]} type="Website, Game"/>
+        </div>
+        <div class="boxDivider">
+            <Box title={"bc2021"} date={"2021"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2021" link="" language={languages[6]} type="Competitive Programming"
+                extraCss="{reactiveFlex}"/>
+            <Box title={"bc2022"} date={"2022"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2022" link="" language={languages[6]} type="Competitive Programming"
+                extraCss="{reactiveFlex}"/>
+            <Box title={"bc2023"} date={"2023"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2023" link="" language={languages[6]} type="Competitive Programming"
+                extraCss="{reactiveFlex}"/>
+        </div>
     </div>
     <div class="boxDivider">
-        <Box title={"jump cutter revamped"} date={"2020"}  description={"cuts out silent audio from videos to shorten the length"} icon={githubLogo} iconLink="https://github.com/polyllc/jump-cutter-revamped" link="./all.html#jumpcutter" language={languages[2]} type="Open Source Project"/>
-        <Box title={"disconnall"} date={"2021"}  description={"disconnects everyone from wifi around you!"} icon={githubLogo} iconLink="https://github.com/polyllc/disconnall" link="./all.html#disconnall" language={languages[2]} type="Open Source Project"/>
-        <Box title={"voting bot"} date={"2020"}  description={"a simple voting bot"} icon="" iconLink="" link="./all.html#voting" language={languages[0]} type="Discord Bot"/>
+        <Box title={"bc2024"} date={"2024"}  description={"my team's final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2024" link="" language={languages[6]} type="Competitive Programming"
+            extraCss="{reactiveFlex}"/>
+        <Box title={"ytdl soundtrack"} date={"2020"}  description={"yt video soundtrack into separate files"} icon={download} iconLink="/src/repository/ytdl-soundtrack.cpp" link="/src/repository/ytdl-soundtrack.cpp" language={languages[2]} type="Script"
+            extraCss="{reactiveFlex}"/>
+        <Box title={"ffmpeg repeater"} date={"2020"}  description={"repeats video/audio x times"} icon={download} iconLink="/src/repository/ffmpeg-repeater.cpp" link="/src/repository/ffmpeg-repeater.cpp" language={languages[2]} type="Script"
+            extraCss="{reactiveFlex}"/>
     </div>
-</div>
-<div class="boxDivider">
-    <Box title={"log bot"} date={"2020"}  description={"logs a server to another created just for logging"} icon="" iconLink="" link="./all.html#log" language={languages[0]} type="Discord Bot"/>
-    <Box title={"auto counter"} date={"2020"}  description={"auto counts in a channel and makes sure everyone is counting correctly"} icon="" iconLink="" link="./all.html#auto" language={languages[0]} type="Discord Bot"/>
-    <Box title={"polyllc.org"} date={"2017-\n2020"}  description={"the main website for poly"} icon="" iconLink="" link="./polyllc.html" language={languages[4]} type="Website"/>
-</div>
-<div class="boxDivider">
-    <Box title={"poly website"} date={"2017-\n2019"}  description={"a feature rich website, with videos, profiles, email and more"} icon="" iconLink="" link="./polywebsite.html" language={languages[3]} type="Website"/>
-    <Box title={"PolyForums"} date={"2019"}  description={"a social media site with tags as the way to find new content"} icon="" iconLink="" link="./polyforums.html" language={languages[3]} type="Website"/>
-    <Box title={"poly birthday games"} date={"2018"}  description={"simple games for poly's birthday"} icon="" iconLink="" link="./birthday.html" language={languages[0]} type="Website, Game"/>
-</div>
-<div class="boxDivider">
-    <Box title={"bc2021"} date={"2021"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2021" link="" language={languages[6]} type="Competitive Programming"
-        extraCss="{reactiveFlex}"/>
-    <Box title={"bc2022"} date={"2022"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2022" link="" language={languages[6]} type="Competitive Programming"
-        extraCss="{reactiveFlex}"/>
-    <Box title={"bc2023"} date={"2023"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2023" link="" language={languages[6]} type="Competitive Programming"
-        extraCss="{reactiveFlex}"/>
-</div>
-<div class="boxDivider">
-    <Box title={"bc2024"} date={"2024"}  description={"my team's final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2024" link="" language={languages[6]} type="Competitive Programming"
-        extraCss="{reactiveFlex}"/>
-    <Box title={"ytdl soundtrack"} date={"2020"}  description={"yt video soundtrack into separate files"} icon={download} iconLink="/src/repository/ytdl-soundtrack.cpp" link="/src/repository/ytdl-soundtrack.cpp" language={languages[2]} type="Script"
-        extraCss="{reactiveFlex}"/>
-    <Box title={"ffmpeg repeater"} date={"2020"}  description={"repeats video/audio x times"} icon={download} iconLink="/src/repository/ffmpeg-repeater.cpp" link="/src/repository/ffmpeg-repeater.cpp" language={languages[2]} type="Script"
-        extraCss="{reactiveFlex}"/>
-</div>
-<div class="boxDivider">
-    <Box title={"ytsdl"} date={"2020"}  description={"search, download, convert youtube"} icon={download} iconLink="/src/repository/ytsdl.js" link="/src/repository/ytsdl.js" language={languages[0]} type="Script"
-        extraCss="{reactiveFlex}"/>
-</div>
+    <div class="boxDivider">
+        <Box title={"ytsdl"} date={"2020"}  description={"search, download, convert youtube"} icon={download} iconLink="/src/repository/ytsdl.js" link="/src/repository/ytsdl.js" language={languages[0]} type="Script"
+            extraCss="{reactiveFlex}"/>
+    </div>
+    </div>
 </div>
 
 <div id="mainContent">

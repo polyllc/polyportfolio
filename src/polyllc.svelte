@@ -55,11 +55,9 @@
 
     function rangeUpdate(e){
         let val = e.target.value;
-        console.log(val);
         title = titles[val-1];
         
         let site = document.getElementById("websites");
-        console.log(site.contentWindow.location.href);
 
         let link = site.contentWindow.location.href.substring(site.contentWindow.location.href.lastIndexOf("/")+1);
         
@@ -90,7 +88,21 @@
         description = descriptions[val-1];
     }
 
+    $: infoBoxCSS = css`opacity: 1;`;
+    let toggleState = false;
+    function toggleInfo(e){
+      if(!toggleState) {
+        infoBoxCSS = `opacity: 0.1; right: -400px;`;
+      }
+      else {
+        infoBoxCSS = `opacity: 1; right: 0px;`;
+      }
+      toggleState = !toggleState;
+    }
 
+    function hoverInfo(e) {
+      infoBoxCSS = "opacity: 1: right: -80px;"
+    }
 
 </script>
 
@@ -107,7 +119,7 @@
 
     <iframe sandbox="allow-same-origin allow-scripts allow-popups allow-forms" id="websites" frameborder="0" src="{url}" title="polyllc.org"></iframe>
 
-    <div style="position: fixed; top: 12vh; right: 0;" id="des">
+    <div style="position: fixed; top: 12vh; right: 0; {infoBoxCSS}" id="des" on:click={toggleInfo} on:mouseover={hoverInfo} on:focus={hoverInfo} on:mouseleave={()=>{toggleInfo(); toggleInfo();}}>
         <div class="headerOfBox">
             <p class="titleOfBox">{title}</p>
             <p class="dateOfBox">{date}</p>
@@ -171,6 +183,7 @@
         position: relative;
         transition: all 0.35s cubic-bezier(0.215, 0.610, 0.355, 1);
     }
+
 
     .titleOfBox {
         font-size: 4.5vh;

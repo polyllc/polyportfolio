@@ -60,6 +60,7 @@ let randomBorder = css`
         line-height: 1;
         position: relative;
         transition: all 0.35s cubic-bezier(0.215, 0.610, 0.355, 1);
+        inline-size: min-content;
     }
 
     a {
