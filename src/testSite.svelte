@@ -6,7 +6,7 @@
 
     let githubLogo = `<img src="src/assets/GitHub-Mark-Light-120px-plus.png" width="50" height="50" class="githubLogo">`; //from githubs own website
     let download = `<img src="src/assets/download.png" width="50" height="50" class="githubLogo">`; 
-    let polylogo = `<img src="src/assets/polyangle.png" width="50" height="50" class="githubLogo">`
+    let polylogo = `<img src="src/assets/polyangle.png" width="50" height="50" class="githubLogo">`;
 
     let languages = [
         {name: "Javascript", color: "#f1e05a"},
@@ -41,16 +41,28 @@
     margin-right: 5%;
     margin-left: 5%;
 
-    @media screen and (max-width: 1500px) {
-        min-width: 50% !important;
-    }
-
     @media screen and (max-width: 1100px) {
         min-width: 80% !important;
         margin-left: 10% !important;
+        width: 300% !important; max-width: 999% !important; inline-size: fit-content !important;
     }
     `;
 
+    let reactiveFlexWhite = css`background-color: rgba(111, 111, 111, 0.66) !important; border: #ccc 2px solid !important; margin-right: 5%;
+    margin-left: 5%;
+    
+    @media screen and (max-width: 1100px) {
+        min-width: 80% !important;
+        margin-left: 10% !important;
+        width: 300% !important; max-width: 999% !important; inline-size: fit-content !important;
+    }`
+
+
+    let reactiveContainer = css`
+    @media screen and (max-width: 1100px) {
+        display: block !important;
+    }
+    `
 
     let a = Math.floor(Math.random() * 125) + 20;
     let b = Math.floor(Math.random() * 125) + 20;
@@ -84,7 +96,7 @@
 
     $: changeOverlayText = css``;
 
-    let disableOnScroll;
+ /*   let disableOnScroll;
     onscroll = (event) => {
         let scrollValue = clamp(1 - window.scrollY / 400, 0, 1);
         changeOverlayText = css`
@@ -99,7 +111,7 @@
         disableOnScroll.disabled = scrollValue != 1;
         //${clamp(1 - window.scrollY / 400, 0, 1) == 1 ? "mix-blend-mode: difference;" : "mix-blend-mode: difference;"}
         //linear-gradient(45deg, #fbc200 rgba(251, 194, 0, ${scrollValue}) 33%, rgba(0, 255, 0, ${scrollValue}) 66%, rgba(0, 0, 255, ${scrollValue}) 100%)
-    }
+    }*/
 
 </script>
 <Header/>
@@ -135,9 +147,6 @@
         mix-blend-mode: normal;
         overflow-y:visible;
     }
-    * {
-        
-    }
 
     .boxDivider {
         display: flex;
@@ -166,7 +175,7 @@
 
     }
 
-    #tester {
+    #imgbackground {
         background: linear-gradient(135deg, #24513d 0%, rgba(40,40,100,1) 120%);
         background-image: url("src/assets/polytiles2.png");
         background-repeat: repeat;
@@ -175,93 +184,81 @@
 
 </style>
 
-<!--<div style="background: rgba(0,0,0,0); position: fixed; z-index: 2;" class="full">
-<div>
-    <div class="{changeOverlayBG}" style="width: 100vw; height: 100vh; display: flex; justify-content: center; mix-blend-mode: exclusion; align-items: center;">
-        <p class="{overlayText} {changeOverlayText}" bind:this={disableOnScroll} style="font-size: 150px;">About</p>
-        </div>
 
-    <p style="font-size: 25px; color: white; margin-left: 5%; margin-top: 2%; margin-right: 20%; font-weight: 0; text-shadow: 0 0 15pt black; line-height: 160%;">
-        &emsp;Hey! My name is Poly, and welcome to my portfolio! This portfolio is a collection of projects that I have finished (or worked on) over the years since 2017. I started to program when I was eight in Scratch. My dad was watching a TED talk
-        about this new programming language made by MIT just for kids. He installed it on our family computer, and I just started to click the blocks together. I had no idea what I was doing, but something was happening on the screen, so I didn't care.
-        I gave up like a month after being introduced, but later when I was ten, people of course wanted to find any way to get games on their school computers, and I introduced them to Scratch. They instantly fell in love with it (not the programming, 
-        the games of course), and would sit on it 24/7 (well at least in school). This prompted my return to Scratch. I then made upwards of ten or twenty games when I was ten and eleven. Most of them did really badly, but one game in particular, was my
-        favorite. It was called The Adventures of Stick Man, and was I proud of it. It was a simple platformer, but it was complete. Complete with levels, gameplay(!!!), leaderboards and more. I was so proud, I even told the people at a hair salon 
-        when my hair was being cut. I eventually moved on from block coding, to text coding. And to help publish my new games that weren't going to be on Scratch, I made a company.
-        <br><br>&emsp;I initially started up as Poly under the company Poly LLC, and my first project at Poly LLC
-        was to make a game. I started with a Geometry Dash style game, which I extensively developed over a year, with multiple notebooks filled with ideas. I bought a game engine called GameMaker Studio 2, and started to tinker around in it.
-        I eventually made my first prototype of my game, which was unbelievably horrible. But by my standards when I was eleven, it was magical. I had just made crudely drawn pictures and programmed a bit with the worst spaghetti code possible,
-        but it was my drawings and my code, all working. I worked on that for a long time, but nothing came out of it. <br><br>&emsp;In the meantime, I made my first website. Mind you, this was HTML 101 basic website, with awful color pairings and misaligned
-        text, but yet again, it was my website, available through the very same link you're using to see this website. <br><br>&emsp;While on vacation, I bought this book on PHP and MySQL, and after reading it, my multifunction website (that has no name other
-        than poly, it's called poly website under the website section) was dreamed up and created. I had put at least 500 hours into making that website, and it took up my most of my free time when I was twelve. But the hours I would spend with my friends
-        playing around on that website were of course the best. I partly made that website for them, so we could have fun on it. After a while, I got busy with other things, and I stopped maintaining the website, until I had to shut it down because of 
-        certain concerns.<br><br>&emsp;Anyways, most everything below this is well documented, so if you want to learn more about this website or the games that I made for Poly LLC, scroll on down and click the button. 
-        
-    </p>
-</div>
-</div> -->
-<div style="" id="tester">
+<!-- todo, just make a thing that automagically makes it so it makes boxDividers and boxes in the right place and all I have to do is just put in the boxes-->
+<div style="" id="imgbackground">
     <div id="overground" style="{bg}">
-    <div class="boxDivider">
-        <Box title={"about"} date={"2017-\n2024"} description="Welcome to my portfolio! This is a collection of works from years 2017 to 2024. They vary in quality as well as in scale, but I do hope you look around." 
-        icon={polylogo} language={languages[7]} link={"/"} />
-    </div>
 
     <div class="boxHolder {randomBorder}">
-        <Box title={"about"} date={"2017-\n2024"} description="Welcome to my portfolio! This is a collection of works from years 2017 to 2024. They vary in quality as well as in scale, but I do hope you look around." 
-            icon={polylogo} language={languages[7]} link={"/"} extraCss={css`width: 300% !important; max-width: 999% !important; inline-size: fit-content !important;`}/>
-        <div class="boxDivider">
-            <Box title={"discord-gameboy"} date={"2020"}  description={"a gameboy emulator that's a discord bot"} icon={githubLogo} iconLink="https://github.com/polyllc/discord-gameboy" link="./all.html#discordgameboy" language={languages[0]} type="Open Source Project, Discord Bot"/>
-            <Box title={"alexa"} date={"2020-\n2022"}  description={"alexa is a feature rich music discord bot, from voice commands, to playlists"} icon={githubLogo} iconLink="https://github.com/polyllc/alexa" link="./all.html#alexa" language={languages[0]} type="Open Source Project, Discord Bot"/>
-            <Box title={"poly portfolio"} date={"2022-\n2024"}  description={"a portfolio of my works"} icon={githubLogo} iconLink="https://github.com/polyllc/polyportfolio" link="./all.html#polyportfolio" language={languages[1]} type="Open Source Project, Website"/>
+        <div class="boxDivider {reactiveContainer}">
+            <Box title={"about"} date={"2017-\n2024"} description="Welcome to my portfolio! This is a collection of works from years 2017 to 2024. They vary in quality as well as in scale, but I do hope you look around." 
+            icon={polylogo} language={languages[7]} link={"/"} extraCss={reactiveFlexWhite} />
+            <Box title={"games"} date={"2017-\n2024"} description="I've made a couple of games back in my time, and even published them. The first one in 2018, fdphysics, a 2d platform shooter/fighting game, and the second in 2020, planeagement, a 
+            strategy based plane management game." 
+            icon={polylogo} language={languages[7]} link={"/"} extraCss={reactiveFlexWhite} />
+            <Box title={"fdphysics"} date={"2018-2019"} description={"a two player, 2D, shooting showdown in a variety of maps and modes"} icon={itchLogo} iconLink="https://polyllc.itch.io/fdphysics" link="./fdphysics.html" language={languages[5]} extraCss="{reactiveFlex}"/>
         </div>  
-        <div class="boxDivider">
-            <Box title={"scrypty"} date={"2021-\n2022"}  description={"clone, detect, compile, install from any repository, automatically"} icon={githubLogo} iconLink="https://github.com/polyllc/scrypty" link="./all.html#scrypty" language={languages[0]} type="Open Source Project"/>
-            <Box title={"C++ Tester"} date={"2024"}  description={"simple C++ tester library"} icon={githubLogo} iconLink="https://github.com/polyllc/cpptester" link="./all.html#cpptester" language={languages[2]} type="Open Source Project"/>
-            <Box title={"progflow"} date={"2021"}  description={"scripting for efficiency"} icon={githubLogo} iconLink="https://github.com/polyllc/progflow" link="./all.html#progflow" language={languages[2]} type="Open Source Project"/>
-        </div>
-        <div class="boxDivider">
-            <Box title={"jump cutter revamped"} date={"2020"}  description={"cuts out silent audio from videos to shorten the length"} icon={githubLogo} iconLink="https://github.com/polyllc/jump-cutter-revamped" link="./all.html#jumpcutter" language={languages[2]} type="Open Source Project"/>
-            <Box title={"disconnall"} date={"2021"}  description={"disconnects everyone from wifi around you!"} icon={githubLogo} iconLink="https://github.com/polyllc/disconnall" link="./all.html#disconnall" language={languages[2]} type="Open Source Project"/>
-            <Box title={"voting bot"} date={"2020"}  description={"a simple voting bot"} icon="" iconLink="" link="./all.html#voting" language={languages[0]} type="Discord Bot"/>
-        </div>
-    </div>
 
+        <div class="boxDivider {reactiveContainer}">
+            <Box title={"planeagement"} date={"2019-2020"} description={"a casual plane management game, where you manage your planes going from your airport to others"} icon={itchLogo} iconLink="https://polyllc.itch.io/planeagement" link="./planeagement.html" language={languages[5]} extraCss="{reactiveFlex}"/>
+            <Box title={"open source"} date={"2019-\n2024"} description="Here is a small list of the various open source programs I've made over the years. All of them are available on GitHub." 
+            icon={polylogo} language={languages[7]} link={"/"} extraCss={reactiveFlexWhite}/>
+            <Box title={"C++ Tester"} date={"2024"}  description={"simple C++ tester library"} icon={githubLogo} iconLink="https://github.com/polyllc/cpptester" link="./all.html#cpptester" language={languages[2]} type="Open Source Project" extraCss="{reactiveFlex}"/>
+        </div>
 
-    <div class="boxHolder {randomBorder}">
-        <Box title={"open source"} date={"2017-\n2024"} description="Here is a small list of the various open source programs I've made over the years. All of them are available on GitHub." 
-            icon={polylogo} language={languages[7]} link={"/"} extraCss={css`width: 300% !important; max-width: 999% !important; inline-size: fit-content !important;`}/>
-        <div class="boxDivider">
-            <Box title={"log bot"} date={"2020"}  description={"logs a server to another created just for logging"} icon="" iconLink="" link="./all.html#log" language={languages[0]} type="Discord Bot"/>
-            <Box title={"auto counter"} date={"2020"}  description={"auto counts in a channel and makes sure everyone is counting correctly"} icon="" iconLink="" link="./all.html#auto" language={languages[0]} type="Discord Bot"/>
-            <Box title={"polyllc.org"} date={"2017-\n2020"}  description={"the main website for poly"} icon="" iconLink="" link="./polyllc.html" language={languages[4]} type="Website"/>
+        <div class="boxDivider {reactiveContainer}">
+            <Box title={"alexa"} date={"2020-\n2022"}  description={"alexa is a feature rich music discord bot, from voice commands, to playlists"} icon={githubLogo} iconLink="https://github.com/polyllc/alexa" link="./all.html#alexa" language={languages[0]} type="Open Source Project, Discord Bot" extraCss="{reactiveFlex}"/>
+            <Box title={"scrypty"} date={"2021-\n2022"}  description={"clone, detect, compile, install from any repository, automatically"} icon={githubLogo} iconLink="https://github.com/polyllc/scrypty" link="./all.html#scrypty" language={languages[0]} type="Open Source Project" extraCss="{reactiveFlex}"/>
+            <Box title={"progflow"} date={"2021"}  description={"scripting for efficiency"} icon={githubLogo} iconLink="https://github.com/polyllc/progflow" link="./all.html#progflow" language={languages[2]} type="Open Source Project" extraCss="{reactiveFlex}"/>
         </div>
-        <div class="boxDivider">
-            <Box title={"poly website"} date={"2017-\n2019"}  description={"a feature rich website, with videos, profiles, email and more"} icon="" iconLink="" link="./polywebsite.html" language={languages[3]} type="Website"/>
-            <Box title={"PolyForums"} date={"2019"}  description={"a social media site with tags as the way to find new content"} icon="" iconLink="" link="./polyforums.html" language={languages[3]} type="Website"/>
-            <Box title={"poly birthday games"} date={"2018"}  description={"simple games for poly's birthday"} icon="" iconLink="" link="./birthday.html" language={languages[0]} type="Website, Game"/>
+
+        <div class="boxDivider {reactiveContainer}">
+            <Box title={"poly portfolio"} date={"2022-\n2024"}  description={"a portfolio of my works"} icon={githubLogo} iconLink="https://github.com/polyllc/polyportfolio" link="./all.html#polyportfolio" language={languages[1]} type="Open Source Project, Website" extraCss="{reactiveFlex}"/>
+            <Box title={"jump cutter revamped"} date={"2020"}  description={"cuts out silent audio from videos to shorten the length"} icon={githubLogo} iconLink="https://github.com/polyllc/jump-cutter-revamped" link="./all.html#jumpcutter" language={languages[2]} type="Open Source Project" extraCss="{reactiveFlex}"/>
+            <Box title={"disconnall"} date={"2021"}  description={"disconnects everyone from wifi around you!"} icon={githubLogo} iconLink="https://github.com/polyllc/disconnall" link="./all.html#disconnall" language={languages[2]} type="Open Source Project" extraCss="{reactiveFlex}"/>
         </div>
-        <div class="boxDivider">
-            <Box title={"bc2021"} date={"2021"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2021" link="" language={languages[6]} type="Competitive Programming"
-                extraCss="{reactiveFlex}"/>
-            <Box title={"bc2022"} date={"2022"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2022" link="" language={languages[6]} type="Competitive Programming"
-                extraCss="{reactiveFlex}"/>
+
+        <div class="boxDivider {reactiveContainer}">
+            <Box title={"competitive programming"} date={"2020-\n2024"} description="All of my competitive programming entries, pretty much all MIT Battlecode." 
+            icon={polylogo} language={languages[7]} link={"/"} extraCss={reactiveFlexWhite} />
+            <Box title={"bc2024"} date={"2024"}  description={"my team's final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2024" link="" language={languages[6]} type="Competitive Programming"
+            extraCss="{reactiveFlex}"/>
             <Box title={"bc2023"} date={"2023"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2023" link="" language={languages[6]} type="Competitive Programming"
                 extraCss="{reactiveFlex}"/>
         </div>
+
+        <div class="boxDivider {reactiveContainer}">
+            <Box title={"bc2022"} date={"2022"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2022" link="" language={languages[6]} type="Competitive Programming"
+            extraCss="{reactiveFlex}"/>
+            <Box title={"bc2021"} date={"2021"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2021" link="" language={languages[6]} type="Competitive Programming"
+                extraCss="{reactiveFlex}"/>
+            <Box title={"websites"} date={"2017-\n2024"} description="Websites made for various purposes, like this one (portfolio), or polyllc.org (my old website), or poly website (user driven content delivery site)." 
+                icon={polylogo} language={languages[7]} link={"/"} extraCss={reactiveFlexWhite} />
+        </div>
+        <div class="boxDivider {reactiveContainer}">
+            <Box title={"polyllc.org"} date={"2017-\n2020"}  description={"the main website for poly, click for a history of the website in real time."} icon="" iconLink="" link="./polyllc.html" language={languages[4]} type="Website" extraCss="{reactiveFlex}"/>
+            <Box title={"poly website"} date={"2017-\n2019"}  description={"a feature rich website, with videos, profiles, email and more"} icon="" iconLink="" link="./polywebsite.html" language={languages[3]} type="Website" extraCss="{reactiveFlex}"/>
+            <Box title={"PolyForums"} date={"2019"}  description={"a social media site with tags as the way to find new content"} icon="" iconLink="" link="./polyforums.html" language={languages[3]} type="Website" extraCss="{reactiveFlex}"/>
+        </div>
+        <div class="boxDivider {reactiveContainer}">
+            <Box title={"poly birthday games"} date={"2018"}  description={"simple games for poly's birthday"} icon="" iconLink="" link="./birthday.html" language={languages[0]} type="Website, Game" extraCss="{reactiveFlex}"/>
+            <Box title={"discord bots"} date={"2020-\n2024"} description="Random discord bots. Some actually useful!" 
+                icon={polylogo} language={languages[7]} link={"/"} extraCss={reactiveFlexWhite} />
+            <Box title={"alexa"} date={"2020-\n2022"}  description={"alexa is a feature rich music discord bot, from voice commands, to playlists"} icon={githubLogo} 
+                iconLink="https://github.com/polyllc/alexa" link="./all.html#alexa" language={languages[0]} type="Open Source Project, Discord Bot" extraCss="{reactiveFlex}"/>
+
+        </div>
+        <div class="boxDivider {reactiveContainer}">
+            <Box title={"discord-gameboy"} date={"2020"}  description={"a gameboy emulator that's a discord bot"} icon={githubLogo} iconLink="https://github.com/polyllc/discord-gameboy" link="./all.html#discordgameboy"
+                 language={languages[0]} type="Open Source Project, Discord Bot"/>
+            <Box title={"log bot"} date={"2020"}  description={"logs a server to another created just for logging"} icon="" iconLink="" link="./all.html#log" language={languages[0]} type="Discord Bot" extraCss="{reactiveFlex}"/>
+            <Box title={"voting bot"} date={"2020"}  description={"a simple voting bot"} icon="" iconLink="" link="./all.html#voting" language={languages[0]} type="Discord Bot" extraCss="{reactiveFlex}"/>
+        </div>
+        <div class="boxDivider {reactiveContainer}">
+            <Box title={"auto counter"} date={"2020"}  description={"auto counts in a channel and makes sure everyone is counting correctly"} icon="" iconLink="" link="./all.html#auto" language={languages[0]} type="Discord Bot" extraCss="{reactiveFlex}"/>
+        </div>
     </div>
-    <div class="boxDivider">
-        <Box title={"bc2024"} date={"2024"}  description={"my team's final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2024" link="" language={languages[6]} type="Competitive Programming"
-            extraCss="{reactiveFlex}"/>
-        <Box title={"ytdl soundtrack"} date={"2020"}  description={"yt video soundtrack into separate files"} icon={download} iconLink="/src/repository/ytdl-soundtrack.cpp" link="/src/repository/ytdl-soundtrack.cpp" language={languages[2]} type="Script"
-            extraCss="{reactiveFlex}"/>
-        <Box title={"ffmpeg repeater"} date={"2020"}  description={"repeats video/audio x times"} icon={download} iconLink="/src/repository/ffmpeg-repeater.cpp" link="/src/repository/ffmpeg-repeater.cpp" language={languages[2]} type="Script"
-            extraCss="{reactiveFlex}"/>
-    </div>
-    <div class="boxDivider">
-        <Box title={"ytsdl"} date={"2020"}  description={"search, download, convert youtube"} icon={download} iconLink="/src/repository/ytsdl.js" link="/src/repository/ytsdl.js" language={languages[0]} type="Script"
-            extraCss="{reactiveFlex}"/>
-    </div>
+
     </div>
 </div>
 

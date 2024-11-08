@@ -42,6 +42,15 @@ import Box from "./lib/box.svelte";
                             </div>
                         </div>
                     </a>
+                    <a href="https://po-ly.itch.io/yamanote" style="text-decoration: none !important">
+                        <div id="yamanoteTraveler">
+                            <img src="src/assets/yamanoteLogo.png" type="image/png" alt="yamanote traveler screenshot" id="yamanoteLogo">
+                            <div style="display: block"> 
+                                <p style="color:white; font-size:30pt; font-weight: 900; text-shadow: 1pt 1pt 2pt rgba(0, 0, 0, 1);">Released 2024</p>
+                                <p style="color:white; text-shadow: 0px 0px 10px black; font-size: 22pt; font-weight:200;">Ride around the yamanote line and explore the wonders (of sorts) around tokyo</p>
+                            </div>
+                        </div>
+                    </a>
             </div>
         </div>
         <div id="headerDropDownOpenSource" class="headerDropDown">
@@ -220,6 +229,41 @@ import Box from "./lib/box.svelte";
     }
 
     #planeagementLogo:hover {
+        filter: drop-shadow(0px 0px 10px black);
+        
+    }
+
+    #yamanoteTraveler{
+        background-image: url("src/assets/yamanoteBg.png");
+        background-size:cover;
+        padding: 5.5%;
+        display: flex;
+        align-content: flex-start;
+        box-shadow: 0 0 0pt black;
+        border-radius: 15px;
+        transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+        max-height: 40vh;
+       
+      
+    }
+
+    #yamanoteTraveler:hover {
+        box-shadow: 0 0 15pt black;
+        z-index: 4;
+        padding: 6.5%;
+        border-radius: 50px;
+    }
+
+    #yamanoteLogo {
+        width: 330px; 
+        height: 270px;
+        margin:auto;
+        filter:drop-shadow(0px 0px 2px black);
+        padding-right: 20px;
+        transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+    }
+
+    #yamanoteLogo:hover {
         filter: drop-shadow(0px 0px 10px black);
         
     }

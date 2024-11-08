@@ -8,6 +8,7 @@ export let link;
 export let language;
 export let extraCss = "";
 export let type = "";
+export let altText = "";
 
 import { css } from '@emotion/css';
 
@@ -20,26 +21,38 @@ let randomBorder = css`
         border: rgb(${a}, ${b}, ${c}, 1) 2px solid;
         background-color: rgb(${a-100}, ${b-100}, ${c-100}, 0.66);
     }
-`
+`;
+
+
+let altTextEnabled = true;
 </script>
 
 <div class="box {randomBorder} {extraCss}">
-    <a href={link}>
-    <div class="headerOfBox">
-        <p class="titleOfBox">{title}</p>
-        <p class="dateOfBox">{date}</p>
-    </div>
-    <p class="descriptionOfBox">{description}</p>
-    <div class="iconBox">
-        <a href={iconLink}>
-            {@html icon}
-        </a>
+    <div on:click="{() => {altTextEnabled = !altTextEnabled}}">
+        <div class="headerOfBox">
+            <p class="titleOfBox">{title}</p>
+            <p class="dateOfBox">{date}</p>
+        </div>
+        <p class="descriptionOfBox">
+            {#if altTextEnabled}
+            {description}
+            {:else}
+            {altText}
+            {/if}</p>
+        
+            <p class="descriptionOfBox" id="extraDetail"></p>
+       
+        <div class="iconBox">
+            <a href={iconLink}>
+                {@html icon}
+            </a>
+        </div>
     </div>
     <div class="languageBox">
         <dot class="languagedot" style="background-color: {language.color}"></dot><p class="language">{language.name}</p>
         <em><p class="extraText">{type}</p></em>
     </div>
-    </a>
+
 </div>
 <!--inline-size: min-content;-->
 <style>
@@ -58,6 +71,7 @@ let randomBorder = css`
         min-width: 28%;
         max-width: 120%;
         line-height: 1;
+        min-height: 55%;
         position: relative;
         transition: all 0.35s cubic-bezier(0.215, 0.610, 0.355, 1);
         inline-size: min-content;
@@ -107,6 +121,7 @@ let randomBorder = css`
         font-size: 2.1324vh;
         margin-left: 4%;
         text-shadow: 0 0 10px black;
+        margin-bottom: 10%;
     }
 
     .iconBox {
@@ -151,6 +166,11 @@ let randomBorder = css`
         left: 0;
         bottom: 2.091529vh;
         position: absolute;
+    }
+
+    #extraDetail {
+        display: block;
+
     }
 
 
