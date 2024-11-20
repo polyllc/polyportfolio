@@ -4,11 +4,16 @@ export let description;
 export let date;
 export let icon = ""; 
 export let iconLink = "";
-export let link;
+export let link = "/";
 export let language;
 export let extraCss = "";
 export let type = "";
 export let altText = "";
+export let onClick = () => {};
+
+import empty from "./empty.svelte";
+export let innerElement = empty;
+
 
 import { css } from '@emotion/css';
 
@@ -28,7 +33,7 @@ let altTextEnabled = true;
 </script>
 
 <div class="box {randomBorder} {extraCss}">
-    <div on:click="{() => {altTextEnabled = !altTextEnabled}}">
+    <div on:click={onClick}>
         <div class="headerOfBox">
             <p class="titleOfBox">{title}</p>
             <p class="dateOfBox">{date}</p>
@@ -41,7 +46,7 @@ let altTextEnabled = true;
             {/if}</p>
         
             <p class="descriptionOfBox" id="extraDetail"></p>
-       
+            <svelte:element this={"wow"} />
         <div class="iconBox">
             <a href={iconLink}>
                 {@html icon}

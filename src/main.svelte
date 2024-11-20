@@ -129,11 +129,23 @@
     `
 
 
+    let popupElement = "<p>hi</p>";
+
+    let closePopup = () => {
+        document.getElementById("popup").style.opacity = "0";
+
+    }
+
+    let openPopup = (dataNum) => {
+        document.getElementById("popup").style.opacity = "1";
+    }
+
+    import innerBox from "./boxPopups/yamanoteTraveler.svelte";
 
 
 </script>
 <Header/>
-<!--bro just use gradients in css-->
+
 <div id="scrollContainer" style=" overflow-x:hidden; transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);">
     <div class="full" style="{bg} height: 100vh" >
         <div style="background-size: 10%; background-image:url('src/assets/polytiles2.png'); background-repeat:repeat; text-align: center;" class="full">
@@ -155,6 +167,10 @@
     
 </div>
 
+<div id="popup" class="animate">
+    <Box title={"info"} date={"2019"} description={"info"} icon={polylogo} language={languages[2]} link={""}
+    extraCss={css`inline-size: unset !important; position: fixed !important; z-index: 999; left: -24.8%; top: -14%; min-width: 70% !important; transform: translate(50%, 50%);`} onClick={closePopup} innerElement={popupElement}/>
+</div>
 
 <div style="" id="imgbackground">
     <div id="overground" style="{bg2}">
@@ -163,7 +179,7 @@
         <div class="boxDivider {reactiveContainer}">
             <Box title={"about"} date={"2017-\n2024"} description="Welcome to my portfolio! This is a collection of works from years 2017 to 2024. They vary in quality as well as in scale, but I do hope you look around." 
             icon={polylogo} language={languages[7]} link={"/"} extraCss={reactiveFlexWhite}
-            altText="wwow!!sdfkls;dfksdf wow!!sdfkls;dfksdf wow!!sdfkls;dfksdf v wow!!sdfkls;dfksdfwow!!sdfkls;dfksdf wow!!sdfkls;dfksdfwow!!sdfkls;dfksdfwow!!sdfkls;dfksdfwow!!sdfkls;dfksdfwow!!sdfkls;dfksdfwow!!sdfkls;dfksdfwow!!sdfkls;dfksdf wow!!sdfkls;dfksdf" />
+            onClick={() => {openPopup(1);}} />
             <Box title={"games"} date={"2017-\n2024"} description="I've made a couple of games back in my time, and even published them. The first one in 2018, fdphysics, a 2d platform shooter/fighting game, and the second in 2020, planeagement, a 
             strategy based plane management game." 
             icon={polylogo} language={languages[7]} link={"/"} extraCss={reactiveFlexWhite} />
@@ -345,7 +361,7 @@
         background: rgba(180, 180, 180, 0.1);
     }
 
-    #popUpBox {
+    /* #popupd {
         display: flex;
         border-radius: 30px;
         overflow-x: hidden;
@@ -368,7 +384,7 @@
         left: -48%;
         transition: all 0.75s cubic-bezier(0.215, 0.610, 0.355, 1);
 
-    }
+    } */
 
     .box {
         border-radius: 30px;
@@ -382,6 +398,10 @@
         position: relative;
         transition: all 0.35s cubic-bezier(0.215, 0.610, 0.355, 1);
         margin-left:5%;
+    }
+
+    .animate {
+        transition: all 0.35s cubic-bezier(0.215, 0.610, 0.355, 1);
     }
 
 </style>
