@@ -129,20 +129,79 @@
     `
 
 
-    let popupElement = "<p>hi</p>";
+    
 
-    let closePopup = () => {
-        document.getElementById("popup").style.opacity = "0";
-
-    }
+    $: currentDataNum = 1;
 
     let openPopup = (dataNum) => {
-        document.getElementById("popup").style.opacity = "1";
+        currentDataNum = dataNum;
+        popupBox();
     }
 
-    import innerBox from "./boxPopups/yamanoteTraveler.svelte";
+    import yamanoteTraveler from "./boxPopups/yamanoteTraveler.svelte";
+    import Cpptester from "./boxPopups/cpptester.svelte";
+    import Alexa from "./boxPopups/alexa.svelte";
+
+    $: popupElements = [
+        {   component: yamanoteTraveler, 
+            date: "2024",
+            title: "yamanote traveler",
+            icon: itchLogo,
+            link: "https://po-ly.itch.io/yamanote",
+            language: languages[8]
+        },
+        {   component: Cpptester, 
+            date: "2024-",
+            title: "c++ tester",
+            icon: githubLogo,
+            link: "https://github.com/polyllc/cpptester",
+            language: languages[2]
+        },
+        {
+            component: Alexa, 
+            date: "2020-2022",
+            title: "alexa",
+            icon: githubLogo,
+            link: "https://github.com/polyllc/alexa",
+            language: languages[0]
+        }
+    ];
+
+    $: getComponent = () => {
+        return popupElements[currentDataNum].component;
+    }
+
+    $: getDate = () => {
+        return popupElements[currentDataNum].date;
+    }
+
+    $: getTitle = () => {
+        return popupElements[currentDataNum].title;
+    }
+
+    $: getIcon = () => {
+        return popupElements[currentDataNum].icon;
+    }
 
 
+    $: getLink = () => {
+        return popupElements[currentDataNum].link;
+    }
+
+    $: getLanguage = () => {
+        return popupElements[currentDataNum].language;
+    }
+
+
+    let popupBoxDisplay = "display: none";
+    let popupBox = () => {
+        if (popupBoxDisplay === "display: none") {
+            popupBoxDisplay = "display: block";
+        }
+        else {
+            popupBoxDisplay = "display: none";
+        }
+    }
 </script>
 <Header/>
 
@@ -156,8 +215,6 @@
                         <img src="src/assets/arrows.png" alt="\/" class="arrow" id="a2" style={a2}>
                         <img src="src/assets/arrows.png" alt="\/" class="arrow" id="a3" style={a3}>
                     </div>
-                    
-                    
             </div>
         </div>
     </div>
@@ -167,90 +224,147 @@
     
 </div>
 
-<div id="popup" class="animate">
-    <Box title={"info"} date={"2019"} description={"info"} icon={polylogo} language={languages[2]} link={""}
-    extraCss={css`inline-size: unset !important; position: fixed !important; z-index: 999; left: -24.8%; top: -14%; min-width: 70% !important; transform: translate(50%, 50%);`} onClick={closePopup} innerElement={popupElement}/>
+<div id="popup" class="animate" style="{popupBoxDisplay}">
+    <Box title={getTitle()} date={getDate()} description="" icon={getIcon()} language={getLanguage()} iconLink={getLink()}
+    extraCss={css`inline-size: unset !important; background: rgba(51, 51, 51, 0.95) !important; position: fixed !important; max-height: 75% !important; z-index: 999 !important; left: -25%; top: -25%; min-width: 50% !important; width: 70% !important; transform: translate(50%, 50%); overflow-y: scroll !important;`}>
+        <button on:click={popupBox} style="float: right; background: none; border: none; color: white; font-size: 24pt; margin-top: -4%;">X</button>
+        <svelte:component this={getComponent()}/>
+    </Box>  
 </div>
 
 <div style="" id="imgbackground">
     <div id="overground" style="{bg2}">
 
     <div class="boxHolder {randomBorder}" id="entireBoxHolder">
-        <div class="boxDivider {reactiveContainer}">
+        <div class="boxDivider {reactiveContainer}" id="about">
             <Box title={"about"} date={"2017-\n2024"} description="Welcome to my portfolio! This is a collection of works from years 2017 to 2024. They vary in quality as well as in scale, but I do hope you look around." 
-            icon={polylogo} language={languages[7]} link={"/"} extraCss={reactiveFlexWhite}
-            onClick={() => {openPopup(1);}} />
+            icon={polylogo} language={languages[7]} extraCss={reactiveFlexWhite} />
+
             <Box title={"games"} date={"2017-\n2024"} description="I've made a couple of games back in my time, and even published them. The first one in 2018, fdphysics, a 2d platform shooter/fighting game, and the second in 2020, planeagement, a 
             strategy based plane management game." 
-            icon={polylogo} language={languages[7]} link={"/"} extraCss={reactiveFlexWhite} />
-            <Box title={"fdphysics"} date={"2018-2019"} description={"a two player, 2D, shooting showdown in a variety of maps and modes"} icon={itchLogo} iconLink="https://polyllc.itch.io/fdphysics" link="./fdphysics.html" language={languages[5]} extraCss="{reactiveFlex}"/>
+            icon={polylogo} language={languages[7]} extraCss={reactiveFlexWhite} />
+
+            <Box title={"fdphysics"} date={"2018-2019"} description={"a two player, 2D, shooting showdown in a variety of maps and modes"} 
+            icon={itchLogo} iconLink="https://polyllc.itch.io/fdphysics" link="./fdphysics.html" language={languages[5]} extraCss="{reactiveFlex}"/>
+
         </div>  
 
         <div class="boxDivider {reactiveContainer}">
-            <Box title={"planeagement"} date={"2019-2020"} description={"a casual plane management game, where you manage your planes going from your airport to others"} icon={itchLogo} iconLink="https://polyllc.itch.io/planeagement" link="./planeagement.html" language={languages[5]} extraCss="{reactiveFlex}"/>
-            <Box title={"yamanote traveler"} date={"2024"} description={"a two player, 2D, shooting showdown in a variety of maps and modes"} icon={itchLogo} iconLink="https://po-ly.itch.io/yamanote" link="/" language={languages[8]} extraCss="{reactiveFlex}"/>
+            <Box title={"planeagement"} date={"2019-2020"} description={"a casual plane management game, where you manage your planes going from your airport to others"} 
+            icon={itchLogo} iconLink="https://polyllc.itch.io/planeagement" link="./planeagement.html" language={languages[5]} extraCss="{reactiveFlex}"/>
+
+            <Box title={"yamanote traveler"} date={"2024"} description={"a two player, 2D, shooting showdown in a variety of maps and modes"} 
+            icon={itchLogo} iconLink="https://po-ly.itch.io/yamanote"  language={languages[8]} extraCss="{reactiveFlex}" onClick={() => {openPopup(0);}}/>
+
             <Box title={"open source"} date={"2019-\n2024"} description="Here is a small list of the various open source programs I've made over the years. All of them are available on GitHub." 
             icon={polylogo} language={languages[7]} link={"/"} extraCss={reactiveFlexWhite}/>
         </div>
 
         <div class="boxDivider {reactiveContainer}">
-            <Box title={"C++ Tester"} date={"2024"}  description={"simple C++ tester library"} icon={githubLogo} iconLink="https://github.com/polyllc/cpptester" link="./all.html#cpptester" language={languages[2]} type="Open Source Project" extraCss="{reactiveFlex}"/>
-            <Box title={"alexa"} date={"2020-\n2022"}  description={"alexa is a feature rich music discord bot, from voice commands, to playlists"} icon={githubLogo} iconLink="https://github.com/polyllc/alexa" link="./all.html#alexa" language={languages[0]} type="Open Source Project, Discord Bot" extraCss="{reactiveFlex}"/>
-            <Box title={"scrypty"} date={"2021-\n2022"}  description={"clone, detect, compile, install from any repository, automatically"} icon={githubLogo} iconLink="https://github.com/polyllc/scrypty" link="./all.html#scrypty" language={languages[0]} type="Open Source Project" extraCss="{reactiveFlex}"/>
+            <Box title={"C++ Tester"} date={"2024"}  description={"simple C++ tester library"} icon={githubLogo} iconLink="https://github.com/polyllc/cpptester"
+             language={languages[2]} type="Open Source Project" extraCss="{reactiveFlex}" onClick={() => {openPopup(1);}}/>
+
+            <Box title={"alexa"} date={"2020-\n2022"}  description={"alexa is a feature rich music discord bot, from voice commands, to playlists"} icon={githubLogo} 
+            iconLink="https://github.com/polyllc/alexa" onClick={() => {openPopup(2);}} language={languages[0]} type="Open Source Project, Discord Bot" extraCss="{reactiveFlex}"/>
+
+            <Box title={"yomichan-renshuu"} date={"2024"}  description={"add words to your renshuu schedules from the popular yomichan extension"} icon={githubLogo}
+             iconLink="https://github.com/polyllc/yomichan-renshuu" link="./all.html#alexa" language={languages[0]} type="Open Source Project" extraCss="{reactiveFlex}"/>
+            
+        </div>
+
+        <div class="boxDivider {reactiveContainer}">
+            <Box title={"scrypty"} date={"2021-\n2022"}  description={"clone, detect, compile, install from any repository, automatically"} icon={githubLogo} 
+            iconLink="https://github.com/polyllc/scrypty" link="./all.html#scrypty" language={languages[0]} type="Open Source Project" extraCss="{reactiveFlex}"/>
          
+            <Box title={"progflow"} date={"2021"}  description={"scripting for efficiency"} icon={githubLogo} iconLink="https://github.com/polyllc/progflow" 
+            link="./all.html#progflow" language={languages[2]} type="Open Source Project" extraCss="{reactiveFlex}"/>
+
+            <Box title={"poly portfolio"} date={"2022-\n2024"}  description={"a portfolio of my works"} icon={githubLogo} iconLink="https://github.com/polyllc/polyportfolio" 
+            link="./all.html#polyportfolio" language={languages[1]} type="Open Source Project, Website" extraCss="{reactiveFlex}"/>
+            
         </div>
 
         <div class="boxDivider {reactiveContainer}">
-            <Box title={"progflow"} date={"2021"}  description={"scripting for efficiency"} icon={githubLogo} iconLink="https://github.com/polyllc/progflow" link="./all.html#progflow" language={languages[2]} type="Open Source Project" extraCss="{reactiveFlex}"/>
-            <Box title={"poly portfolio"} date={"2022-\n2024"}  description={"a portfolio of my works"} icon={githubLogo} iconLink="https://github.com/polyllc/polyportfolio" link="./all.html#polyportfolio" language={languages[1]} type="Open Source Project, Website" extraCss="{reactiveFlex}"/>
-            <Box title={"jump cutter revamped"} date={"2020"}  description={"cuts out silent audio from videos to shorten the length"} icon={githubLogo} iconLink="https://github.com/polyllc/jump-cutter-revamped" link="./all.html#jumpcutter" language={languages[2]} type="Open Source Project" extraCss="{reactiveFlex}"/>
+            <Box title={"jump cutter revamped"} date={"2020"}  description={"cuts out silent audio from videos to shorten the length"} icon={githubLogo} 
+            iconLink="https://github.com/polyllc/jump-cutter-revamped" link="./all.html#jumpcutter" language={languages[2]} type="Open Source Project" extraCss="{reactiveFlex}"/>
           
-        </div>
+            <Box title={"disconnall"} date={"2021"}  description={"disconnects everyone from wifi around you!"} icon={githubLogo} iconLink="https://github.com/polyllc/disconnall" 
+            link="./all.html#disconnall" language={languages[2]} type="Open Source Project" extraCss="{reactiveFlex}"/>
 
-        <div class="boxDivider {reactiveContainer}">
-            <Box title={"disconnall"} date={"2021"}  description={"disconnects everyone from wifi around you!"} icon={githubLogo} iconLink="https://github.com/polyllc/disconnall" link="./all.html#disconnall" language={languages[2]} type="Open Source Project" extraCss="{reactiveFlex}"/>
             <Box title={"competitive programming"} date={"2020-\n2024"} description="All of my competitive programming entries, pretty much all MIT Battlecode." 
             icon={polylogo} language={languages[7]} link={"/"} extraCss={reactiveFlexWhite} />
-            <Box title={"bc2024"} date={"2024"}  description={"my team's final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2024" link="" language={languages[6]} type="Competitive Programming"
-            extraCss="{reactiveFlex}"/>
+            
             
         </div>
 
         <div class="boxDivider {reactiveContainer}">
-            <Box title={"bc2023"} date={"2023"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2023" link="" language={languages[6]} type="Competitive Programming"
-                extraCss="{reactiveFlex}"/>
-            <Box title={"bc2022"} date={"2022"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2022" link="" language={languages[6]} type="Competitive Programming"
-            extraCss="{reactiveFlex}"/>
-            <Box title={"bc2021"} date={"2021"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2021" link="" language={languages[6]} type="Competitive Programming"
-                extraCss="{reactiveFlex}"/>
+            <Box title={"bc2025"} date={"2025"}  description={"my team's final submission "} icon={githubLogo} 
+            iconLink="https://github.com/polyllc/bc2025" link="" language={languages[6]} type="Competitive Programming" extraCss="{reactiveFlex}"/>
+
+            <Box title={"bc2024"} date={"2024"}  description={"my team's final submission "} icon={githubLogo} 
+            iconLink="https://github.com/polyllc/bc2024" link="" language={languages[6]} type="Competitive Programming" extraCss="{reactiveFlex}"/>
+
+            <Box title={"bc2023"} date={"2023"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2023" 
+            link="" language={languages[6]} type="Competitive Programming" extraCss="{reactiveFlex}"/>
+            
+            
             
         </div>
+        
         <div class="boxDivider {reactiveContainer}">
+            <Box title={"bc2022"} date={"2022"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2022" 
+            link="" language={languages[6]} type="Competitive Programming" extraCss="{reactiveFlex}"/>
+
+            <Box title={"bc2021"} date={"2021"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2021" 
+            link="" language={languages[6]} type="Competitive Programming" extraCss="{reactiveFlex}"/>
+
             <Box title={"websites"} date={"2017-\n2024"} description="Websites made for various purposes, like this one (portfolio), or polyllc.org (my old website), or poly website (user driven content delivery site)." 
-                icon={polylogo} language={languages[7]} link={"/"} extraCss={reactiveFlexWhite} />
-            <Box title={"polyllc.org"} date={"2017-\n2020"}  description={"the main website for poly, click for a history of the website in real time."} icon="" iconLink="" link="./polyllc.html" language={languages[4]} type="Website" extraCss="{reactiveFlex}"/>
-            <Box title={"poly website"} date={"2017-\n2019"}  description={"a feature rich website, with videos, profiles, email and more"} icon="" iconLink="" link="./polywebsite.html" language={languages[3]} type="Website" extraCss="{reactiveFlex}"/>
+            icon={polylogo} language={languages[7]} link={"/"} extraCss={reactiveFlexWhite} />
             
         </div>
+
         <div class="boxDivider {reactiveContainer}">
-            <Box title={"PolyForums"} date={"2019"}  description={"a social media site with tags as the way to find new content"} icon="" iconLink="" link="./polyforums.html" language={languages[3]} type="Website" extraCss="{reactiveFlex}"/>
-            <Box title={"poly birthday games"} date={"2018"}  description={"simple games for poly's birthday"} icon="" iconLink="" link="./birthday.html" language={languages[0]} type="Website, Game" extraCss="{reactiveFlex}"/>
+            <Box title={"polyllc.org"} date={"2017-\n2020"}  description={"the main website for poly, click for a history of the website in real time."} icon="" 
+            iconLink="" link="./polyllc.html" language={languages[4]} type="Website" extraCss="{reactiveFlex}"/>
+
+            <Box title={"poly website"} date={"2017-\n2019"}  description={"a feature rich website, with videos, profiles, email and more"} icon="" 
+            iconLink="" link="./polywebsite.html" language={languages[3]} type="Website" extraCss="{reactiveFlex}"/>
+            
+            <Box title={"PolyForums"} date={"2019"}  description={"a social media site with tags as the way to find new content"} icon="" iconLink="" 
+            link="./polyforums.html" language={languages[3]} type="Website" extraCss="{reactiveFlex}"/>
+            
+
+        </div>
+
+        <div class="boxDivider {reactiveContainer}">
+            <Box title={"poly birthday games"} date={"2018"}  description={"simple games for poly's birthday"} icon="" iconLink=""
+            link="./birthday.html" language={languages[0]} type="Website, Game" extraCss="{reactiveFlex}"/>
+
             <Box title={"discord bots"} date={"2020-\n2024"} description="Random discord bots. Some actually useful!" 
                 icon={polylogo} language={languages[7]} link={"/"} extraCss={reactiveFlexWhite} />
             
-
-        </div>
-        <div class="boxDivider {reactiveContainer}">
             <Box title={"alexa"} date={"2020-\n2022"}  description={"alexa is a feature rich music discord bot, from voice commands, to playlists"} icon={githubLogo} 
                 iconLink="https://github.com/polyllc/alexa" link="./all.html#alexa" language={languages[0]} type="Open Source Project, Discord Bot" extraCss="{reactiveFlex}"/>
-            <Box title={"discord-gameboy"} date={"2020"}  description={"a gameboy emulator that's a discord bot"} icon={githubLogo} iconLink="https://github.com/polyllc/discord-gameboy" link="./all.html#discordgameboy"
-                 language={languages[0]} type="Open Source Project, Discord Bot" extraCss="{reactiveFlex}"/>
-            <Box title={"log bot"} date={"2020"}  description={"logs a server to another created just for logging"} icon="" iconLink="" link="./all.html#log" language={languages[0]} type="Discord Bot" extraCss="{reactiveFlex}"/>
             
         </div>
+
         <div class="boxDivider {reactiveContainer}">
-            <Box title={"voting bot"} date={"2020"}  description={"a simple voting bot"} icon="" iconLink="" link="./all.html#voting" language={languages[0]} type="Discord Bot" extraCss="{reactiveFlex}"/>
-            <Box title={"auto counter"} date={"2020"}  description={"auto counts in a channel and makes sure everyone is counting correctly"} icon="" iconLink="" link="./all.html#auto" language={languages[0]} type="Discord Bot" extraCss="{reactiveFlex}"/>
+            <Box title={"discord-gameboy"} date={"2020"}  description={"a gameboy emulator that's a discord bot"} icon={githubLogo} iconLink="https://github.com/polyllc/discord-gameboy" link="./all.html#discordgameboy"
+                 language={languages[0]} type="Open Source Project, Discord Bot" extraCss="{reactiveFlex}"/>
+
+            <Box title={"log bot"} date={"2020"}  description={"logs a server to another created just for logging"} 
+            icon="" iconLink="" link="./all.html#log" language={languages[0]} type="Discord Bot" extraCss="{reactiveFlex}"/>
+            
+            <Box title={"voting bot"} date={"2020"}  description={"a simple voting bot"} icon="" iconLink="" 
+            link="./all.html#voting" language={languages[0]} type="Discord Bot" extraCss="{reactiveFlex}"/>
+
+        </div>
+
+        <div class="boxDivider {reactiveContainer}">
+
+            <Box title={"auto counter"} date={"2020"}  description={"auto counts in a channel and makes sure everyone is counting correctly"} icon="" 
+            iconLink="" link="./all.html#auto" language={languages[0]} type="Discord Bot" extraCss="{reactiveFlex}"/>
+        
         </div>
     </div>
 
@@ -402,6 +516,12 @@
 
     .animate {
         transition: all 0.35s cubic-bezier(0.215, 0.610, 0.355, 1);
+    }
+
+    #popup {
+        display: block;
+        position: absolute;
+        margin-top: -5%;
     }
 
 </style>

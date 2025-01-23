@@ -21,7 +21,12 @@ import Box from "./lib/box.svelte";
 </script>
 
 <div id="header" class="centered">
-        <div id="headerDropDownGames" class="headerDropDown">
+
+    <a href="index.html" id="polylogoheader">
+        <img src="src/assets/polylogo.png" id="polylogoheader" alt="poly logo">
+    </a>
+
+        <div id="headerDropDownGames" class="headerDropDown tooSmallForMobile">
             <a class="headerLink" id="headerLinkGames" href="./index.html#games">Games</a>
             <div id="headerDropDownGamesContent">
                     <a href="./planeagement.html" style="text-decoration: none !important;">
@@ -53,7 +58,7 @@ import Box from "./lib/box.svelte";
                     </a>
             </div>
         </div>
-        <div id="headerDropDownOpenSource" class="headerDropDown">
+        <div id="headerDropDownOpenSource" class="headerDropDown tooSmallForMobile">
             <a class="headerLink" id="headerLinkOpenSource" href="./index.html#opensource">Open Source Apps</a>
             <div id="headerDropDownOpenSourceContent">
                 <div class="boxDivider">
@@ -73,7 +78,7 @@ import Box from "./lib/box.svelte";
             </div>
         </div>
         
-        <div id="headerDropDownDiscord" class="headerDropDown">
+        <div id="headerDropDownDiscord" class="headerDropDown tooSmallForMobile">
             <a class="headerLink" id="headerLinkDiscord" href="./index.html#discordbots">Discord Bots</a>
             <div id="headerDropDownDiscordContent">
                 <div class="boxDivider">
@@ -88,7 +93,7 @@ import Box from "./lib/box.svelte";
             </div>
         </div>
 
-        <div id="headerDropDownWebsites" class="headerDropDown">
+        <div id="headerDropDownWebsites" class="headerDropDown tooSmallForMobile">
             <a class="headerLink" id="headerLinkWebsites" href="./index.html#websites">Websites</a>
             <div id="headerDropDownWebsitesContent">
                 <div class="boxDivider">
@@ -104,9 +109,7 @@ import Box from "./lib/box.svelte";
         </div>
 
 
-        <a href="index.html" id="polylogoheader">
-            <img src="src/assets/polylogo.png" id="polylogoheader" alt="poly logo">
-        </a>
+        
 </div>
 
 
@@ -119,9 +122,7 @@ import Box from "./lib/box.svelte";
     #polylogoheader {
         height: 50px;
         padding: 4px;
-        position: absolute;
-        margin-left: 1%;
-        left: 10px;
+        position: relative;
         margin-bottom: 0%;
         margin-top: 0;
     }
@@ -181,7 +182,7 @@ import Box from "./lib/box.svelte";
     }
 
     #headerDropDownGamesContent  {
-        overflow-y: show !important;
+        overflow-y: scroll !important;
         max-width: 100vh;
         min-width: 50vw;
         display: inline-block;
@@ -208,7 +209,7 @@ import Box from "./lib/box.svelte";
         box-shadow: 0 0 0pt black;
         border-radius: 15px;
         transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
-        max-height: 40vh;
+        max-height: 20vh !important;
        
       
     }
@@ -242,7 +243,7 @@ import Box from "./lib/box.svelte";
         box-shadow: 0 0 0pt black;
         border-radius: 15px;
         transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
-        max-height: 40vh;
+        max-height: 20vh !important;
        
       
     }
@@ -256,7 +257,8 @@ import Box from "./lib/box.svelte";
 
     #yamanoteLogo {
         width: 330px; 
-        height: 270px;
+        height: 200px;
+        object-fit: fit;
         margin:auto;
         filter:drop-shadow(0px 0px 2px black);
         padding-right: 20px;
@@ -278,7 +280,7 @@ import Box from "./lib/box.svelte";
         border-radius: 15px;
         transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
         text-decoration: none !important;
-        max-height: 40vh;
+        max-height: 20vh !important;
     }
 
     #fdphysics:hover {
