@@ -141,6 +141,10 @@
     import yamanoteTraveler from "./boxPopups/yamanoteTraveler.svelte";
     import Cpptester from "./boxPopups/cpptester.svelte";
     import Alexa from "./boxPopups/alexa.svelte";
+    import YomichanRenshuu from "./boxPopups/yomichanRenshuu.svelte";
+    import Scrypty from "./boxPopups/scrypty.svelte";
+    import Progflow from "./boxPopups/progflow.svelte";
+    import Polyportfolio from "./boxPopups/polyportfolio.svelte";
 
     $: popupElements = [
         {   component: yamanoteTraveler, 
@@ -151,7 +155,7 @@
             language: languages[8]
         },
         {   component: Cpptester, 
-            date: "2024-",
+            date: "2024-2025-",
             title: "c++ tester",
             icon: githubLogo,
             link: "https://github.com/polyllc/cpptester",
@@ -164,6 +168,38 @@
             icon: githubLogo,
             link: "https://github.com/polyllc/alexa",
             language: languages[0]
+        },
+        {
+            component: YomichanRenshuu,
+            date: "2024",
+            title: "yomichan renshuu",
+            icon: githubLogo,
+            link: "https://github.com/polyllc/yomichan-renshuu",
+            language: languages[0]
+        },
+        {
+            component: Scrypty,
+            date: "2021-2022",
+            title: "scrypty",
+            icon: githubLogo,
+            link: "https://github.com/polyllc/scrypty",
+            language: languages[0]
+        },
+        {
+            component: Progflow,
+            date: "2021",
+            title: "progflow",
+            icon: githubLogo,
+            link: "https://github.com/polyllc/progflow",
+            language: languages[2]
+        },
+        {
+            component: Polyportfolio,
+            date: "2022-2025-",
+            title: "poly portfolio",
+            icon: githubLogo,
+            link: "https://github.com/polyllc/polyportfolio",
+            language: languages[1]
         }
     ];
 
@@ -237,110 +273,110 @@
 
     <div class="boxHolder {randomBorder}" id="entireBoxHolder">
         <div class="boxDivider {reactiveContainer}" id="about">
-            <Box title={"about"} date={"2017-\n2024"} description="Welcome to my portfolio! This is a collection of works from years 2017 to 2024. They vary in quality as well as in scale, but I do hope you look around." 
+            <Box id="about" title={"about"} date={"2017-\n2024"} description="Welcome to my portfolio! This is a collection of works from years 2017 to 2024. They vary in quality as well as in scale, but I do hope you look around." 
             icon={polylogo} language={languages[7]} extraCss={reactiveFlexWhite} />
 
-            <Box title={"games"} date={"2017-\n2024"} description="I've made a couple of games back in my time, and even published them. The first one in 2018, fdphysics, a 2d platform shooter/fighting game, and the second in 2020, planeagement, a 
+            <Box id="games" title={"games"} date={"2017-\n2024"} description="I've made a couple of games back in my time, and even published them. The first one in 2018, fdphysics, a 2d platform shooter/fighting game, and the second in 2020, planeagement, a 
             strategy based plane management game." 
             icon={polylogo} language={languages[7]} extraCss={reactiveFlexWhite} />
 
-            <Box title={"fdphysics"} date={"2018-2019"} description={"a two player, 2D, shooting showdown in a variety of maps and modes"} 
-            icon={itchLogo} iconLink="https://polyllc.itch.io/fdphysics" link="./fdphysics.html" language={languages[5]} extraCss="{reactiveFlex}"/>
+            <Box id="fdphysics" title={"fdphysics"} date={"2018-2019"} description={"a two player, 2D, shooting showdown in a variety of maps and modes"} 
+            icon={itchLogo} iconLink="https://polyllc.itch.io/fdphysics" link="./fdphysics.html" type="Game" language={languages[5]} extraCss="{reactiveFlex}"/>
 
         </div>  
 
         <div class="boxDivider {reactiveContainer}">
-            <Box title={"planeagement"} date={"2019-2020"} description={"a casual plane management game, where you manage your planes going from your airport to others"} 
-            icon={itchLogo} iconLink="https://polyllc.itch.io/planeagement" link="./planeagement.html" language={languages[5]} extraCss="{reactiveFlex}"/>
+            <Box id="planeagement" title={"planeagement"} date={"2019-2020"} description={"a casual plane management game, where you manage your planes going from your airport to others"} 
+            icon={itchLogo} iconLink="https://polyllc.itch.io/planeagement" link="./planeagement.html" language={languages[5]} type="Game" extraCss="{reactiveFlex}"/>
 
-            <Box title={"yamanote traveler"} date={"2024"} description={"a two player, 2D, shooting showdown in a variety of maps and modes"} 
-            icon={itchLogo} iconLink="https://po-ly.itch.io/yamanote"  language={languages[8]} extraCss="{reactiveFlex}" onClick={() => {openPopup(0);}}/>
+            <Box id="yamanote" title={"yamanote traveler"} date={"2024"} description={"a two player, 2D, shooting showdown in a variety of maps and modes"} 
+            icon={itchLogo} iconLink="https://po-ly.itch.io/yamanote"  language={languages[8]} extraCss="{reactiveFlex}" type="Game" onClick={() => {openPopup(0);}}/>
 
-            <Box title={"open source"} date={"2019-\n2024"} description="Here is a small list of the various open source programs I've made over the years. All of them are available on GitHub." 
+            <Box id="openSource" title={"open source"} date={"2019-\n2024"} description="Here is a small list of the various open source programs I've made over the years. All of them are available on GitHub." 
             icon={polylogo} language={languages[7]} link={"/"} extraCss={reactiveFlexWhite}/>
         </div>
 
         <div class="boxDivider {reactiveContainer}">
-            <Box title={"C++ Tester"} date={"2024"}  description={"simple C++ tester library"} icon={githubLogo} iconLink="https://github.com/polyllc/cpptester"
+            <Box id="cpptester" title={"C++ Tester"} date={"2024"}  description={"simple C++ tester library"} icon={githubLogo} iconLink="https://github.com/polyllc/cpptester"
              language={languages[2]} type="Open Source Project" extraCss="{reactiveFlex}" onClick={() => {openPopup(1);}}/>
 
-            <Box title={"alexa"} date={"2020-\n2022"}  description={"alexa is a feature rich music discord bot, from voice commands, to playlists"} icon={githubLogo} 
+            <Box id="alexa" title={"alexa"} date={"2020-\n2022"}  description={"alexa is a feature rich music discord bot, from voice commands, to playlists"} icon={githubLogo} 
             iconLink="https://github.com/polyllc/alexa" onClick={() => {openPopup(2);}} language={languages[0]} type="Open Source Project, Discord Bot" extraCss="{reactiveFlex}"/>
 
-            <Box title={"yomichan-renshuu"} date={"2024"}  description={"add words to your renshuu schedules from the popular yomichan extension"} icon={githubLogo}
-             iconLink="https://github.com/polyllc/yomichan-renshuu" link="./all.html#alexa" language={languages[0]} type="Open Source Project" extraCss="{reactiveFlex}"/>
+            <Box id="yomichanRenshuu" title={"yomichan-renshuu"} date={"2024"}  description={"add words to your renshuu schedules from the popular yomichan extension"} icon={githubLogo}
+             iconLink="https://github.com/polyllc/yomichan-renshuu" onClick={() => {openPopup(3);}} language={languages[0]} type="Open Source Project" extraCss="{reactiveFlex}"/>
             
         </div>
 
         <div class="boxDivider {reactiveContainer}">
-            <Box title={"scrypty"} date={"2021-\n2022"}  description={"clone, detect, compile, install from any repository, automatically"} icon={githubLogo} 
-            iconLink="https://github.com/polyllc/scrypty" link="./all.html#scrypty" language={languages[0]} type="Open Source Project" extraCss="{reactiveFlex}"/>
+            <Box id="scrypty" title={"scrypty"} date={"2021-\n2022"}  description={"clone, detect, compile, install from any repository, automatically"} icon={githubLogo} 
+            iconLink="https://github.com/polyllc/scrypty" onClick={() => {openPopup(4);}} language={languages[0]} type="Open Source Project" extraCss="{reactiveFlex}"/>
          
-            <Box title={"progflow"} date={"2021"}  description={"scripting for efficiency"} icon={githubLogo} iconLink="https://github.com/polyllc/progflow" 
-            link="./all.html#progflow" language={languages[2]} type="Open Source Project" extraCss="{reactiveFlex}"/>
+            <Box id="progflow" title={"progflow"} date={"2021"}  description={"scripting for efficiency"} icon={githubLogo} iconLink="https://github.com/polyllc/progflow" 
+            onClick={() => {openPopup(5);}} language={languages[2]} type="Open Source Project" extraCss="{reactiveFlex}"/>
 
-            <Box title={"poly portfolio"} date={"2022-\n2024"}  description={"a portfolio of my works"} icon={githubLogo} iconLink="https://github.com/polyllc/polyportfolio" 
-            link="./all.html#polyportfolio" language={languages[1]} type="Open Source Project, Website" extraCss="{reactiveFlex}"/>
+            <Box id="polyPortfolio" title={"poly portfolio"} date={"2022-\n2024"}  description={"a portfolio of my works"} icon={githubLogo} iconLink="https://github.com/polyllc/polyportfolio" 
+            onClick={() => {openPopup(6);}} language={languages[1]} type="Open Source Project, Website" extraCss="{reactiveFlex}"/>
             
         </div>
 
         <div class="boxDivider {reactiveContainer}">
-            <Box title={"jump cutter revamped"} date={"2020"}  description={"cuts out silent audio from videos to shorten the length"} icon={githubLogo} 
+            <Box id="jumpCutter" title={"jump cutter revamped"} date={"2020"}  description={"cuts out silent audio from videos to shorten the length"} icon={githubLogo} 
             iconLink="https://github.com/polyllc/jump-cutter-revamped" link="./all.html#jumpcutter" language={languages[2]} type="Open Source Project" extraCss="{reactiveFlex}"/>
           
-            <Box title={"disconnall"} date={"2021"}  description={"disconnects everyone from wifi around you!"} icon={githubLogo} iconLink="https://github.com/polyllc/disconnall" 
+            <Box id="disconnall" title={"disconnall"} date={"2021"}  description={"disconnects everyone from wifi around you!"} icon={githubLogo} iconLink="https://github.com/polyllc/disconnall" 
             link="./all.html#disconnall" language={languages[2]} type="Open Source Project" extraCss="{reactiveFlex}"/>
 
-            <Box title={"competitive programming"} date={"2020-\n2024"} description="All of my competitive programming entries, pretty much all MIT Battlecode." 
+            <Box id="competitiveProgramming" title={"competitive programming"} date={"2020-\n2024"} description="All of my competitive programming entries, pretty much all MIT Battlecode." 
             icon={polylogo} language={languages[7]} link={"/"} extraCss={reactiveFlexWhite} />
             
             
         </div>
 
         <div class="boxDivider {reactiveContainer}">
-            <Box title={"bc2025"} date={"2025"}  description={"my team's final submission "} icon={githubLogo} 
+            <Box id="bc2025" title={"battlecode 2025"} date={"2025"}  description={"my team's final submission "} icon={githubLogo} 
             iconLink="https://github.com/polyllc/bc2025" link="" language={languages[6]} type="Competitive Programming" extraCss="{reactiveFlex}"/>
 
-            <Box title={"bc2024"} date={"2024"}  description={"my team's final submission "} icon={githubLogo} 
+            <Box id="bc2024" title={"battlecode 2024"} date={"2024"}  description={"my team's final submission "} icon={githubLogo} 
             iconLink="https://github.com/polyllc/bc2024" link="" language={languages[6]} type="Competitive Programming" extraCss="{reactiveFlex}"/>
 
-            <Box title={"bc2023"} date={"2023"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2023" 
+            <Box id="bc2023" title={"battlecode 2023"} date={"2023"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2023" 
             link="" language={languages[6]} type="Competitive Programming" extraCss="{reactiveFlex}"/>
             
             
             
         </div>
-        
+
         <div class="boxDivider {reactiveContainer}">
-            <Box title={"bc2022"} date={"2022"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2022" 
+            <Box id="bc2022" title={"battlecode 2022"} date={"2022"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2022" 
             link="" language={languages[6]} type="Competitive Programming" extraCss="{reactiveFlex}"/>
 
-            <Box title={"bc2021"} date={"2021"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2021" 
+            <Box id="bc2021" title={"battlecode 2021"} date={"2021"}  description={"my final submission "} icon={githubLogo} iconLink="https://github.com/polyllc/bc2021" 
             link="" language={languages[6]} type="Competitive Programming" extraCss="{reactiveFlex}"/>
 
-            <Box title={"websites"} date={"2017-\n2024"} description="Websites made for various purposes, like this one (portfolio), or polyllc.org (my old website), or poly website (user driven content delivery site)." 
+            <Box id="websites" title={"websites"} date={"2017-\n2024"} description="Websites made for various purposes, like this one (portfolio), or polyllc.org (my old website), or poly website (user driven content delivery site)." 
             icon={polylogo} language={languages[7]} link={"/"} extraCss={reactiveFlexWhite} />
             
         </div>
 
         <div class="boxDivider {reactiveContainer}">
-            <Box title={"polyllc.org"} date={"2017-\n2020"}  description={"the main website for poly, click for a history of the website in real time."} icon="" 
+            <Box id="polyllc" title={"polyllc.org"} date={"2017-\n2020"}  description={"the main website for poly, click for a history of the website in real time."} icon="" 
             iconLink="" link="./polyllc.html" language={languages[4]} type="Website" extraCss="{reactiveFlex}"/>
 
-            <Box title={"poly website"} date={"2017-\n2019"}  description={"a feature rich website, with videos, profiles, email and more"} icon="" 
+            <Box id="polyWebsite" title={"poly website"} date={"2017-\n2019"}  description={"a feature rich website, with videos, profiles, email and more"} icon="" 
             iconLink="" link="./polywebsite.html" language={languages[3]} type="Website" extraCss="{reactiveFlex}"/>
             
-            <Box title={"PolyForums"} date={"2019"}  description={"a social media site with tags as the way to find new content"} icon="" iconLink="" 
+            <Box id="polyForums" title={"PolyForums"} date={"2019"}  description={"a social media site with tags as the way to find new content"} icon="" iconLink="" 
             link="./polyforums.html" language={languages[3]} type="Website" extraCss="{reactiveFlex}"/>
             
 
         </div>
 
         <div class="boxDivider {reactiveContainer}">
-            <Box title={"poly birthday games"} date={"2018"}  description={"simple games for poly's birthday"} icon="" iconLink=""
+            <Box id="polyBirthday" title={"poly birthday games"} date={"2018"}  description={"simple games for poly's birthday"} icon="" iconLink=""
             link="./birthday.html" language={languages[0]} type="Website, Game" extraCss="{reactiveFlex}"/>
 
-            <Box title={"discord bots"} date={"2020-\n2024"} description="Random discord bots. Some actually useful!" 
+            <Box id="discordBots" title={"discord bots"} date={"2020-\n2024"} description="Random discord bots. Some actually useful!" 
                 icon={polylogo} language={languages[7]} link={"/"} extraCss={reactiveFlexWhite} />
             
             <Box title={"alexa"} date={"2020-\n2022"}  description={"alexa is a feature rich music discord bot, from voice commands, to playlists"} icon={githubLogo} 
@@ -349,22 +385,13 @@
         </div>
 
         <div class="boxDivider {reactiveContainer}">
-            <Box title={"discord-gameboy"} date={"2020"}  description={"a gameboy emulator that's a discord bot"} icon={githubLogo} iconLink="https://github.com/polyllc/discord-gameboy" link="./all.html#discordgameboy"
+            <Box id="discordGameboy" title={"discord-gameboy"} date={"2020"}  description={"a gameboy emulator that's a discord bot"} icon={githubLogo} iconLink="https://github.com/polyllc/discord-gameboy" link="./all.html#discordgameboy"
                  language={languages[0]} type="Open Source Project, Discord Bot" extraCss="{reactiveFlex}"/>
 
-            <Box title={"log bot"} date={"2020"}  description={"logs a server to another created just for logging"} 
+            <Box id="logBot" title={"log bot"} date={"2020"}  description={"logs a server to another created just for logging"} 
             icon="" iconLink="" link="./all.html#log" language={languages[0]} type="Discord Bot" extraCss="{reactiveFlex}"/>
             
-            <Box title={"voting bot"} date={"2020"}  description={"a simple voting bot"} icon="" iconLink="" 
-            link="./all.html#voting" language={languages[0]} type="Discord Bot" extraCss="{reactiveFlex}"/>
 
-        </div>
-
-        <div class="boxDivider {reactiveContainer}">
-
-            <Box title={"auto counter"} date={"2020"}  description={"auto counts in a channel and makes sure everyone is counting correctly"} icon="" 
-            iconLink="" link="./all.html#auto" language={languages[0]} type="Discord Bot" extraCss="{reactiveFlex}"/>
-        
         </div>
     </div>
 

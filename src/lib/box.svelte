@@ -10,6 +10,7 @@ export let extraCss = "";
 export let type = "";
 export let altText = "";
 export let onClick = (any) => {};
+export let id = "";
 
 import { css } from '@emotion/css';
 
@@ -34,7 +35,7 @@ if (link !== "") {
 let altTextEnabled = true;
 </script>
 
-<div class="box {randomBorder} {extraCss}">
+<div class="box {randomBorder} {extraCss}" id="{id}">
     <div on:click={onClick}>
 
         <div class="headerOfBox">
